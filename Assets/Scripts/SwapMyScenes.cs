@@ -31,5 +31,6 @@ public class SwapMyScenes : MonoBehaviour
     public void Excalamune(string sceneName)
     {
         SceneManager.UnloadSceneAsync(sceneName); //may need to change to UnloadScene if there are issues - KGC
+        Debug.Log("Unloaded scene" + sceneName);
     }
 }

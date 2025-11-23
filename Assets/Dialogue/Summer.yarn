@@ -1,19 +1,58 @@
 ﻿title: SwapSucceeded
 tags:
+position: -305,-154
 ---
 //tries to show when a scene has been successfully swapped, if the fact "swapped"
 //is true
-<<if TryFact ("swapped")>>
-You: Hey, look, I changed scenes!
-<<EndSection>>
+<<if TryFact("swapped")>>
+You: Hey, look, I changed scenes and its preserved! #lastline
 <<endif>>
+<<EndSection>>
 <<jump Summer>>
 
 ===
 
+title: FruitVerdict
+tags:
+position: -372,135
+---
+Mr. Toad will now pass judgement on your fruit choices.
+-> You: Ok.
+//<<if TryFact("started")>>
+//Mr. Toad: Hi Mom. #lastline
+//<<EndSection>>
+//<<jump Summer>>
+    <<if TryFact("blueberries")>>
+    Mr. Toad: You live. Hooray! 
+    //<<EndSection>>
+    <<jump Summer>>
+    <<else>>
+    Mr. Toad: You didn't pick shit! 
+    //<<EndSection>>
+    <<endif>>
+    <<jump Summer>>
+===
+
+    //<<elseif TryFact("cherries")>> 
+    //<<EndSection>>
+    //Mr. Toad: Could be better. #lastline
+    //<<jump Summer>>
+    //<<elseif TryFact("raspberries")>>
+   // Mr. Toad: I hate you. Die. Lolol. 
+   // <<EndSection>>
+   // <<else>>
+   // Mr. Toad: Get your facts straight! #lastline 
+   // <<EndSection>>
+   // <<endif>>
+   // <<EndSection>>
+    //<<jump Summer>>
+
+//===
+
 title: Summer
 tags:
-color: red
+color: blue
+position: 39,-254
 ---
 
 <<if TryFact("started")>>
@@ -32,21 +71,46 @@ SUMMER
 <<AddFact "started">>
 <<AddFact "AmSilly">>
 <<AddFact "hooraysies">>
-The disc brake screams as it begins to slow down in front of you. #lastline
-<<endif>>
 
+//The disc brake screams as it begins to slow down in front of you. #lastline
+<<endif>>
+Do you like waffles with blueberries, raspberries, or cherries? #lastline
+
+-> You: blueberries
+    <<sir_swapsalot "MyAwesomeFruits">>
+    <<EndSection>>
+    <<AddFact "blueberries">>
+    <<AddFact "fruitPicked">>
+    <<if TryFact("fruitPicked")>>
+    Oh, hooray, me too!
+    <<jump FruitVerdict>>
+    <<endif>>
+-> You: cherries
+    <<AddFact "cherries">>
+    Cherries are ok.
+    <<sir_swapsalot "MyAwesomeFruits">>
+    <<jump FruitVerdict>>
+    //<<EndSection>>
+-> You: raspberries
+    <<AddFact "raspberries">>
+    Mid asf taste. 
+    <<sir_swapsalot "MyAwesomeFruits">>
+    <<jump FruitVerdict>>
+    //<<EndSection>>
 //swaps scenes and tries to tell the player if they swapped scenes correctly
 -> You: I wanna change scenes, lol
     <<sir_swapsalot "TestSceneDeux">>
     <<AddFact "swapped">>
     <<camMoveWhee "funCamWhoaCool">>
-    //<<if TryFact ("swapped")>>
+    <<if TryFact ("swapped")>>
     You: Hey, look, I changed scenes!
     <<jump SwapSucceeded>>
-    //<<endif>>
-    <<AddFact "started">>
+    <<endif>>
+    //<<AddFact "started">>
 -> You: I wanna remove some stuff, lol
     <<sir_tolaspaws "TestSceneDeux">>
+    <<EndSection>>
+    <<jump Summer>>
 -> You: Patiently wait for it to stop.
     You're feeling reasonable, calm, collected - all those good things.
     Most importantly, you don't really have anything else to do but wait - at least not for now.
@@ -483,7 +547,7 @@ tags:
 
 title: Dream
 tags:
-position: 262,-168
+position: 326,-212
 ---
 <<EndSection>>
     Summer.

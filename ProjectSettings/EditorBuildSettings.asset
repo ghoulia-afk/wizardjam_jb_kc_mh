@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TestSceneDeux.unity
     guid: 21eb3c1a9fc3e8b48aef20af11fe931f
+  - enabled: 1
+    path: Assets/MyAwesomeFruits.unity
+    guid: 5f25541ee29838844a02363bc613db42
   m_configObjects: {}
