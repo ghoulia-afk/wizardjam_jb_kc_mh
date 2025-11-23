@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
 public class SwapMyScenes : MonoBehaviour
-{
+{ //A scene swapper that runs whenever sir_swapsalot is called 
     public DialogueRunner dialogueRunner;
 
     // [YarnCommand("sir_swapsalot")]

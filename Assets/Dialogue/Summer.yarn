@@ -1,7 +1,8 @@
 ﻿title: SwapSucceeded
 tags:
 ---
-
+//tries to show when a scene has been successfully swapped, if the fact "swapped"
+//is true
 <<if TryFact ("swapped")>>
 You: Hey, look, I changed scenes!
 <<EndSection>>
@@ -34,6 +35,7 @@ SUMMER
 The disc brake screams as it begins to slow down in front of you. #lastline
 <<endif>>
 
+//swaps scenes and tries to tell the player if they swapped scenes correctly
 -> You: I wanna change scenes, lol
     <<sir_swapsalot "TestSceneDeux">>
     <<AddFact "swapped">>

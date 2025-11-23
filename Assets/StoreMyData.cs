@@ -5,15 +5,11 @@ using UnityEngine;
 public class StoreMyData : MonoBehaviour
 {
 
-    // Start is called before the first frame update
+    //Intended to act as a way to stop stored values from being destroyed between loading scenes. - KGC
     public void Awake()
     {
         DontDestroyOnLoad(this);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
