@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAwesomeFruits.unity
     guid: 5f25541ee29838844a02363bc613db42
+  - enabled: 1
+    path: Assets/MyAwesomeDrinks.unity
+    guid: 12e476416a6371c4ebe790f2ddf928d0
+  - enabled: 1
+    path: Assets/MyAwesomeEggs.unity
+    guid: b75f50ed35e7f8947adae2540e2dc9dc
   m_configObjects: {}

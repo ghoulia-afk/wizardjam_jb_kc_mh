@@ -8,29 +8,58 @@ position: -305,-154
 You: Hey, look, I changed scenes and its preserved! #lastline
 <<endif>>
 <<EndSection>>
-<<jump Summer>>
+<<jump ToadBreakfast>>
 
 ===
 
-title: FruitVerdict
+title: BfastVerdict
 tags:
 position: -372,135
 ---
-Mr. Toad will now pass judgement on your fruit choices.
+Mr. Toad will now pass judgement on your breakfast choices.
 -> You: Ok.
 //<<if TryFact("started")>>
 //Mr. Toad: Hi Mom. #lastline
 //<<EndSection>>
-//<<jump Summer>>
-    <<if TryFact("blueberries")>>
-    Mr. Toad: You live. Hooray! 
-    //<<EndSection>>
-    <<jump Summer>>
-    <<else>>
-    Mr. Toad: You didn't pick shit! 
-    //<<EndSection>>
+//<<jump ToadBreakfast>>
+    <<if TryFact ("coffee")>>
+        Mr. Toad: You like coffee...
+    <<elseif TryFact ("tea")>>
+        Mr. Toad: You like tea...
+    <<elseif TryFact("juice")>>
+        Mr. Toad: You like juice...
     <<endif>>
-    <<jump Summer>>
+    <<EndSection>>
+
+    <<if TryFact ("scrambled")>>
+        Mr. Toad: ...and scrambled eggs...
+    <<elseif TryFact ("sunnyside")>>
+        Mr. Toad: ...and sunnyside up eggs...
+    <<elseif TryFact("noeggs")>>
+        Mr. Toad: ...don't eat eggs...
+    <<endif>>
+    <<EndSection>>
+
+    <<if TryFact ("blueberries")>>
+        Mr. Toad: ...and blueberries...
+    <<elseif TryFact ("raspberries")>>
+        Mr. Toad: ...and blueberries...
+    <<elseif TryFact ("cherries")>>
+        Mr. Toad: ...and blueberries...
+    <<endif>>
+    <<EndSection>>
+
+
+
+    //<<if TryFact("blueberries")>>
+   // Mr. Toad: You live. Hooray! 
+    //<<EndSection>>
+    <<jump ToadBreakfast>>
+   // <<else>>
+   // Mr. Toad: You didn't pick shit! 
+    //<<EndSection>>
+    //<<endif>>
+    <<jump ToadBreakfast>>
 ===
 
     //<<elseif TryFact("cherries")>> 
@@ -63,9 +92,9 @@ Backing down from your impatient fit is great for self-improvement purposes, but
 The disc brake screams as it begins to slow down in front of you. #lastline
 <<endif>> 
 <<else>>
-Mr. Toad: I am a cool toad, blorp.
-//<<camMoveWhee "funCamWhoaCool">>
-//<<endif>>
+Mr. Toad: I am a cool toad, blorp. I have some questions for you about breakfast.
+<<camMoveWhee "funCamWhoaCool">>
+<<endif>>
 SUMMER
 <<EndSection>>
 <<AddFact "started">>
@@ -73,31 +102,90 @@ SUMMER
 <<AddFact "hooraysies">>
 
 //The disc brake screams as it begins to slow down in front of you. #lastline
-<<endif>>
-Do you like waffles with blueberries, raspberries, or cherries? #lastline
+//<<endif>>
+
+Mr. Toad: Do you drink coffee, tea, or juice with breakfast?
+-> You: Coffee
+    <<AddFact "coffee">>
+    Mr. Toad: You’re braver than me. I can only drink that stuff when it is drowned in milk and sugar.
+    <<sir_swapsalot "MyAwesomeDrinks">>
+    <<jump EggsMcGoobert>>
+    <<EndSection>>
+-> You: Tea
+    <<AddFact "tea">>
+    Mr. Toad: Ouu, me too. I like green tea!
+    <<sir_swapsalot "MyAwesomeDrinks">>
+    <<jump EggsMcGoobert>>
+    <<EndSection>>
+-> You: Juice
+    <<AddFact "juice">>
+    Mr. Toad: Interesting. Hopefully you are not brushing your teeth and drinking orange juice! #lastline
+    <<sir_swapsalot "MyAwesomeDrinks">>
+    <<jump EggsMcGoobert>>
+    <<EndSection>>
+
+===
+
+title: EggsMcGoobert
+tags:
+---
+Mr. Toad: How do you like your eggs?
+-> You: Scrambled
+    <<AddFact "scrambled">>
+    Mr. Toad: Ah yes, with red peppers and onions is the best.
+    <<sir_swapsalot "MyAwesomeEggs">>
+    <<jump FruitPicker>>
+    <<EndSection>>
+-> You: Sunny-side up
+    <<AddFact "sunnyside">>
+    Mr. Toad: Always makes me smile when they are sunny-side up!
+    <<sir_swapsalot "MyAwesomeEggs">>
+    <<jump FruitPicker>>
+    <<EndSection>>
+-> You: I don’t eat eggs
+    <<AddFact "noeggs">>
+    Mr. Toad: Oh, you’re missing out. Unless you’re allergic.  
+    <<sir_swapsalot "MyAwesomeEggs">>
+    <<jump FruitPicker>>
+    <<EndSection>>
+
+
+===
+
+title: FruitPicker
+tags:
+
+---
+Mr. Toad: Do you like waffles with blueberries, raspberries, or cherries? #lastline
 
 -> You: blueberries
-    <<sir_swapsalot "MyAwesomeFruits">>
-    <<EndSection>>
     <<AddFact "blueberries">>
-    <<AddFact "fruitPicked">>
-    <<if TryFact("fruitPicked")>>
+    //<<AddFact "fruitPicked">>
+    //<<if TryFact("fruitPicked")>>
     Oh, hooray, me too!
-    <<jump FruitVerdict>>
-    <<endif>>
+    <<sir_swapsalot "MyAwesomeFruits">>
+    <<jump BfastVerdict>>
+    <<EndSection>>
+    //<<endif>>
 -> You: cherries
     <<AddFact "cherries">>
     Cherries are ok.
     <<sir_swapsalot "MyAwesomeFruits">>
-    <<jump FruitVerdict>>
-    //<<EndSection>>
+    <<jump BfastVerdict>>
+    <<EndSection>>
 -> You: raspberries
     <<AddFact "raspberries">>
     Mid asf taste. 
     <<sir_swapsalot "MyAwesomeFruits">>
-    <<jump FruitVerdict>>
+    <<jump BfastVerdict>>
+    <<EndSection>>
     //<<EndSection>>
 //swaps scenes and tries to tell the player if they swapped scenes correctly
+
+title: DontCall
+tags:
+---
+
 -> You: I wanna change scenes, lol
     <<sir_swapsalot "TestSceneDeux">>
     <<AddFact "swapped">>
