@@ -1,0 +1,69 @@
+﻿title: WizJam
+tags:
+---
+VIGNETTE 1 - THE END OF THE FUCKING WORLD
+Deer: You really wanted to chill out underneath the fuckass billboard, Lily?
+Lily: What? Nobody comes around here because they don’t know how to get it to be quiet. 
+(Lily turns to the billboard and gives it a punch, or, somehow, gets the billboard to stop screaming. She flops down on the grating next to Deer.)
+Lily: See? All better.
+Deer: Yeah, but it’s still gonna give anybody who drives by a conniption. 
+Lily: Don’t think that’ll be happening much longer. 
+Deer: Ha. Yeah. I would laugh about it if we didn’t have to live to deal with the consequences. 
+<<jump v1_quesChoice1>>>>
+
+===
+
+title: v1_quesChoice1
+tags:
+---
+//here have a fact become true so that the player doesn't see this again?
+
+Lily: You mean the…
+-> government collapsing?
+    <<AddFact "govtcollapse">>
+    Deer: Eh. That’s happened a zillion times before now. It’ll probably happen again. At least until we figure out fully automated luxury gay space communism.
+    <<if TryFact ("supplychains") and TryFact ("earthstruggle")>>
+            <<jump v1_dialogue2>>
+        <<else>>
+            <<jump v1_quesChoice1>>
+        <<endif>>
+    //<<if TryFact("govtcollapse")>>
+    //<<if TryFact ("supplychains")>>
+    //<<if TryFact ("earthstruggle")>>
+   // <<jump v1_dialogue2>>
+    //<<endif>>
+    //<<endif>>
+    //<<endif>>
+    //<<else>>
+    //<<jump v1_quesChoice1>>
+   // <<endif>>
+//<<endif>>
+-> supply chains getting interrupted?
+    <<AddFact "supplychains">>
+    Deer: Eh. That’s happened a zillion times before now. People just gotta learn to live without their luxuries.
+    Lily: Oh, yeah, my estradiol, how luxurious. 
+    Deer: Ah. My bad. 
+    Lily: (a little giggle), it’s okay. Lots of people forget.
+        <<if TryFact ("govtcollapse") and TryFact("earthstruggle")>>
+            <<jump v1_dialogue2>>
+        <<else>>
+            <<jump v1_quesChoice1>>
+        <<endif>>
+-> earth struggling to breathe?
+    <<AddFact "earthstruggle">>
+    Deer: I mean, yeah. But we’ve been dealing with that since we were, what, five? Maybe now it’ll improve.
+    <<if TryFact ("govtcollapse") and TryFact("supplychains")>>
+            <<jump v1_dialogue2>>
+        <<else>>
+            <<jump v1_quesChoice1>>
+        <<endif>>
+
+===
+
+title: v1_dialogue2
+tags:
+---
+
+Narrator: And then they all died forever. Yay!
+
+===

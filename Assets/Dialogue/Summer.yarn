@@ -117,7 +117,7 @@ position: 39,-254
 <<if TryFact("started")>>
 <<if TryFact("backOffHitDisk")>>
 <<EndSection>>
-Backing down from your impatient fit is great for self-improvement purposes, but unsurprisingly useless at making the brake slow down any faster. #lastline
+//Backing down from your impatient fit is great for self-improvement purposes, but unsurprisingly useless at making the brake slow down any faster. #lastline
 <<else>>
 The disc brake screams as it begins to slow down in front of you. #lastline
 <<endif>> 
