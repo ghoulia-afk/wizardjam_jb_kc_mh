@@ -14,14 +14,14 @@ You: Hey, look, I changed scenes and its preserved! #lastline
 
 title: BfastVerdict
 tags:
-position: -372,135
+position: -576,88
 ---
 Mr. Toad will now pass judgement on your breakfast choices.
 -> You: Ok.
-//<<if TryFact("started")>>
-//Mr. Toad: Hi Mom. #lastline
-//<<EndSection>>
-//<<jump ToadBreakfast>>
+    //<<if TryFact("started")>>
+    //Mr. Toad: Hi Mom. #lastline
+    //<<EndSection>>
+    //<<jump ToadBreakfast>>
     <<if TryFact ("coffee")>>
         Mr. Toad: You like coffee...
     <<elseif TryFact ("tea")>>
@@ -54,13 +54,38 @@ Mr. Toad will now pass judgement on your breakfast choices.
     //<<if TryFact("blueberries")>>
    // Mr. Toad: You live. Hooray! 
     //<<EndSection>>
-    <<jump ToadBreakfast>>
+   // <<jump Summer>>
    // <<else>>
    // Mr. Toad: You didn't pick shit! 
     //<<EndSection>>
     //<<endif>>
-    <<jump ToadBreakfast>>
-===
+   // <<jump Summer>>
+   //<<EndSection>>
+    
+    //To bring it all together, either:
+    //1. Have a number be added to based on player choices or set a variable for each choice to be equal to a number EX:
+    // set $drink to 1
+    //set $eggs to 2
+    // set $fruit to 3
+    //if $drink = 1
+    //2. Make a fact or facts that are like "midchoice", "goodchoice", and "badchoice"
+    //3. Have "and" statements
+    
+    //<<if TryFact ("coffee") and TryFact ("scrambled") and TryFact ("")>>
+    
+
+
+
+    //<<if TryFact("blueberries")>>
+   // Mr. Toad: You live. Hooray! 
+    //<<EndSection>>
+    //<<jump ToadBreakfast>>
+   // <<else>>
+   // Mr. Toad: You didn't pick shit! 
+    //<<EndSection>>
+    //<<endif>>
+   // <<jump ToadBreakfast>>
+
 
     //<<elseif TryFact("cherries")>> 
     //<<EndSection>>
@@ -74,9 +99,14 @@ Mr. Toad will now pass judgement on your breakfast choices.
    // <<EndSection>>
    // <<endif>>
    // <<EndSection>>
-    //<<jump Summer>>
 
-//===
+
+
+===
+
+
+
+    
 
 title: Summer
 tags:
@@ -164,9 +194,10 @@ Mr. Toad: Do you like waffles with blueberries, raspberries, or cherries? #lastl
     //<<if TryFact("fruitPicked")>>
     Oh, hooray, me too!
     <<sir_swapsalot "MyAwesomeFruits">>
-    <<jump BfastVerdict>>
+    //<<if TryFact ("coffee")>>
+       // <<if TryFact ("scrambled")>>
+            // jump to coffee/scrambled/blueberries <<jump BfastVerdict>>
     <<EndSection>>
-    //<<endif>>
 -> You: cherries
     <<AddFact "cherries">>
     Cherries are ok.
