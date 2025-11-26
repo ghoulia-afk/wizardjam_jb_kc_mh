@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e81cc39e2be3372408e3138e78c16915, type: 3}
-  m_Name: Deer
+  m_Script: {fileID: 11500000, guid: 5ac628d7cdd3af7419e89706a40cb3c9, type: 3}
+  m_Name: badgod
   m_EditorClassIdentifier: 
-  displayName: 1
-  portrait: {fileID: 0}
-  colour: {r: 1, g: 0.47457013, b: 0, a: 0}
-  colorDisplayType: 0
+  internalName: badgod

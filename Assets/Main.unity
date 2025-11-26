@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9d912f17a1783a4ba9e8164df6bbc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnFile: {fileID: -8253061345870894857, guid: e58f1bd7faea567438bfe5dbe0c74b42, type: 3}
+  yarnFile: {fileID: -8253061345870894857, guid: 40959db64cbac494b979ea52782baa88, type: 3}
   startDialogueEvent: {fileID: 11400000, guid: b127a294bcd3e304fa161c0f735911d8, type: 2}
 --- !u!4 &1497470610
 Transform:
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnProject: {fileID: 7545569452688597077, guid: f39d7ce959d9d284a9c928c733efbd9b, type: 3}
+  yarnProject: {fileID: 7545569452688597077, guid: 8b525c1a5681bab4fa1e2705cd4bd783, type: 3}
   _variableStorage: {fileID: 503648129}
   dialogueViews:
   - {fileID: 3595569036764030403}

@@ -1,0 +1,181 @@
+﻿title: WizJamFinal
+tags:
+position: -371,-363
+color: red
+---
+GAME TITLE
+<<jump LilyCrashOut>>
+===
+
+title: LilyCrashOut
+tags: 
+position: -256,-175
+---
+Lily: Aw fuck fuck fuck fuck fuck
+Louise: I am talking now hello
+Louise: What are you going to do now?
+
+Lily: I think I'll...
+-> Be a good god.
+    <<AddFact "goodgod">>
+    Lily: As good a god as I can be, anyway.
+    <<EndSection>>
+    <<jump Vignette2>>
+-> Be a bad god.
+    <<AddFact "badgod">>
+    Lily: I want to be a terrible person!
+    Louise: Ok lol this sucks but okay
+    <<EndSection>>
+    <<jump Vignette2>>
+===
+
+title: Vignette2
+tags:
+position: 140,-322
+---
+Lily: Oh my god years have passed, lol! 
+Louise: I know, right? 
+Louise: So, do you expect to be worshiped?
+Lily:
+-> Yes.
+    <<AddFact "expectworship">>
+    Louise: Huh. Interesting.
+    <<EndSection>>
+    <<jump Vignette3>>
+-> No.
+    <<AddFact "noexpectworship">>
+    Louise: Huh. Interesting.
+    <<EndSection>>
+    <<jump Vignette3>>
+
+
+===
+
+title: Vignette3
+tags:
+position: 254,-138
+---
+Louise: You have a cult now.
+Lily: Yeah.
+Louise: How's that worship treating you?
+Lily:
+-> Great, actually.
+    <<AddFact "likeworship">>
+    Louise: Huh. Interesting.
+    <<EndSection>>
+    <<jump EpilogueChecker>>
+-> Sucks. I hate it.
+    <<AddFact "dislikeworship">>
+    Louise: Huh. Interesting.
+    <<EndSection>>
+    <<jump EpilogueChecker>>
+
+===
+
+title: EpilogueChecker
+tags:
+position: 142,178
+---
+<<if TryFact ("goodgod")>>
+    <<if TryFact ("expectworship")>>
+        <<if TryFact ("likeworship")>>
+            <<jump Ending1>>
+        <<elseif TryFact ("dislikeworship")>>
+            <<jump Ending2>>
+        <<endif>>
+    <<elseif TryFact ("noexpectworship")>>
+        <<if TryFact ("likeworship")>>
+            <<jump Ending3>>
+        <<elseif TryFact ("dislikeworship")>>
+            <<jump Ending4>>
+        <<endif>>
+    <<endif>>
+<<elseif TryFact ("badgod")>>
+    <<if TryFact ("expectworship")>>
+        <<if TryFact ("likeworship")>>
+            <<jump Ending5>>
+        <<elseif TryFact ("dislikeworship")>>
+            <<jump Ending6>>
+        <<endif>>
+    <<elseif TryFact ("noexpectworship")>>
+        <<if TryFact ("likeworship")>>
+            <<jump Ending7>>
+        <<elseif TryFact ("dislikeworship")>>
+            <<jump Ending8>>
+        <<endif>>
+    <<endif>>
+<<endif>>
+            
+//<<endif>>
+//<<elseif TryFact ("badgod")>>
+  //  <<if TryFact ("expectworship")>>
+   //     <<if TryFact ("likeworship")>>
+     //       <<jump Ending5>>
+     //       <<endif>>
+      //  <<elseif TryFact ("dislikeworship")>>
+      //      <<jump Ending6>>
+      //      <<endif>>
+   // <<elseif TryFact ("noexpectworship")>>
+    //    <<if TryFact ("likeworship")>>
+    //        <<jump Ending7>>
+     //       <<endif>>
+     //   <<elseif TryFact ("dislikeworship")>>
+     //       <<jump Ending8>>
+     //       <<endif>>
+===
+
+title: Ending1
+tags:
+position: -244,347
+---
+Louise: This is ending 1.
+===
+
+title: Ending2
+tags:
+position: -24,375
+---
+Louise: This is ending 2.
+===
+
+title: Ending3
+tags:
+position: 248,415
+---
+Louise: This is ending 3.
+===
+
+title: Ending4
+tags:
+position: 132,557
+---
+Louise: This is ending 4.
+===
+
+
+title: Ending5
+tags:
+position: 598,-8
+---
+Louise: This is ending 5.
+===
+title: Ending6
+tags:
+position: 482,416
+---
+Louise: This is ending 6. 
+===
+title: Ending7
+tags:
+position: 425,681
+---
+Louise: This is ending 7.
+===
+title: Ending8
+tags:
+position: -76,704
+---
+Louise: This is ending 8.
+===
+
+
