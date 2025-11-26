@@ -74,7 +74,7 @@ Lily:
 
 title: EpilogueChecker
 tags:
-position: 142,178
+position: 173,116
 ---
 <<if TryFact ("goodgod")>>
     <<if TryFact ("expectworship")>>
