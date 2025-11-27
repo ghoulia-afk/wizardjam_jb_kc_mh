@@ -4,71 +4,87 @@ position: -371,-363
 color: red
 ---
 GAME TITLE
-<<jump LilyCrashOut>>
+<<jump Vignette1>>
 ===
 
-title: LilyCrashOut
-tags: 
-position: -256,-175
+//Louise and Lily are sitting on the edge of the billboard’s catwalk, watching the sun set. 
+title: Vignette1
+tags:
 ---
-Lily: Aw fuck fuck fuck fuck fuck
-Louise: I am talking now hello
-Louise: What are you going to do now?
-
-Lily: I think I'll...
--> Be a good god.
-    <<AddFact "goodgod">>
-    Lily: As good a god as I can be, anyway.
-    <<EndSection>>
+Lily: So, that’s most of what you missed in the scene this past summer, while you’ve been away.
+Louise: Jeez. Stabbing Caesar Salad really broke up? 
+Lily: Sorta. Everyone knows they’re probably gonna get back together–
+Louise: That’s what everyone’s said about ‘em since forever, Lily. 
+Lily: Well, damn, Weezy, sorry for being a total dweeb. 
+Louise: Aw, dude, I didn’t mean that to come out that way. Just…
+Louise: Guess when you’re submerged in it, it’s hard to see the water for the reef. 
+Lily: But, that out of the way, is there anything else you wanna know about? 
+Louise: Lemme take a look at the list you made me. Hmmm…
+//(Lily takes a look at the list herself.)
+Louise: Might as well just rattle ‘em off, goin’ down it. 
+Louise: How ‘bout…
+//(Potentially have it so that the questions are served in a random order here, as a stretch goal)
+Louise: My family?
+    -> Lily: Fuckin’ terrible. They’re distraught without you.
+	//(more response here)
+        <<AddFact familyTruth>>
+    -> Lily: (Lie) Just fine. They miss you, obviously, but they’re not really letting it keep them down.
+        <<AddFact familyLie>>
+    //(more response here)
+Louise: The world?
+-> Lily: Same as it ever was
+	Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
+	Louise: You’re voting, right?
+	Lily: Of course I am. Gonna volunteer for the next local election come fall. 
+-> Lily: Burning down the house
+	Lily: Everything’s gone down the tubes.
+	Louise: Bullshit. Your phone still works and you don’t smell like BO. 
+Louise: You? 
+	-> Lily: (Lie) Doing great.
+		//(more response here)	
+		<<AddFact lilydoinglie>>
+	-> Lily: (Everything sucks and I miss you and I don’t want to leave this town and I need you to come back but I know you can’t)
+        Lily: Everything is terrible.
+		//(more response here)
+		<<AddFact lilydoingtruth>>
+Louise: When you were showing me that video of SCS’s last show earlier, I saw you had a little noti pop up for something. A memorial show at the Acid Wash.
+Lily: Yeah. Benefiting the Gauthier Family. 
+Louise: Saw the Chichis on there.
+Lily: Ha, yeah. All alive and kicking.
+Louise: Christ. Wonder if Ines still got that terrible pair of crust pants. 
+Lily: I don’t know about that, but I do know they got a whole song dedicated to you. La Crusty Cumbia del Weezy.
+//(There is quiet for a moment. (florid description of crickets and late spring/early summer weather))
+Lily: They wanna knock this billboard down, you know.
+//(more banter about the billboard, ask whether or not Lily thinks the billboard should get knocked down)
+Louise: I have another question for you, Lily. 
+Lily: We did the whole list, though, didn’t we?
+Louise: That was stuff you thought I’d wanna know about. And I know how thoughtful you are, but, I want to know, no lists, just from me to you.
+Louise: You know it wasn’t your fault, right?
+-> Lily: Yes
+    <<AddFact lilynotfault>>
     <<jump Vignette2>>
--> Be a bad god.
-    <<AddFact "badgod">>
-    Lily: I want to be a terrible person!
-    Louise: Ok lol this sucks but okay
-    <<EndSection>>
+-> Lily: No
+    <<AddFact lilyatfault>>
     <<jump Vignette2>>
+-> Lily: (Do not respond)
+    <<AddFact lilyfaultsilence>>
+    <<jump Vignette2>>
+//(We see Louise awash in ghostly blue light, and fade into the next Vignette.)
 ===
+
+
 
 title: Vignette2
 tags:
 position: 140,-322
 ---
-Lily: Oh my god years have passed, lol! 
-Louise: I know, right? 
-Louise: So, do you expect to be worshiped?
-Lily:
--> Yes.
-    <<AddFact "expectworship">>
-    Louise: Huh. Interesting.
-    <<EndSection>>
-    <<jump Vignette3>>
--> No.
-    <<AddFact "noexpectworship">>
-    Louise: Huh. Interesting.
-    <<EndSection>>
-    <<jump Vignette3>>
-
-
+Lily: Look at me I can talk 
 ===
 
 title: Vignette3
 tags:
 position: 254,-138
 ---
-Louise: You have a cult now.
-Lily: Yeah.
-Louise: How's that worship treating you?
-Lily:
--> Great, actually.
-    <<AddFact "likeworship">>
-    Louise: Huh. Interesting.
-    <<EndSection>>
-    <<jump EpilogueChecker>>
--> Sucks. I hate it.
-    <<AddFact "dislikeworship">>
-    Louise: Huh. Interesting.
-    <<EndSection>>
-    <<jump EpilogueChecker>>
 
 ===
 
