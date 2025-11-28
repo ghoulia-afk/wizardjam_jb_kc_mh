@@ -5,10 +5,8 @@ color: red
 ---
 
 GAME TITLE
-<<declare $togetherending = 0 as number>>
-<<set $togetherending += 1>>
 //Show me {$togetherending}.
-//<<jump Vignette1>>
+<<jump Vignette1>>
 
 
 ===
@@ -17,10 +15,10 @@ GAME TITLE
 title: Vignette1
 tags:
 ---
-//<<declare $togetherending = 0 as number>>
+//<<declare $togetherending = 0>>
 //<<declare $aloneending = 0 as number>>
 //<<set $aloneending = $aloneending + 1>>
-//<<set $togetherending += 1>>
+//<<set $togetherending = 1>>
 //Show me {$togetherending}.
 
 Lily: So, that’s most of what you missed in the scene this past summer, while you’ve been away.
@@ -41,8 +39,10 @@ Louise: How ‘bout…
 Louise: My family?
     -> Lily: Fuckin’ terrible. They’re distraught without you.
         <<AddFact familyTruth>>
+        //<<AddFact TogetherEndingIs1>>
     -> Lily: (Lie) Just fine. They miss you, obviously, but they’re not really letting it keep them down.
         <<AddFact familyLie>>
+        //<<AddFact AloneEndingIs1>>
         //(more response here)
 Louise: The world?
 -> Lily: Same as it ever was
@@ -56,6 +56,9 @@ Louise: You?
 	-> Lily: (Lie) Doing great.
 		//(more response here)	
 		<<AddFact lilydoinglie>>
+        //<<if TryFact ("AloneEndingIs1")>>
+        //    <<AddFact AloneEndingIs2>>
+        //<<endif>>
 	-> Lily: (Everything sucks and I miss you and I don’t want to leave this town and I need you to come back but I know you can’t)
         Lily: Everything is terrible.
 		//(more response here)
@@ -172,8 +175,8 @@ tags:
 position: 173,116
 ---
 <<if TryFact ("familyTruth")>>
-    <<if TryFact ("expectworship")>>
-        <<if TryFact ("likeworship")>>
+    <<if TryFact ("lilydoingtruth")>>
+        <<if TryFact ("didpunkshow")>>
             <<jump Ending1>>
         <<elseif TryFact ("dislikeworship")>>
             <<jump Ending2>>
