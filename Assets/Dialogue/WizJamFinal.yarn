@@ -3,14 +3,26 @@ tags:
 position: -371,-363
 color: red
 ---
+
 GAME TITLE
-<<jump Vignette1>>
+<<declare $togetherending = 0 as number>>
+<<set $togetherending += 1>>
+//Show me {$togetherending}.
+//<<jump Vignette1>>
+
+
 ===
 
 //Louise and Lily are sitting on the edge of the billboard’s catwalk, watching the sun set. 
 title: Vignette1
 tags:
 ---
+//<<declare $togetherending = 0 as number>>
+//<<declare $aloneending = 0 as number>>
+//<<set $aloneending = $aloneending + 1>>
+//<<set $togetherending += 1>>
+//Show me {$togetherending}.
+
 Lily: So, that’s most of what you missed in the scene this past summer, while you’ve been away.
 Louise: Jeez. Stabbing Caesar Salad really broke up? 
 Lily: Sorta. Everyone knows they’re probably gonna get back together–
@@ -24,13 +36,14 @@ Louise: Lemme take a look at the list you made me. Hmmm…
 Louise: Might as well just rattle ‘em off, goin’ down it. 
 Louise: How ‘bout…
 //(Potentially have it so that the questions are served in a random order here, as a stretch goal)
+        //TogetherEnding = $togetherending
+        //(more response here) 
 Louise: My family?
     -> Lily: Fuckin’ terrible. They’re distraught without you.
-	//(more response here)
         <<AddFact familyTruth>>
     -> Lily: (Lie) Just fine. They miss you, obviously, but they’re not really letting it keep them down.
         <<AddFact familyLie>>
-    //(more response here)
+        //(more response here)
 Louise: The world?
 -> Lily: Same as it ever was
 	Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
@@ -53,6 +66,12 @@ Louise: Saw the Chichis on there.
 Lily: Ha, yeah. All alive and kicking.
 Louise: Christ. Wonder if Ines still got that terrible pair of crust pants. 
 Lily: I don’t know about that, but I do know they got a whole song dedicated to you. La Crusty Cumbia del Weezy.
+Louise: You’re going, right?
+Lily:
+    -> Yes
+        <<AddFact didPunkShow>>
+    -> No
+        <<AddFact noPunkShow>>
 //(There is quiet for a moment. (florid description of crickets and late spring/early summer weather))
 Lily: They wanna knock this billboard down, you know.
 //(more banter about the billboard, ask whether or not Lily thinks the billboard should get knocked down)
@@ -78,13 +97,73 @@ title: Vignette2
 tags:
 position: 140,-322
 ---
-Lily: Look at me I can talk 
+Louise: Alright, something smells delicious. What do you have?
+Lily: Oh, just one of your old favorites:
+-> Lily: Spinach puffs. //(either add fact or don’t)
+-> Lily: Food B
+-> Lily: Food C
+//Louise: <<Food>>? Dude, you hate those! What’s gotten into you?
+Lily: I figured, it’s been five years since…you know.
+Louise: It’s ok, Lily. You’re allowed to say the d-word. And the e-word, for that matter. 
+Lily: I wanted to do something nice for you, is the point. 
+Louise: Appreciate it. Considering I can’t exactly dip out of here whenever I want.
+Lily: How do you stand it?
+Louise: Stand what?
+//(decide whether or not to have this be a freakin uh. Choice of questions or a more linear conversation)
+Lily: 
+-> Lily:  Being stuck here, alone.
+	How nobody comes around the screaming billboard anymore
+    What Louise misses
+    //here is where Louise asks about her baby sibling and how 
+    //Here is where Louise elaborates on her baby sibling and asks how they’re doing. 
+    //If Lily did go to the punk show, they’re ok; 
+    //if not, the sibling is doing badly. 
+-> Lily: The noise.
+	How the wailing billboard sounds a lot like a baby crying
+        Reincarnation
+-> Lily: The feeling.
+	What it feels like to be electrocuted to death
+Louise: Lily,would we still be friends if I hadn’t died?
+Lily: 
+-> Lily: Yes 
+    <<AddFact friendsnodeathyes>>
+    //ending vignette stuff here
+    //load new scene
+    <<EndSection>>
+    <<jump Vignette3>>
+-> Lily: No 
+    <<AddFact friendsnodeathno>>
+    //ending vignette stuff here
+    //load new scene
+    <<EndSection>>
+    <<jump Vignette3>>
+-> Lily: Do not respond
+    <<AddFact friendsnodeathsilence>>
+    //ending vignette stuff here
+    //load new scene
+    <<EndSection>>
+    <<jump Vignette3>>
+
 ===
 
 title: Vignette3
 tags:
 position: 254,-138
 ---
+Louise: You know, what surprises me the most about this is that this stupid fucking billboard still has juice, after all this time.
+//(more dialogue here)
+Louise: You asked me a…a while ago what it felt like to get electrocuted. 
+Louise: And I think if you’re going to move on, at all, you should know. 
+Lily: (all I saw was you convulsing)
+Louise: (reassuring Lily that it isn’t her fault. Louise was the one who decided to bring them out there in the first place)
+Louise: Do you ever plan on getting out of here, Lily?
+Lily:
+    -> Yes
+        <<AddFact lilyleaving>>
+    -> No
+        <<AddFact lilystaying>>
+    -> I don’t know
+        <<AddFact lilylocationindecision>>
 
 ===
 
@@ -92,7 +171,7 @@ title: EpilogueChecker
 tags:
 position: 173,116
 ---
-<<if TryFact ("goodgod")>>
+<<if TryFact ("familyTruth")>>
     <<if TryFact ("expectworship")>>
         <<if TryFact ("likeworship")>>
             <<jump Ending1>>
