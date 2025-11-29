@@ -6,8 +6,8 @@ color: red
 
 GAME TITLE
 //<<PlayAudioClip "babywhaa">>
-<<sir_swapsalot ("Scenes/Map_2")>>
-<<sir_tolaspaws ("Scenes/Map_1")>>
+<<sir_swapsalot Scenes/Map_2>>
+<<sir_tolaspaws Scenes/Map_1>>
 <<jump Vignette2>>
 ===
 
@@ -148,7 +148,7 @@ Louise: Hardee har.
 Louise: But you know what? Good. I never liked this thing very much. 
 Louise: Especially not now.
 Louise: Can't be a shining monument to the folly of capitalism, since it's tied to me. Can't make a statement besides a scream, since that's what it was programmed to do. 
-Louise: Kind of like a baby.
+Lily: Kind of like a baby.
 Louise: Except this thing will never be able to grow up.
 Lily: I can't help but feel bad for it, any time I see it. For the same reasons you hate it, actually.
 Lily: It's not like it asked to exist. 
@@ -268,6 +268,7 @@ tags:
     Lily: Surely you must miss some normalcy.
     Louise: Oh, do they tell ghost stories about me, now?
     Louise: Is that why they're not fucking with the trees?
+    <<wait  .5>>
     Lily: ...maybe.
     Louise: Oh, Lils, that's kickass.
     Louise: I've always wanted to be ooky-spooky.
@@ -293,10 +294,16 @@ tags:
     Lily: The screaming, I mean.
     Louise: I mean, it's not like it's stopped wailing. 
     Louise: Or like I feel any less terrible.
-    Louise: 
-	How the wailing billboard sounds a lot like a baby crying
-        Reincarnation
-        //need to make sure that the endings with the smashing and the baby crying make sense
+    Louise: After a while, I guess I've just...tuned it out.
+    Louise: Otherwise I think I'd get kinda bitter about it. 
+    Lily: Bitter?
+    Louise: Yeah. You mentioned that it's like a baby. All it can do to talk to the world is cry. Wail. Bawl. Whatever. Insert loud, obnoxious, gutwrenching verb here. 
+    Louise: If I focus too long on it, I get a little jealous.
+    Lily: *Jealous*?
+    Louise: Yes, Lily. Jealous.
+    Louise: Of all the babies getting delivered around the world, second by second.
+    Louise: They have everything ahead of them, and---
+    Lily: Weez. It's okay. I understand, now. 
      <<if TryFact ("stuckalone")>> and <<if TryFact ("standfeeling")>>
         <<jump Vignette2End>>
     <<else>>
@@ -307,9 +314,13 @@ tags:
 title: StandFeeling
 tags:
 ---
-    Lily: Like...what's it like?
+    Lily: Like...what's it like? What do you feel?
     Louise: Haven't you asked me this question before?
-    Lily: No. I wasn't 
+    Lily: No. I didn't want to pry. Not if it was going to make you go through it again.
+    Louise: C'mon now, I'm made of sterner stuff than that, Lily. 
+    Louise: But, hmmm...
+    Louise: All I can really feel is what I was feeling in the last 10 minutes, or so. 
+    Louise: 
 	What it feels like to be electrocuted to death
      <<if TryFact ("stuckalone")>> and <<if TryFact ("standnoise")>>
         <<jump Vignette2End>>
@@ -353,7 +364,7 @@ Louise: Hell. You been rubbing off on me, because these days, I see things your 
 Louise: Like a kid without a bottle.
 Lily: Or Frankenstein's monster. 
 Louise: Perfect example of how unfeeling capitalists make for bad parents.
-Lily: Well, I don't know if Frankenstein was an unfeeling capitalist, but that's besides the point. 
+Lily: Well, I don't know if Victor Frankenstein was an unfeeling capitalist, but that's besides the point. 
 Lily: It's not like you asked to be here forever either, Weezy. What happened to you wasn't your fault. 
 Lily: You wanted to make a statement. There's nothing wrong with speaking up. You taught me that.
 Louise: Wasn't it, though? I was the one who came up with the idea in the first place. 
@@ -368,7 +379,7 @@ Louise: And the worst part is it's one of the big things. Not death by a thousan
 Lily: Then let's feed it so it goes away. 
 Louise: Lily...fuck.
 Lily: It's okay. Take your time.
-<<wait 5>>
+<<wait 3>>
 //Louise and Lily sit in silence for a while.
 Louise: Lily, would we still be friends if I hadn’t died?
 Lily: 
@@ -409,6 +420,7 @@ Louise: You know, what surprises me the most about this is that this stupid fuck
 //(more dialogue here)
 Louise: You asked me a…a while ago what it felt like to get electrocuted. 
 Louise: And I think if you’re going to move on, at all, you should know. 
+//Louise talks about how its the worst pain shes ever felt, but she got to see the stars again, and she'd go over it all over again if it meant Lily could move on
 Lily: (all I saw was you convulsing)
 Louise: (reassuring Lily that it isn’t her fault. Louise was the one who decided to bring them out there in the first place)
 Louise: Do you ever plan on getting out of here, Lily?
