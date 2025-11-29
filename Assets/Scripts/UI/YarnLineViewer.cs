@@ -91,7 +91,7 @@ public class YarnLineViewer : DialogueViewBase
         optionGreyout.AddLine(dialogueLine.Text.Text);
 
         // Line break between dialogue
-        text.text += "\n\n ";
+       text.text = "";
 
         // Actual text
         string characterName;
