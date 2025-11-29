@@ -33,8 +33,8 @@ public class BlackScreen : MonoBehaviour
         blackScreen.enabled = true;
         text.enabled = true;
 
-        blackScreen.color = new Color(0f, 0f, 0f, 1f);
-        FadeFromBlack();
+   //     blackScreen.color = new Color(0f, 0f, 0f, 1f);
+    //    FadeFromBlack();
     }
 
     // Called on new day

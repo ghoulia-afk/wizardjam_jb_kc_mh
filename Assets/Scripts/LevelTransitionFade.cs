@@ -24,9 +24,10 @@ public IEnumerator FadeAnim(){
         elapsed += Time.deltaTime;
         float progress = elapsed / duration;
 
-        canvasGroup.alpha = progress;
+        canvasGroup.alpha = animationCurve.Evaluate(progress) ;
         yield return null;
       }
+       canvasGroup.alpha = 0f;
 }
 
 

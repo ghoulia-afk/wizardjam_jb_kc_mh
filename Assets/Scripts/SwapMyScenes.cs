@@ -22,7 +22,7 @@ public void Start(){
 
     public IEnumerator SetAsActiveScene(string sceneName) //waits a half second and loads scene
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.25f);
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName)); //tells unity this scene is what we use for rendering
     }
 
@@ -48,7 +48,7 @@ public void Start(){
 
     public IEnumerator LoadSceneTime(string sceneName){
     fade.Fade();
-    yield return new WaitForSeconds(0.2f);
+    yield return new WaitForSeconds(0.3f);
     SceneManager.LoadScene (sceneName, LoadSceneMode.Additive);
     StartCoroutine(SetAsActiveScene(sceneName));
     
@@ -57,7 +57,7 @@ public void Start(){
 
     public IEnumerator UnloadSceneTime(string sceneName){
     fade.Fade();
-    yield return new WaitForSeconds(0.2f);
+    yield return new WaitForSeconds(0.3f);
     SceneManager.UnloadSceneAsync(sceneName); //may need to change to UnloadScene if there are issues - KGC
     Debug.Log("Unloaded scene" + sceneName);
     }
