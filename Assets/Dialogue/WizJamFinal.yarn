@@ -6,8 +6,8 @@ color: red
 
 GAME TITLE
 //<<PlayAudioClip "babywhaa">>
-<<sir_swapsalot Scenes/Map_2>>
-<<sir_tolaspaws Scenes/Map_1>>
+<<sir_swapsalot Scenes/Map_1>>
+//<<sir_tolaspaws Scenes/Map_1>>
 <<jump Vignette2>>
 ===
 
@@ -268,6 +268,7 @@ tags:
     Lily: Surely you must miss some normalcy.
     Louise: Oh, do they tell ghost stories about me, now?
     Louise: Is that why they're not fucking with the trees?
+    Louise: Lettin' nature take its course on the powerlines?
     <<wait  .5>>
     Lily: ...maybe.
     Louise: Oh, Lils, that's kickass.
@@ -302,8 +303,15 @@ tags:
     Lily: *Jealous*?
     Louise: Yes, Lily. Jealous.
     Louise: Of all the babies getting delivered around the world, second by second.
+    Louise: Lung by lung. Heart by heart. Wail by wail. 
     Louise: They have everything ahead of them, and---
     Lily: Weez. It's okay. I understand, now. 
+    <<wait  2.5>>
+    Lily: Maybe you'll reincarnate. Come back as one of the crying babies.
+    Louise: Hah. So you want me to get stuck back in the cycle of Samsara, huh?
+    Lily: Beats dying. 
+    Louise: Now you're getting it. I've taught you well, young padawan. 
+    Lily: Fucker. 
      <<if TryFact ("stuckalone")>> and <<if TryFact ("standfeeling")>>
         <<jump Vignette2End>>
     <<else>>
@@ -320,12 +328,20 @@ tags:
     Louise: C'mon now, I'm made of sterner stuff than that, Lily. 
     Louise: But, hmmm...
     Louise: All I can really feel is what I was feeling in the last 10 minutes, or so. 
-    Louise: 
-	What it feels like to be electrocuted to death
+    Louise: Excitement. Getting hyped to screw up this billboard. 
+    Louise: Anxiety, about getting you caught. Though there's always that. One thing they don't tell you about being dead is you can still have anxiety attacks.
+    Louise: Pride--which goeths before the fall, and shit--when I finally got up here, and started showing you how safe it was.
+    Louise: And then endorphins. 
+    Lily: There's no pain?
+    Louise: You really want me to tell you about that?
+    Lily: No, but--
+    Louise: Then we're square. 
      <<if TryFact ("stuckalone")>> and <<if TryFact ("standnoise")>>
+        <<wait 2.5>>
         <<jump Vignette2End>>
     <<else>>
-    <<jump HowStandChoices>>
+        <<wait2.5>>
+        <<jump HowStandChoices>>
     <<endif>>
 ===
 title: Vignette2End
@@ -333,23 +349,92 @@ tags:
 ---
 Louise: I can tell you exactly who I miss, now I'm thinking.
 Lily: Who is that?
-Louise: My baby sibling. How are they?
+Louise: D'artagnan. My Arty. How are they?
 <<if TryFact ("noPunkShow")>>
     Lily:
         -> (Lie) They're doing really well. Never better, actually.
-            Louise: You don't smile like that when you're telling me the truth
             <<AddAloneEndingCounter>>
+            <<AddFact liedAboutArtAlive>>
+            Louise: You don't smile like that when you're telling me the truth, Lils.
+            Louise: Tell me the truth. 
+            Lily: That is the truth. 
+            Louise: The fuck it is, Lily. You didn't go to that show that night, did you?
+            <<wait  3>>
+            Louise: So they're dead? 
+            <<wait 1>>
+            Louise: Lily.
+            <<wait  1>>
+            Louise: Lily!
+            Lily: Yes! They're dead, alright? I just thought--
+            Louise: No. You didn't think.
+            <<wait  3>>
+            Louise: What happened to D'Artagnan, Lily? 
+            Lily: They left, once they saw I wasn't there. Julie and Guillaume tried to get them to stay, but they just wanted to go home, be by themselves.
+            Lily: Luckily, though, your Mama and Mémère were home, so they were going to meet Arty at the station by your family's apartment.
+            Lily: And Arty decided to jaywalk. Not a car in sight.
+            <<wait  1>>
+            Lily: Until there was a car. 
+            <<wait  1>>
+            Lily: Going really, really, really fast.
+            <<wait  3>>
+            Louise: Jesus Christ.
+            <<wait  1>>
+            Louise: Well. Thank you for being honest with me, at least.
         -> They...they didn't make it, Louise.
             <<AddTogetherEndingCounter>>
+            <<AddFact truthAboutArtDeath>>
+            <<wait 1>>
+            Louise: You didn't go to the show that night, did you?
+            Lily: I didn't.
+            <<wait  1>>
+            Louise: What happened to D'Artagnan, Lily? 
+            Lily: They left, once they saw I wasn't there. Julie and Guillaume tried to get them to stay, but they just wanted to go home, be by themselves.
+            Lily: Luckily, though, your Mama and Mémère were home, so they were going to meet Arty at the station by your family's apartment.
+            Lily: And Arty decided to jaywalk. Not a car in sight.
+            <<wait  1>>
+            Lily: Until there was a car. 
+            <<wait  1>>
+            Lily: Going really, really, really fast.
+            <<wait  3>>
+            Louise: Jesus Christ.
+
 <<elseif TryFact ("didPunkShow")>>
     Lily:
         -> They're doing really well. Never better, actually.
+            <<AddFact truthAboutArtAlive>>
             <<AddTogetherEndingCounter>>
+            Louise: So you went to the show after all?
+            Lily: I did, and we had a great time. They're in their third year at college now, a junior. Wanna make art for video games.
+            Louise: Hideo Kojima type shit?
+            Lily: Yeah. Hideo Kojima type shit. And some Final Fantasy in there, too. Maybe some Bayonetta. 
+            Louise: Man.
+            <<wait  2>>
+            Louise: Thank you, Lily.
+            Louise: I can't imagine how I'd feel if they--if they died, too. 
         -> (Lie) They...they didn't make it, Louise.
+            <<AddFact liedAboutArtDeath>>
             <<AddAloneEndingCounter>>
+            Louise: You don't smile like that when you're telling me the truth, Lils.
+            Louise: Tell me the truth. 
+            Lily: That is the truth. 
+            Louise: The fuck it is, Lily. You think this is funny?
+            Lily: I thought--
+            Louise: No. You didn't. 
+            <<wait  3>>
+            Louise: So they're alive? 
+            Lily:They're in their third year at college now, a junior. Wanna make art for video games.
+            Louise: ...Hideo Kojima type shit?
+            Lily: Yeah. Hideo Kojima type shit. And some Final Fantasy in there, too. Maybe some Bayonetta. 
+            Louise: Man.
+            <<wait  2>>
+            Louise: Well, thanks, Lily. Even though I had to yank it out of you, since you wanted to be a total prick.
 <<endif>>
-
-Louise: Lily, something's been bothering me, a little.
+<<wait  3>>
+<<if TryFact ("liedAboutArtDeath")>>
+    Louise: Besides you being a jerk, something else has been bothering me, a little.
+<<else>>
+    Louise: Something else has been bothering me, a little.
+<<endif>>
 Lily: More than the whole being dead thing?
 Louise: Yeah, actually. 
 Louise: I know it's always been hard to get you outta the house, but--lemme start over.
@@ -373,11 +458,12 @@ Louise: Or did you?
 Lily: 
 -> Lily: Yes
 -> Lily: No
-//maybe there is a choice here or something idk lol
-Louise: But regardless, I'm still getting eaten up by something.
-Louise: And the worst part is it's one of the big things. Not death by a thousand cuts.
+<<wait  2>>
+Louise: But regardless, I'm still getting eaten up by something. And the worst part is it's one of the big things. Not death by a thousand cuts.
 Lily: Then let's feed it so it goes away. 
-Louise: Lily...fuck.
+Louise: Lily...
+<<wait  1>>
+Louise: Fuck.
 Lily: It's okay. Take your time.
 <<wait 3>>
 //Louise and Lily sit in silence for a while.
@@ -390,7 +476,9 @@ Lily:
     Lily: And I think we would have learned our lesson about making statements.
     Louise: Right. Only vandalise walls that aren't electrified.
     Lily: No!
-    Lily: ...well, yes, but the more important lesson is to make them smartly. //fix this dialogue
+    Lily: ...well, yes, but the more important lesson is to be smart about it.
+    Lily: Medium is the message, and all that.
+    Lily: Plus, I...I think you're really cool. 
     //ending vignette stuff here
     //load new scene
     <<EndSection>>
