@@ -17,8 +17,15 @@ public class SwapMyScenes : MonoBehaviour
 
 public void Start(){
      SceneManager.LoadScene (defaultScene, LoadSceneMode.Additive);
-     SceneManager.SetActiveScene(SceneManager.GetSceneByName(defaultScene));
+        StartCoroutine(SetAsActiveScene(defaultScene));
 }
+
+    public IEnumerator SetAsActiveScene(string sceneName) //waits a half second and loads scene
+    {
+        yield return new WaitForSeconds(.5f);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName)); //tells unity this scene is what we use for rendering
+    }
+
 
     public void Awake()
     {
@@ -43,7 +50,8 @@ public void Start(){
     fade.Fade();
     yield return new WaitForSeconds(0.2f);
     SceneManager.LoadScene (sceneName, LoadSceneMode.Additive);
-    SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+    StartCoroutine(SetAsActiveScene(sceneName));
+    
     Debug.Log("Loaded scene" + (sceneName));
     }
 
@@ -57,7 +65,7 @@ public void Start(){
 
     public void Excalamune(string sceneName)
     {
- StartCoroutine(UnloadSceneTime(sceneName));
+    StartCoroutine(UnloadSceneTime(sceneName));
 
         
     }
