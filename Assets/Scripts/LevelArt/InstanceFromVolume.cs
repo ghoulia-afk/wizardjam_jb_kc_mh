@@ -133,7 +133,8 @@ public class InstanceFromVolume : MonoBehaviour
                 Quaternion instanceRotation;
                 if (orientToSurfaceNormal)
                 {
-                    instanceRotation = Quaternion.LookRotation(Random.insideUnitSphere, hit.normal);
+                    instanceRotation = Quaternion.FromToRotation(transform.up, hit.normal);
+                //    instanceRotation = Quaternion.LookRotation(Random.insideUnitSphere, hit.normal);
                 }
                 else
                 {
