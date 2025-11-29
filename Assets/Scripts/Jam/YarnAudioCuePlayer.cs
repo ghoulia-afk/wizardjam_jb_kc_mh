@@ -13,7 +13,7 @@ public class YarnAudioCuePlayer : MonoBehaviour
 
     void Awake()
     {
-        dialogueRunner.AddCommandHandler<string>("PlayAudioClip", PlayAudioClip);
+        dialogueRunner.AddCommandHandler<string>("PlayAudioClip", PlayAudioClip); //use this command to play audio - KGC
     }
 
     void Start(){

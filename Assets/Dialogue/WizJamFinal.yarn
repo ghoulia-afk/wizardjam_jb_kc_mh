@@ -5,6 +5,7 @@ color: red
 ---
 
 GAME TITLE
+<<PlayAudioClip "babywhaa">>
 <<jump Vignette1>>
 ===
 
@@ -24,29 +25,40 @@ Lily: Sorta. Everyone knows they’re probably gonna get back together–
 Louise: That’s what everyone’s said about ‘em since forever, Lily. 
 Lily: Well, damn, Weezy, sorry for being a total dweeb. 
 Louise: Aw, dude, I didn’t mean that to come out that way. Just…
-Louise: Guess when you’re submerged in it, it’s hard to see the water for the reef. 
+Louise: Guess when you’re submerged in it, it’s hard to see the water for the reef.
+Louise: And I'm happy this city's weirdos still have places to congregate, instead of gettin' pushed out by gentrifiers.
+Lily: Yeah. The Acid Wash still stands.
+Louise: Probably gonna survive the heat death of the universe. Kinda like this fuckass billboard.
 Lily: But, that out of the way, is there anything else you wanna know about? 
 Louise: Lemme take a look at the list you made me. Hmmm…
 //(Lily takes a look at the list herself.)
 Louise: Might as well just rattle ‘em off, goin’ down it. 
+Louise: And be honest. Would rather you hurt my feelings than try to sugarcoat it.
 Louise: How ‘bout…
 Louise: My family?
     -> Lily: Fuckin’ terrible. They’re distraught without you.
+       Lily: something here about Louise's family being sucky
+       Louise: Oh, jeez. 
         <<AddFact familyTruth>>
         <<AddTogetherEndingCounter>>
         //response
     -> Lily: (Lie) Just fine. They miss you, obviously, but they’re not really letting it keep them down.
+        Lily: something here about Louise's family being fine
         <<AddFact familyLie>>
         <<AddAloneEndingCounter>>
         //response
 Louise: The world?
--> Lily: (neutral) Same as it ever was 
-	Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
-	Louise: You’re voting, right?
-	Lily: Of course I am. Gonna volunteer for the next local election come fall. 
--> Lily: (neutral) Burning down the house 
-	Lily: Everything’s gone down the tubes.
-	Louise: Bullshit. Your phone still works and you don’t smell like BO. 
+    -> Lily: (neutral) Same as it ever was 
+        Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
+        Louise: Huh. Typical.
+        Lily: Hey, they haven't gutted the public transit. Not yet, anyway.
+        Louise: You’re voting, right?
+        Lily: Of course I am. Gonna volunteer for the next local election come fall. 
+    -> Lily: (neutral) Burning down the house 
+        Lily: Everything’s gone down the tubes.
+        Louise: Bullshit. Your phone still works and you don’t smell like BO.
+        Lily: What, you think I wouldn't figure out how to take showers in the apocalypse?
+        Louise: ...Y'know what? Fair point.
 Louise: You? 
 Lily:
 	-> (Lie) Doing great.
@@ -58,8 +70,16 @@ Lily:
     //(more response here)
     <<AddFact lilydoingtruth>>
     <<AddTogetherEndingCounter>>
-Louise: When you were showing me that video of SCS’s last show earlier, I saw you had a little noti pop up for something. A memorial show at the Acid Wash.
-Lily: Yeah. Benefiting the Gauthier Family. Your (insert family connection here) agreed to go, last I heard.
+Louise: When you were showing me that video of SCS’s last show earlier, I saw you had a little noti pop up for something. A benefit show at the Acid Wash.
+Lily: Yeah. Benefiting the Gauthier Family. D'artagnan agreed to go, last I heard.
+Louise: Really? My Arty?
+Lily: Sure did. Took some convincing from me, your Mama, and your Mémère, but they'll be there. Julie and Guillaume both agreed to help them do their makeup, give 'em a little punk makeover.
+Louise: Huh. That kiddo's...
+Lily: ...
+Lily: Are you going to cry, Weezy-Lou?
+Louise: No. Just got some dust in my eyes.
+Louise: Shut up. 
+Louise: Anyway.
 Louise: Saw the Chichis on there.
 Lily: Ha, yeah. All alive and kicking.
 Louise: Christ. Wonder if Ines still got that terrible pair of crust pants. 
@@ -69,12 +89,60 @@ Lily:
     -> Yes
         <<AddFact didPunkShow>>
         <<AddTogetherEndingCounter>>
-    -> No
+        Lily: Even though all those emotions in one place seems a little...scary, and people mostly knew me through you, and it's already gonna be a bit of a tearjerker, I...
+        Lily: It's just as much my scene as it is yours. 
+        Louise: Was. 
+        Lily: Right.
+        Louise: Remember, stick to Julie and Guillaume if you get spooked. 
+        Louise: You always have been sensitive to stuff like that. 
+        Lily: Yeah. On my empath grindset since day one.
+        Louise: Don't undercut yourself like that, Lils. You're too important.
+    -> I'm still thinking about it
         <<AddFact noPunkShow>>
         <<AddAloneEndingCounter>>
+        Louise: Wait, what? Why?
+        Lily: It's...it's not quite my scene, still.
+        Lily: People mostly knew me through you, and it's already gonna be a bit of a tearjerker.
+        Lily: All those emotions in one place seems a little...scary.
+        Louise: ...Fair enough. 
+        Louise: You always have been sensitive to stuff like that. 
+        Lily: Yeah. On my empath grindset since day one.
+        Louise: Don't undercut yourself like that, Lils. You're too important.
 //(There is quiet for a moment. (florid description of crickets and late spring/early summer weather))
 Lily: They wanna knock this billboard down, you know.
-//(more banter about the billboard, ask whether or not Lily thinks the billboard should get knocked down)
+Louise: You mean the fuckass billboard?
+Lily: Yes, I mean the fuckass billboard.
+Louise: I bet they do.
+Louise: Now it's just an eyesore. Or earsore. Or both. Is earsore a real word?
+Lily: It is now, since you're saying it with your mouth organ. 
+Louise: Hardee har. 
+Louise: But you know what? Good. I never liked this thing very much. 
+Louise: Especially not now.
+Louise: Can't be a shining monument to the folly of capitalism, since it's tied to me. Can't make a statement besides a scream, since that's what it was programmed to do. 
+Louise: Kind of like a baby.
+Louise: Except this thing will never be able to grow up.
+Lily: I can't help but feel bad for it, any time I see it. For the same reasons you hate it, actually.
+Lily: It's not like it asked to exist. 
+Louise: Does anybody, though?
+Lily: No. We're not that magical. 
+Lily: But maybe that's just the thing. 
+Lily: What we choose to do with our existence.
+Lily: Like...like when we came out here, that night, and tried to paint. Tried to leave something behind.
+Louise: But the billboard can't do that. Not without thumbs.
+Louise: It doesn't have those kinds of opportunities like we do.
+Louise: So do you think we should smash it? Put it out of its misery?
+Lily: What? How the hell did we get here?
+Louise: It'd technically be a victimless crime, if you can call it that.
+Louise: And we'd definitely be leaving something behind. 
+Louise: So how 'bout it? A smashening for the ages?
+Lily: 
+    -> Yeah
+        Louise: Oh, Lils, I was just fucking with you. Wouldn't want you to get in trouble for real.
+    -> Nah
+        Louise: Oh, Lils, I was just fucking with you. Wouldn't want you to get in trouble for real.
+Lily: Man, it really doesn't feel like it's been three months. Feels like it was yesterday you went away.
+Louise: Time flies when you're blah-de-blah, as they say.
+Lily: Oh my gosh, you're such a shithead, Weez. 
 Louise: I have another question for you, Lily. 
 Lily: We did the whole list, though, didn’t we?
 Louise: That was stuff you thought I’d wanna know about. And I know how thoughtful you are, but, I want to know, no lists, just from me to you.
@@ -82,6 +150,7 @@ Louise: You know it wasn’t your fault, right?
 -> Lily: Yes
     <<AddFact lilynotfault>>
     <<AddTogetherEndingCounter>> //at this point Louise feels Lily is just lying about this
+    //may need to jump to another node for this cutscene
     <<jump Vignette2>>
 -> Lily: No
     <<AddFact lilyatfault>>
@@ -90,6 +159,7 @@ Louise: You know it wasn’t your fault, right?
 -> Lily: (Do not respond)
     <<AddFact lilyfaultsilence>>
     <<AddTogetherEndingCounter>> //Louise also understands that Lily might not have processed this enough
+    //may need to jump to another node for this cutscene 
     <<jump Vignette2>>
 //(We see Louise awash in ghostly blue light, and fade into the next Vignette.)
 ===
@@ -110,13 +180,21 @@ Lily: I figured, it’s been five years since…you know.
 Louise: It’s ok, Lily. You’re allowed to say the d-word. And the e-word, for that matter. 
 Lily: I wanted to do something nice for you, is the point. 
 Louise: Appreciate it. Considering I can’t exactly dip out of here whenever I want.
+Lily: Of course, Weezy. 
+//maybe timer here? lol
 Lily: How do you stand it?
 Louise: Stand what?
 //(decide whether or not to have this be a freakin uh. Choice of questions or a more linear conversation)
 Lily: 
 -> Lily:  Being stuck here, alone.
-	How nobody comes around the screaming billboard anymore
-    What Louise misses
+    Louise: But I'm not alone, Lily. You have your visits with me. That's more than enough.
+    Lily: Everything around here's breaking down, though. 
+    Lily: Surely you must miss some normalcy.
+    Louise: Oh, do they tell ghost stories about me, now?
+    Louise: Is that why they're not fucking with the trees?
+    Lily: ...maybe.
+    Louise: Oh, Lils, that's kickass. 
+	
     Louise: I'd have to think about it, Lily.
     //here is where Louise asks about her baby sibling and how 
     //Here is where Louise elaborates on her baby sibling and asks how they’re doing. 
@@ -125,6 +203,8 @@ Lily:
 -> Lily: The noise.
 	How the wailing billboard sounds a lot like a baby crying
         Reincarnation
+        //need to make sure that the endings with the smashing and the baby crying make sense
+    
 -> Lily: The feeling.
 	What it feels like to be electrocuted to death
 Louise: I can tell you exactly who I miss, now I'm thinking.
@@ -153,7 +233,7 @@ Louise: The flipside is that you think a whole lot about your own death. Or, I d
 Louise: I don't live somewhere interesting. Not an old mansion, or a newspaper office, or a game studio, or a dive bar. Don't have ghost buddies, unless you count the dead rabbits and squirrels hanging out around here.
 Louise: I'm in the middle of the woods. Nature bathing for eternity in the electric shadow of this fuckass billboard.
 Louise: All because I wanted to make art out of this...thing. Leave a mark behind.
-Louise: Hell. I feel bad for it, in a way. Not like it asked to be screaming forever. 
+Louise: Hell. You been rubbing off on me, because these days, I see things your way. Like you've filtered it through stained glass. Not like it asked to be screaming forever. 
 Louise: Like a kid without a bottle.
 Lily: Or Frankenstein's monster. 
 Louise: Perfect example of how unfeeling capitalists make for bad parents.
