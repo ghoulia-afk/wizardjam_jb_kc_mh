@@ -5,10 +5,7 @@ color: red
 ---
 
 GAME TITLE
-//Show me {$togetherending}.
 <<jump Vignette1>>
-
-
 ===
 
 //Louise and Lily are sitting on the edge of the billboard’s catwalk, watching the sun set. 
@@ -33,38 +30,36 @@ Louise: Lemme take a look at the list you made me. Hmmm…
 //(Lily takes a look at the list herself.)
 Louise: Might as well just rattle ‘em off, goin’ down it. 
 Louise: How ‘bout…
-//(Potentially have it so that the questions are served in a random order here, as a stretch goal)
-        //TogetherEnding = $togetherending
-        //(more response here) 
 Louise: My family?
     -> Lily: Fuckin’ terrible. They’re distraught without you.
         <<AddFact familyTruth>>
-        //<<AddFact TogetherEndingIs1>>
+        <<AddTogetherEndingCounter>>
+        //response
     -> Lily: (Lie) Just fine. They miss you, obviously, but they’re not really letting it keep them down.
         <<AddFact familyLie>>
-        //<<AddFact AloneEndingIs1>>
-        //(more response here)
+        <<AddAloneEndingCounter>>
+        //response
 Louise: The world?
--> Lily: Same as it ever was
+-> Lily: (neutral) Same as it ever was 
 	Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
 	Louise: You’re voting, right?
 	Lily: Of course I am. Gonna volunteer for the next local election come fall. 
--> Lily: Burning down the house
+-> Lily: (neutral) Burning down the house 
 	Lily: Everything’s gone down the tubes.
 	Louise: Bullshit. Your phone still works and you don’t smell like BO. 
 Louise: You? 
-	-> Lily: (Lie) Doing great.
-		//(more response here)	
-		<<AddFact lilydoinglie>>
-        //<<if TryFact ("AloneEndingIs1")>>
-        //    <<AddFact AloneEndingIs2>>
-        //<<endif>>
-	-> Lily: (Everything sucks and I miss you and I don’t want to leave this town and I need you to come back but I know you can’t)
-        Lily: Everything is terrible.
-		//(more response here)
-		<<AddFact lilydoingtruth>>
+Lily:
+	-> (Lie) Doing great.
+    <<AddFact lilydoinglie>>
+    <<AddAloneEndingCounter>>
+    Lily: I'm doing wonderful.
+    -> Everything sucks and I miss you and I don’t want to leave this town and I need you to come back but I know you can’t
+    Lily: Everything is terrible.
+    //(more response here)
+    <<AddFact lilydoingtruth>>
+    <<AddTogetherEndingCounter>>
 Louise: When you were showing me that video of SCS’s last show earlier, I saw you had a little noti pop up for something. A memorial show at the Acid Wash.
-Lily: Yeah. Benefiting the Gauthier Family. 
+Lily: Yeah. Benefiting the Gauthier Family. Your (insert family connection here) agreed to go, last I heard.
 Louise: Saw the Chichis on there.
 Lily: Ha, yeah. All alive and kicking.
 Louise: Christ. Wonder if Ines still got that terrible pair of crust pants. 
@@ -73,8 +68,10 @@ Louise: You’re going, right?
 Lily:
     -> Yes
         <<AddFact didPunkShow>>
+        <<AddTogetherEndingCounter>>
     -> No
         <<AddFact noPunkShow>>
+        <<AddAloneEndingCounter>>
 //(There is quiet for a moment. (florid description of crickets and late spring/early summer weather))
 Lily: They wanna knock this billboard down, you know.
 //(more banter about the billboard, ask whether or not Lily thinks the billboard should get knocked down)
@@ -84,12 +81,15 @@ Louise: That was stuff you thought I’d wanna know about. And I know how though
 Louise: You know it wasn’t your fault, right?
 -> Lily: Yes
     <<AddFact lilynotfault>>
+    <<AddTogetherEndingCounter>> //at this point Louise feels Lily is just lying about this
     <<jump Vignette2>>
 -> Lily: No
     <<AddFact lilyatfault>>
+    <<AddTogetherEndingCounter>>
     <<jump Vignette2>>
 -> Lily: (Do not respond)
     <<AddFact lilyfaultsilence>>
+    <<AddTogetherEndingCounter>> //Louise also understands that Lily might not have processed this enough
     <<jump Vignette2>>
 //(We see Louise awash in ghostly blue light, and fade into the next Vignette.)
 ===
@@ -117,6 +117,7 @@ Lily:
 -> Lily:  Being stuck here, alone.
 	How nobody comes around the screaming billboard anymore
     What Louise misses
+    Louise: I'd have to think about it, Lily.
     //here is where Louise asks about her baby sibling and how 
     //Here is where Louise elaborates on her baby sibling and asks how they’re doing. 
     //If Lily did go to the punk show, they’re ok; 
@@ -126,22 +127,76 @@ Lily:
         Reincarnation
 -> Lily: The feeling.
 	What it feels like to be electrocuted to death
-Louise: Lily,would we still be friends if I hadn’t died?
+Louise: I can tell you exactly who I miss, now I'm thinking.
+Lily: Who is that?
+Louise: My baby sibling. How are they?
+<<if TryFact ("noPunkShow")>>
+    Lily:
+        -> (Lie) They're doing really well. Never better, actually.
+            <<AddAloneEndingCounter>>
+        -> They...they didn't make it, Louise. 
+            <<AddTogetherEndingCounter>>
+<<elseif TryFact ("didPunkShow")>>
+    Lily:
+        -> They're doing really well. Never better, actually.
+            <<AddTogetherEndingCounter>>
+        -> (Lie) They...they didn't make it, Louise.
+            <<AddAloneEndingCounter>>
+<<endif>>
+
+Louise: Lily, something's been bothering me, a little.
+Lily: More than the whole being dead thing?
+Louise: Yeah, actually. 
+Louise: I know it's always been hard to get you outta the house, but--lemme start over.
+Louise: Being dead gives you a whole lot of time to think. 
+Louise: The flipside is that you think a whole lot about your own death. Or, I do, at least. 
+Louise: I don't live somewhere interesting. Not an old mansion, or a newspaper office, or a game studio, or a dive bar. Don't have ghost buddies, unless you count the dead rabbits and squirrels hanging out around here.
+Louise: I'm in the middle of the woods. Nature bathing for eternity in the electric shadow of this fuckass billboard.
+Louise: All because I wanted to make art out of this...thing. Leave a mark behind.
+Louise: Hell. I feel bad for it, in a way. Not like it asked to be screaming forever. 
+Louise: Like a kid without a bottle.
+Lily: Or Frankenstein's monster. 
+Louise: Perfect example of how unfeeling capitalists make for bad parents.
+Lily: Well, I don't know if Frankenstein was an unfeeling capitalist, but that's besides the point. 
+Lily: It's not like you asked to be here forever either, Weezy. What happened to you wasn't your fault. 
+Lily: You wanted to make a statement. There's nothing wrong with speaking up. You taught me that.
+Louise: Wasn't it, though? I was the one who came up with the idea in the first place. 
+Louise: You didn't even wanna come, not really.
+Louise: Or did you?
 Lily: 
--> Lily: Yes 
+-> Lily: Yes
+-> Lily: No
+//maybe there is a choice here or something idk lol
+Louise: But regardless, I'm still getting eaten up by something.
+Louise: And the worst part is it's one of the big things. Not death by a thousand cuts.
+Lily: Then let's feed it so it goes away. 
+Louise: Lily...fuck.
+Lily: It's okay. Take your time.
+//Louise and Lily sit in silence for a while.
+Louise: Lily, would we still be friends if I hadn’t died?
+Lily: 
+-> Lily: Yes. Absolutely.
     <<AddFact friendsnodeathyes>>
+    <<AddTogetherEndingCounter>>
+    Lily: You were just getting started. I was just getting started. 
+    Lily: And I think we would have learned our lesson about making statements.
+    Louise: Right. Only vandalise walls that aren't electrified.
+    Lily: No!
+    Lily: ...well, yes, but the more important lesson is to make them smartly. //fix this dialogue
     //ending vignette stuff here
     //load new scene
     <<EndSection>>
     <<jump Vignette3>>
 -> Lily: No 
     <<AddFact friendsnodeathno>>
+    <<AddTogetherEndingCounter>>
     //ending vignette stuff here
     //load new scene
     <<EndSection>>
     <<jump Vignette3>>
 -> Lily: Do not respond
     <<AddFact friendsnodeathsilence>>
+    <<AddAloneEndingCounter>>
     //ending vignette stuff here
     //load new scene
     <<EndSection>>
@@ -163,10 +218,20 @@ Louise: Do you ever plan on getting out of here, Lily?
 Lily:
     -> Yes
         <<AddFact lilyleaving>>
+        <<AddTogetherEndingCounter>>
+        <<jump EpilogueChecker>>
     -> No
         <<AddFact lilystaying>>
+        <<AddAloneEndingCounter>>
+        <<jump EpilogueChecker>>
     -> I don’t know
         <<AddFact lilylocationindecision>>
+        <<if TryFact("didPunkShow")>>
+            <<AddTogetherEndingCounter>>
+        <<elseif TryFact ("noPunkShow")>>
+            <<AddAloneEndingCounter>>
+        <<endif>>
+        <<jump EpilogueChecker>>
 
 ===
 
@@ -174,65 +239,34 @@ title: EpilogueChecker
 tags:
 position: 173,116
 ---
-<<if TryFact ("familyTruth")>>
-    <<if TryFact ("lilydoingtruth")>>
-        <<if TryFact ("didpunkshow")>>
-            <<jump Ending1>>
-        <<elseif TryFact ("dislikeworship")>>
-            <<jump Ending2>>
-        <<endif>>
-    <<elseif TryFact ("noexpectworship")>>
-        <<if TryFact ("likeworship")>>
-            <<jump Ending3>>
-        <<elseif TryFact ("dislikeworship")>>
-            <<jump Ending4>>
-        <<endif>>
-    <<endif>>
-<<elseif TryFact ("badgod")>>
-    <<if TryFact ("expectworship")>>
-        <<if TryFact ("likeworship")>>
-            <<jump Ending5>>
-        <<elseif TryFact ("dislikeworship")>>
-            <<jump Ending6>>
-        <<endif>>
-    <<elseif TryFact ("noexpectworship")>>
-        <<if TryFact ("likeworship")>>
-            <<jump Ending7>>
-        <<elseif TryFact ("dislikeworship")>>
-            <<jump Ending8>>
-        <<endif>>
-    <<endif>>
+
+<<if CheckTogetherEnding()>>
+    <<jump TogetherEnding>>
+    <<else>>
+    <<jump AloneEnding>>
 <<endif>>
-            
-//<<endif>>
-//<<elseif TryFact ("badgod")>>
-  //  <<if TryFact ("expectworship")>>
-   //     <<if TryFact ("likeworship")>>
-     //       <<jump Ending5>>
-     //       <<endif>>
-      //  <<elseif TryFact ("dislikeworship")>>
-      //      <<jump Ending6>>
-      //      <<endif>>
-   // <<elseif TryFact ("noexpectworship")>>
-    //    <<if TryFact ("likeworship")>>
-    //        <<jump Ending7>>
-     //       <<endif>>
-     //   <<elseif TryFact ("dislikeworship")>>
-     //       <<jump Ending8>>
-     //       <<endif>>
 ===
 
-title: Ending1
+title: TogetherEnding
 tags:
 position: -244,347
 ---
 Louise: This is ending 1.
+//Lily is together with Louise.
+//Facts Leading to Alone:
 ===
 
-title: Ending2
+title: AloneEnding
 tags:
 position: -24,375
 ---
+//Lily is alone at the billboard.
+//Potentially, show Louise on the billboard speaking to Lily.
+//Facts that need to be checked/that lead to Alone (let the player know why Louise left):
+//noPunkShow
+//lilystaying
+//lilynotfault
+//familyLie
 Louise: This is ending 2.
 ===
 
@@ -276,4 +310,50 @@ position: -76,704
 Louise: This is ending 8.
 ===
 
-
+//Old/Obsolete 
+//<<if TryFact ("familyTruth")>>
+    //<<if TryFact ("lilydoingtruth")>>
+     //   <<if TryFact ("didpunkshow")>>
+      //      <<jump Ending1>>
+      //  <<elseif TryFact ("dislikeworship")>>
+       //     <<jump Ending2>>
+      //  <<endif>>
+    //<<elseif TryFact ("noexpectworship")>>
+    //    <<if TryFact ("likeworship")>>
+    //        <<jump Ending3>>
+     //   <<elseif TryFact ("dislikeworship")>>
+     //       <<jump Ending4>>
+      //  <<endif>>
+    //<<endif>>
+//<<elseif TryFact ("badgod")>>
+   // <<if TryFact ("expectworship")>>
+     //   <<if TryFact ("likeworship")>>
+     //       <<jump Ending5>>
+      //  <<elseif TryFact ("dislikeworship")>>
+      //      <<jump Ending6>>
+      //  <<endif>>
+   // <<elseif TryFact ("noexpectworship")>>
+      //  <<if TryFact ("likeworship")>>
+    //        <<jump Ending7>>
+       // <<elseif TryFact ("dislikeworship")>>
+       //     <<jump Ending8>>
+       // <<endif>>
+   // <<endif>>
+//<<endif>>
+            
+//<<endif>>
+//<<elseif TryFact ("badgod")>>
+  //  <<if TryFact ("expectworship")>>
+   //     <<if TryFact ("likeworship")>>
+     //       <<jump Ending5>>
+     //       <<endif>>
+      //  <<elseif TryFact ("dislikeworship")>>
+      //      <<jump Ending6>>
+      //      <<endif>>
+   // <<elseif TryFact ("noexpectworship")>>
+    //    <<if TryFact ("likeworship")>>
+    //        <<jump Ending7>>
+     //       <<endif>>
+     //   <<elseif TryFact ("dislikeworship")>>
+     //       <<jump Ending8>>
+     //       <<endif>>

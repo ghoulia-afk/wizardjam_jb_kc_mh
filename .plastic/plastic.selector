@@ -1,0 +1,4 @@
+repository "wizardjam_jb_kc_mh/wizardjam_jb_kc_mh@3574368844918@cloud"
+  path "/"
+    br "/main"
+    co "/main"
