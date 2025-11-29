@@ -6,7 +6,7 @@ color: red
 
 GAME TITLE
 //<<PlayAudioClip "babywhaa">>
-<<jump Vignette1>>
+<<jump Vignette2>>
 ===
 
 //Louise and Lily are sitting on the edge of the billboard’s catwalk, watching the sun set. 
@@ -61,13 +61,13 @@ Louise: My family?
     Lily: At the very least, they've managed to get a lot of support and advocacy from the community, actually.
     Louise: Good. 
 Louise: The world?
-    -> Lily: (neutral) Same as it ever was 
+    -> Lily: (neutral) Same as it ever was. 
         Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
         Louise: Huh. Typical.
         Lily: Hey, they haven't gutted the public transit. Not yet, anyway.
         Louise: You’re voting, right?
         Lily: Of course I am. Gonna volunteer for the next local election come fall. 
-    -> Lily: (neutral) Burning down the house 
+    -> Lily: (neutral) Burning down the house.
         Lily: Everything’s gone down the tubes.
         Louise: Bullshit. Your phone still works and you don’t smell like BO.
         Lily: What, you think I wouldn't figure out how to take showers in the apocalypse?
@@ -98,6 +98,9 @@ Louise: When you were showing me that video of SCS’s last show earlier, I saw 
 Lily: Yeah. Benefiting the Gauthier Family. D'artagnan agreed to go, last I heard.
 Louise: Really? My Arty?
 Lily: Sure did. Took some convincing from me, your Mama, and your Mémère, but they'll be there. Julie and Guillaume both agreed to help them do their makeup, give 'em a little punk makeover.
+Lily: It seems like it's really going to get them out of their shell, especially after...you know.
+Louise: After their best friend killed themselves, and I left?
+Lily:...Yeah. That.
 Louise: Huh. That kiddo's...
 Lily: ...
 Lily: Are you going to cry, Weezy-Lou?
@@ -186,9 +189,6 @@ Louise: You know it wasn’t your fault, right?
     Louise: Lily Laflamme. 
     Louise: I know you.
     Louise: I love you.
-    Louise: Lily Laflamme. 
-    Louise: I know you.
-    Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     //swing to Louise
     Louise: So don't lie to me like this. Hurts worse than the electricity did tearing me apart.
@@ -239,12 +239,28 @@ Louise: It’s ok, Lily. You’re allowed to say the d-word. And the e-word, for
 Lily: I wanted to do something nice for you, is the point. 
 Louise: Appreciate it. Considering I can’t exactly dip out of here whenever I want.
 Lily: Of course, Weezy. 
-<<wait  5>>
+<<wait  1>>
 Lily: How do you stand it?
 Louise: Stand what?
-//(decide whether or not to have this be a freakin uh. Choice of questions or a more linear conversation)
+<<jump HowStandChoices>>
+===
+
+title: HowStandChoices
+tags:
+---
 Lily: 
--> Lily:  Being stuck here, alone.
+-> Lily: Being stuck here, alone.
+    <<jump StuckAlone>>
+-> Lily: The noise.
+    <<jump StandNoise>>
+-> Lily: The feeling.
+    <<jump StandFeeling>>
+===
+
+title: StuckAlone
+tags: 
+---
+    <<AddFact stuckalone>>
     Louise: But I'm not alone, Lily. You have your visits with me. That's more than enough.
     Lily: Everything around here's breaking down, though. 
     Lily: Surely you must miss some normalcy.
@@ -254,28 +270,63 @@ Lily:
     Louise: Oh, Lils, that's kickass.
     Louise: I've always wanted to be ooky-spooky.
     Lily: You really don't miss anything?
-    Louise: I'd have to think about it, Lily.
+    Louise: I'd have to think about it, Lily. Really.
+    <<if TryFact ("standfeeling")>> and <<if TryFact ("standnoise")>>
+        <<jump Vignette2End>>
+    <<else>>
+        <<jump HowStandChoices>>
+    <<endif>>
+    
+===
+
     //here is where Louise asks about her baby sibling and how 
     //Here is where Louise elaborates on her baby sibling and asks how they’re doing. 
     //If Lily did go to the punk show, they’re ok; 
     //if not, the sibling is doing badly. 
--> Lily: The noise.
+
+title: StandNoise
+tags:
+---
+    <<AddFact standnoise>>
+    Lily: The screaming, I mean.
     Louise: I mean, it's not like it's stopped wailing. 
-    Louise: Or like I feel any less terrible. 
+    Louise: Or like I feel any less terrible.
+    Louise: 
 	How the wailing billboard sounds a lot like a baby crying
         Reincarnation
         //need to make sure that the endings with the smashing and the baby crying make sense
-    
--> Lily: The feeling.
+     <<if TryFact ("stuckalone")>> and <<if TryFact ("standfeeling")>>
+        <<jump Vignette2End>>
+    <<else>>
+        <<jump HowStandChoices>>
+    <<endif>>
+===
+
+title: StandFeeling
+tags:
+---
+    Lily: Like...what's it like?
+    Louise: Haven't you asked me this question before?
+    Lily: No. I wasn't 
 	What it feels like to be electrocuted to death
+     <<if TryFact ("stuckalone")>> and <<if TryFact ("standnoise")>>
+        <<jump Vignette2End>>
+    <<else>>
+    <<jump HowStandChoices>>
+    <<endif>>
+===
+title: Vignette2End
+tags:
+---
 Louise: I can tell you exactly who I miss, now I'm thinking.
 Lily: Who is that?
 Louise: My baby sibling. How are they?
 <<if TryFact ("noPunkShow")>>
     Lily:
         -> (Lie) They're doing really well. Never better, actually.
+            Louise: You don't smile like that when you're telling me the truth
             <<AddAloneEndingCounter>>
-        -> They...they didn't make it, Louise. 
+        -> They...they didn't make it, Louise.
             <<AddTogetherEndingCounter>>
 <<elseif TryFact ("didPunkShow")>>
     Lily:
