@@ -1332,12 +1332,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Credits:\nLead Narrative Designer: K. Galvin Clark @bigglassesbluestockings\nLead
-    Game Designer: K. Galvin Clark @bigglassesbluestockings\nTrees, Foliage, and
-    Natural Environment Artist: Mae Haslam\nConcept Painting: Mae Haslam\nSkybox
-    Artist: Mae Haslam\nCharacter Models: Jadin Brown\nCharacter Texturing: Jadin
-    Brown\nHard Surface Modeling: Jadin Brown\nSpecial Thanks:\nAlexis Morin\nNick
-    Kornek\nSchuyler Palmer\nAudio Credits: \nCrying Baby: \nGlass Breaking:\nFootsteps:"
+  m_text: "Credits:\nGame Design:\nLead Game Designer: K. Galvin Clark @bigglassesbluestockings\nLead
+    Narrative Designer: K. Galvin Clark @bigglassesbluestockings\nLead Writer: K.
+    Galvin Clark @bigglassesbluestockings\nAdditional Narrative: Mae Haslam\nAdditional
+    Writing: Mae Haslam\nYarnspinner and Unity Tools Creator: Jadin Brown\n\nArt:
+    \nTrees, Foliage, and Natural Environment Artist: Mae Haslam\nConcept Painting:
+    Mae Haslam\nSkybox Artist: Mae Haslam\nCharacter Models: Jadin Brown\nCharacter
+    Texturing: Jadin Brown\nHard Surface Modeling: Jadin Brown\nCamera Placers: Mae
+    Haslam, K. Galvin Clark\n\nSpecial Thanks:\nAlexis Morin\nNick Kornek\nSchuyler
+    Palmer\n\nAudio Credits: \nCrying Baby: \nGlass Breaking:\nFootsteps:\n\nYarnspinner
+    Credits Here"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
