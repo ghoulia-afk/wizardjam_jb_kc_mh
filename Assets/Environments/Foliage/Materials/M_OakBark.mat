@@ -76,15 +76,21 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ShadowSize: 0.36
+    - _ShadowSize: 0.027
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _UseAmbientColor: 0
+    - _UseSmoothShading: 0
+    - _UseWindDirection: 0
+    - _WindSize: 0
+    - _WindSpeed: 0
+    - _WindStrength: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
