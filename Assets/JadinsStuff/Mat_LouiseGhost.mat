@@ -45,11 +45,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bias: -0.06
+    - _Bias: 0.08
     - _Max: 0.7
-    - _Min: 0.05
-    - _Power: 5.47
-    - _Scale: 3.24
+    - _Min: 0.2
+    - _Power: 1.46
+    - _Scale: 1.33
     - _Speed: -0.11
     - __dirty: 0
     m_Colors: []
