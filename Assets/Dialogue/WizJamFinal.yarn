@@ -196,8 +196,7 @@ Louise: You know it wasn’t your fault, right?
     //swing to Louise
     Louise: So I'll forgive you this time, but don't lie to me like this again. Hurts worse than the electricity did tearing me apart.
     //at this point Louise feels Lily is just lying about this
-    //may need to jump to another node for this cutscene
-    <<jump Vignette2>>
+    //<<jump Vignette2>>
 -> Lily: No.
     <<AddFact lilyatfault>>
     <<AddTogetherEndingCounter>>
@@ -207,7 +206,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     //swing to Louise
     Louise: So you'll have to forgive me for knowing you'd say that. Even though, strictly speaking, my last thoughts were how that electricity hurt like a motherfucker as it was tearing me apart.
-    <<jump Vignette2>>
+    //<<jump Vignette2>>
 -> Lily: (Do not respond)
     <<AddFact lilyfaultsilence>>
     <<AddTogetherEndingCounter>>
@@ -222,7 +221,9 @@ Louise: You know it wasn’t your fault, right?
     //Louise also understands that Lily might not have processed this enough
     //may need to jump to another node for this cutscene 
     //swap scenes for map 2, unload map 1
-    <<jump Vignette2>>
+    //<<jump Vignette2>>
+<<sir_swapsalot Scenes/Map_2>>
+<<jump Vignette2>>
 //(We see Louise awash in ghostly blue light, and fade into the next Vignette.)
 ===
 
@@ -482,10 +483,6 @@ Lily:
     Lily: Medium is the message, and all that.
     Lily: Plus, I...I think you're really cool. 
     Louise: Aw, Lils. 
-    //ending vignette stuff here
-    //load new scene
-    <<EndSection>>
-    <<jump Vignette3>>
 -> Lily: No. I don't. I'm not enough. 
     <<AddFact friendsnodeathno>>
     <<AddTogetherEndingCounter>>
@@ -513,10 +510,6 @@ Lily:
         Louise: And I see those biceps.
         Lily: Ha, ha. 
         Louise: Seriously, have you been working out?
-    //ending vignette stuff here
-    //load new scene
-    <<EndSection>>
-    <<jump Vignette3>>
 -> Lily: Do not respond
     <<AddFact friendsnodeathsilence>>
     <<AddAloneEndingCounter>>
@@ -526,10 +519,9 @@ Lily:
     Louise: Would you?
     <<wait  2>>
     Louise: Lily?
-    //ending vignette stuff here
-    //load new scene
-    <<EndSection>>
-    <<jump Vignette3>>
+<<EndSection>>
+<<sir_swapsalot Scenes/Map_3>>
+<<jump Vignette3>>
 
 ===
 

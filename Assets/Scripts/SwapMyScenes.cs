@@ -15,6 +15,11 @@ public class SwapMyScenes : MonoBehaviour
 
     public RollMyCredits creditsRoller;
 
+    public GameObject oldMesh;
+
+    public GameObject newMesh;
+
+
     // [YarnCommand("sir_swapsalot")]
 
 public void Start(){
@@ -41,6 +46,11 @@ public void Start(){
             ShowCredits
             );
 
+        dialogueRunner.AddCommandHandler<string, GameObject, GameObject>(
+            "king_mesher",
+            ModelSwapper
+            );
+
     }
     public void Scenecalibur (string sceneName)
     {
@@ -65,6 +75,11 @@ public void Start(){
 
     }
 
+    public void ModelSwapper (string objectName, GameObject gameObjectOld, GameObject gameObjectNew)
+    {
+        gameObjectOld.SetActive(false);
+        gameObjectNew.SetActive(true);
+    }
 
     
 
