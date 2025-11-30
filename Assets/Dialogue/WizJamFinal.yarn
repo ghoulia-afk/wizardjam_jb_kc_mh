@@ -6,9 +6,9 @@ color: red
 
 GAME TITLE
 //<<PlayAudioClip "babywhaa">>
-//<<sir_swapsalot Scenes/Map_1>>
+<<sir_swapsalot Scenes/Map_1>>
 //<<sir_tolaspaws Scenes/Map_1>>
-<<jump Vignette2>>
+<<jump Vignette1>>
 ===
 
 //Louise and Lily are sitting on the edge of the billboard’s catwalk, watching the sun set. 
@@ -52,18 +52,18 @@ Louise: My family?
         Lily: But I don't want to hurt you. 
         Louise: I'm beyond you hurting me now, Lily. 
         Lily: Okay, okay! Okay...okay.
-        <<wait  5>>
+        <<wait  2>>
         Lily: 
-            -> I'm sorry.
+            -> Lily: I'm sorry.
                 <<AddTogetherEndingCounter>>
                 Louise: It's alright. Shouldn't have opened with that one.
-            -> ...
+            -> Lily: ...
                 <<AddFact familyLie>>
                 <<AddAloneEndingCounter>>
     Lily: At the very least, they've managed to get a lot of support and advocacy from the community, actually.
     Louise: Good. 
 Louise: The world?
-    -> Lily: (neutral) Same as it ever was. 
+    ->  Lily: (neutral) Same as it ever was. 
         Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
         Louise: Huh. Typical.
         Lily: Hey, they haven't gutted the public transit. Not yet, anyway.
@@ -76,26 +76,26 @@ Louise: The world?
         Louise: ...Y'know what? Fair point.
 Louise: You? 
 Lily:
-	-> (Lie) Doing great. I've gotten some good support from everyone. 
-    <<AddFact lilydoinglie>>
-    <<AddAloneEndingCounter>>
-    Lily: I'm doing wonderful, actually.
-    Lily: I've been able to reach out to everyone and get some support.
-    Louise: Way to make a girl feel special.
-    Lily: I didn't mean it that way.
-    -> (Everything sucks and I miss you and I don’t want to leave this town and I need you to come back but I know you can’t)
-    <<AddFact lilydoingtruth>>
-    <<AddTogetherEndingCounter>>
-    Lily:...
-    Lily: Everything is terrible. 
-    Lily: I haven't been sleeping, I haven't been eating right, I---
-    Lily: Weezy, everything's lost its color. 
-    Louise: Easy, Lily. Breathe.
-    Lily: How can I? You--
-    Louise: I'm right here. And I'm not going anywhere. Not until you feel better.
-    Lily: You'll be here a while.
-    Louise: What, you think I got anything better to do? Not like I can just go back. 
-<<wait  5>>
+    -> Lily: (Lie) Doing great. I've gotten some good support from everyone. 
+        <<AddFact lilydoinglie>>
+        <<AddAloneEndingCounter>>
+        Lily: I'm doing wonderful, actually.
+        Lily: I've been able to reach out to everyone and get some support.
+        Louise: Way to make a girl feel special.
+        Lily: I didn't mean it that way.
+    -> Lily: (Everything sucks and I miss you and I don’t want to leave this town and I need you to come back but I know you can’t)
+        <<AddFact lilydoingtruth>>
+        <<AddTogetherEndingCounter>>
+        Lily:...
+        Lily: Everything is terrible. 
+        Lily: I haven't been sleeping, I haven't been eating right, I...
+        Lily: Weezy, everything's lost its color. 
+        Louise: Easy, Lily. Breathe.
+        Lily: How can I? You...
+        Louise: I'm right here. And I'm not going anywhere. Not until you feel better.
+        Lily: You'll be here a while.
+        Louise: What, you think I got anything better to do? Not like I can just go back. 
+<<wait  3>>
 Louise: When you were showing me that video of SCS’s last show earlier, I saw you had a little noti pop up for something. A benefit show at the Acid Wash.
 Lily: Yeah. Benefiting the Gauthier Family. D'artagnan agreed to go, last I heard.
 Louise: Really? My Arty?
@@ -118,7 +118,7 @@ Lily:
     -> Yes
         <<AddFact didPunkShow>>
         <<AddTogetherEndingCounter>>
-        Lily: Even though all those emotions in one place seems a little...scary, and people mostly knew me through you, and it's already gonna be a bit of a tearjerker, I...
+        Lily: Even though all those emotions in one place seems a little...scary, and people mostly knew me through you, and I'm still a big dweeby astrophysics major, and it's already gonna be a bit of a tearjerker, I...
         Lily: It's just as much my scene as it is yours. 
         Louise: Was. 
         Lily: Right.
@@ -131,13 +131,14 @@ Lily:
         <<AddAloneEndingCounter>>
         Louise: Wait, what? Why?
         Lily: It's...it's not quite my scene, still.
-        Lily: People mostly knew me through you, and it's already gonna be a bit of a tearjerker.
+        Lily: I wasn't much but a big dweeby astrophysics major when I started out going to shows, and stuff. 
+        Lily: And people mostly knew me through you, and it's already gonna be a bit of a tearjerker.
         Lily: All those emotions in one place seems a little...scary.
         Louise: ...Fair enough. 
         Louise: You always have been sensitive to stuff like that. 
         Lily: Yeah. On my empath grindset since day one.
         Louise: Don't undercut yourself like that, Lils. You're too important.
-//(There is quiet for a moment. (florid description of crickets and late spring/early summer weather))
+//shot forward
 Lily: They wanna knock this billboard down, you know.
 Louise: You mean the fuckass billboard?
 Lily: Yes, I mean the fuckass billboard.
@@ -220,6 +221,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: I just wish I could still hold your hand. 
     //Louise also understands that Lily might not have processed this enough
     //may need to jump to another node for this cutscene 
+    //swap scenes for map 2, unload map 1
     <<jump Vignette2>>
 //(We see Louise awash in ghostly blue light, and fade into the next Vignette.)
 ===
@@ -562,7 +564,9 @@ Lily: Pesky time flying, right?
     Lily: I know. It's such a pretty name.
 <<elseif TryFact ("noPunkShow")>>
     Lily: Everyone around me's had babies, now. It's weird.
-    //more dialogue about this
+    Lily: I feel like I've missed some boat, but--but at the same time, I don't know that I ever wanted kids in the first place.
+    Louise: They're certainly not for the faint of heart. But the future never is.
+    <<wait  2>>
     Louise: Arty wanted to have kids, when they were old enough. 
     Louise: Liked the name Phoebe. 
     Lily: Andy O'Connor had a baby recently, actually. Named her Louise D'Artagnan.
@@ -574,21 +578,93 @@ Lily: Pesky time flying, right?
     Louise: Louise D'Artagnan. 
 <<endif>>
 <<wait  2>>
-Louise: uo
+Louise: You know, one of the upsides about dying here is how far it is from the light pollution.
+Lily: Yeah. I still remember that first scouts trip. 
+Louise: Oh, God. Out to Chalcedony National Park?
+Lily: Yeah, the one where we sacrificed way too many marshmallows.
+Louise: I got scared of snipes--
+Lily: You had to share my sleeping bag--
+Louise: And you moved us outside under the stars to try and prove snipes weren't real.
+Lily: And we got rained on in the morning, but the night before--
+Louise: Perfectly clear. Not a cloud in the sky. 
+//Louise got scared and had to share Lily's sleeping bag
 Louise: You asked me a…a while ago what it felt like to get electrocuted. 
 Louise: And I think if you’re going to move on, at all, you should know. 
-//Louise talks about how its the worst pain shes ever felt, but she got to see the stars again, and she'd go through it all over again if it meant Lily could move on
-Lily: (all I saw was you convulsing)
-Louise: (reassuring Lily that it isn’t her fault. Louise was the one who decided to bring them out there in the first place)
-Louise: Do you ever plan on getting out of here, Lily?
+Lily: You don't have to talk about this. 
+Louise: Lily, it's been 10 years.
+Louise: Let me have this.
+<<wait  3>>
+Louise: It was the worst thing I've ever felt. Never really goes away, actually. 
+Louise: Since it was the *last* thing I ever felt, it...hangs over everything. 
+Louise: Like I was trapped in a 
+Louise: But when that current was coursing through me? When I was connected to this billboard?
+Louise: I was looking up. My muscles locked up, so I couldn't move, but it meant even though I was frozen, I could see the universe.
+<<wait  2>>
+Louise: Y'know how scientists talk about finding God in small equations?
+Lily: I do. I'm one of them, Weez.
+Louise: So you know what I mean.
+Louise: It was like by touching this billboard, I was...
+Louise: I was communing with the universe. Sharing the impulses of my body with the billboard. Even though it was agonizing.
+Louise: Even though it was the last feeling I breathed. 
+Louise: And maybe...maybe we're one and the same, now. 
+Louise: I don't know. 
+<<wait  3>>
+Lily: All I saw was you convulsing, Louise.
+Louise: It wasn't your fault, Lily. 
+Louise: If you believing that meant I had to get electrocuted again, I'd do it a thousand times over. 
+Lily: I know it's not my fault--
+Louise: Lily, ten years on, and you're still out here talking to me. Finished your degree here. Got work at the local uni. 
+Louise: Don't bullshit me.
+Louise: Do you ever plan on getting out of here?
 Lily:
     -> Yes
         <<AddFact lilyleaving>> //Louise tests her on this/make the player work for it
+        Louise: To go where?
+        Lily:
+        -> Another country
+            Lily: Another city's not enough. I need to go to another country entirely. 
+            Louise: Jeez, that's a big change. Sure you can handle it?
+            Lily: Yes. I'm sure.
+            Lily: I'm strong, I'm smart, I'm...
+            Louise: My friend. 
+            Louise: And that's more than enough.
+            Louise: But you have to promise me you're gonna follow through.
+            Louise: Because if you're not going to move on, I'm going to find a way to. 
+            Louise: And I have a very, very long memory, too. 
+            Lily: I promise. Scout's honor.
+        -> Another city
+            Lily: The next town over's not enough. I need a different city.
+            Louise: Jeez, that's a big change. Sure you can handle it?
+            Lily: Yes. I'm sure.
+            Lily: I'm strong, I'm smart, I'm...
+            Louise: My friend. 
+            Louise: And that's more than enough.
+            Louise: But you have to promise me you're gonna follow through.
+            Louise: Because if you're not going to move on, I'm going to find a way to. 
+            Louise: And I have a very, very long memory, too. 
+            Lily: I promise. Scout's honor.
+        -> I don't know
+            Lily: I don't know, but, you're right. I need...
+            Lily: I need to leave. 
+            Lily: To change.
+            Louise: On that we can agree.
+            Lily: And I know I can do it, too.
+            Lily: I'm strong, I'm smart, I'm...
+            Louise: My friend. 
+            Louise: And that's more than enough.
+            Louise: But you have to promise me you're gonna follow through.
+            Louise: Because if you're not going to move on, I'm going to find a way to. 
+            Louise: And I have a very, very long memory, too. 
+            Lily: I promise. Scout's honor.
         <<AddTogetherEndingCounter>>
         <<jump EpilogueChecker>>
     -> No
         <<AddFact lilystaying>> //Louise believes her and takes her at her word
         <<AddAloneEndingCounter>>
+        Louise: ...well, alright.
+        Louise: I can't force your hand.
+        Louise: But just know, if you're not going to move on, I'm going to find a way to. 
+        Louise: And I have a very, very long memory, too.
         <<jump EpilogueChecker>>
     -> I don’t know
         <<AddFact lilylocationindecision>> //depends on what happened at the Punk show
@@ -597,6 +673,15 @@ Lily:
         <<elseif TryFact ("noPunkShow")>>
             <<AddAloneEndingCounter>>
         <<endif>>
+        Louise: After 10 years, you still don't know?
+        Lily: No, I don't. 
+        Lily: I never thought I would be without you. 
+        <<wait  2>>
+        Louise: Well, whatever decision you make, I...
+        Louise: You were enough.
+        Louise: You were my friend. And I love you.
+        Louise: But just know, if you're not going to move on, I'm going to find a way to. 
+        Louise: And I have a very, very long memory, too.
         <<jump EpilogueChecker>>
 
 ===
@@ -619,7 +704,7 @@ position: -244,347
 ---
 Louise: This is ending 1.
 //Lily is together with Louise.
-//Facts Leading to Alone:
+//Facts Leading to Together:
 ===
 
 title: AloneEnding
