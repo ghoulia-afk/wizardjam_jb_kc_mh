@@ -1395,52 +1395,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'These are all the super cool and awesom people that helped make this game
-    Lolol
-
-    words
-
-    wordswordswordswords
-
-    These are all the super cool
-    and awesom people that helped make this game Lolol
-
-    words
-
-    wordswordswordswords
-
-    These
-    are all the super cool and awesom people that helped make this game Lolol
-
-    words
-
-    wordswordswordswords
-
-    These
-    are all the super cool and awesom people that helped make this game Lolol
-
-    words
-
-    wordswordswordswords
-
-    These
-    are all the super cool and awesom people that helped make this game Lolol
-
-    words
-
-    wordswordswordswordsThese
-    are all the super cool and awesom people that helped make this game Lolol
-
-    words
-
-    wordswordswordswords
-
-    These
-    are all the super cool and awesom people that helped make this game Lolol
-
-    words
-
-    wordswordswordswords'
+  m_text: "Credits:\nLead Narrative Designer: K. Galvin Clark @bigglassesbluestockings\nLead
+    Game Designer: K. Galvin Clark @bigglassesbluestockings\nTrees, Foliage, and
+    Natural Environment Artist: Mae Haslam\nConcept Painting: Mae Haslam\nSkybox
+    Artist: Mae Haslam\nCharacter Models: Jadin Brown\nCharacter Texturing: Jadin
+    Brown\nHard Surface Modeling: Jadin Brown\nSpecial Thanks:\nAlexis Morin\nNick
+    Kornek\nSchuyler Palmer\nAudio Credits: \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1940,6 +1900,8 @@ MonoBehaviour:
   dialogueRunner: {fileID: 588572661387402176}
   fade: {fileID: 8074751223322306277}
   creditsRoller: {fileID: 1834750324}
+  oldMesh: {fileID: 0}
+  newMesh: {fileID: 0}
 --- !u!1 &1513718348
 GameObject:
   m_ObjectHideFlags: 0

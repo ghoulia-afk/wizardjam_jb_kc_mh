@@ -689,8 +689,10 @@ position: 173,116
 ---
 
 <<if CheckTogetherEnding()>>
+    <<sir_swapsalot Scenes/Map_4>>
     <<jump TogetherEnding>>
     <<else>>
+    <<sir_swapsalot Scenes/Map_5>>
     <<jump AloneEnding>>
 <<endif>>
 ===
