@@ -6,7 +6,7 @@ color: red
 
 GAME TITLE
 //<<PlayAudioClip "babywhaa">>
-<<sir_swapsalot Scenes/Map_1>>
+//<<sir_swapsalot Scenes/Map_2>>
 //<<sir_tolaspaws Scenes/Map_1>>
 <<jump Vignette1>>
 ===

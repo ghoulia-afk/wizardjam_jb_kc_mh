@@ -16,7 +16,7 @@ public class SwapMyScenes : MonoBehaviour
     // [YarnCommand("sir_swapsalot")]
 
 public void Start(){
-     SceneManager.LoadScene (defaultScene, LoadSceneMode.Additive);
+     SceneManager.LoadScene (defaultScene);
         StartCoroutine(SetAsActiveScene(defaultScene));
 }
 
@@ -33,11 +33,6 @@ public void Start(){
             "sir_swapsalot",     // the name of the command
             Scenecalibur // the method to run
         );
-
-        dialogueRunner.AddCommandHandler<string>(
-            "sir_tolaspaws",
-            Excalamune
-        );
     }
     public void Scenecalibur (string sceneName)
     {
@@ -47,28 +42,16 @@ public void Start(){
     }
 
     public IEnumerator LoadSceneTime(string sceneName){
-    fade.Fade();
-    yield return new WaitForSeconds(0.3f);
-    SceneManager.LoadScene (sceneName, LoadSceneMode.Additive);
-    StartCoroutine(SetAsActiveScene(sceneName));
+        fade.FadeOutScene();
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene (sceneName);
+        Debug.Log("Loaded scene" + (sceneName));
+        fade.FadeInScene();
+
+    }
+
+
     
-    Debug.Log("Loaded scene" + (sceneName));
-    }
-
-    public IEnumerator UnloadSceneTime(string sceneName){
-    fade.Fade();
-    yield return new WaitForSeconds(0.3f);
-    SceneManager.UnloadSceneAsync(sceneName); //may need to change to UnloadScene if there are issues - KGC
-    Debug.Log("Unloaded scene" + sceneName);
-    }
-
-
-    public void Excalamune(string sceneName)
-    {
-    StartCoroutine(UnloadSceneTime(sceneName));
-
-        
-    }
 
 
 }

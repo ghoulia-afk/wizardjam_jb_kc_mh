@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,29 +7,23 @@ using UnityEngine.UI;
 public class LevelTransitionFade : MonoBehaviour
 {
 
-public CanvasGroup canvasGroup;
+    public CanvasGroup canvasGroup;
 
-public AnimationCurve animationCurve;
+    public AnimationCurve animationCurve;
 
-public void Fade()
-{
-StartCoroutine(FadeAnim());
+    public void FadeOutScene()
+    {
+        canvasGroup.DOFade(1, 0.3f).SetUpdate(true);
 
     
-}
+    }
 
-public IEnumerator FadeAnim(){
-    float elapsed = 0f;
-      float  duration = 1f;
-      while(elapsed < duration){
-        elapsed += Time.deltaTime;
-        float progress = elapsed / duration;
+    public void FadeInScene()
+    {
+        canvasGroup.DOFade(0, 0.3f).SetUpdate(true);
 
-        canvasGroup.alpha = animationCurve.Evaluate(progress) ;
-        yield return null;
-      }
-       canvasGroup.alpha = 0f;
-}
+    }
+
 
 
 }
