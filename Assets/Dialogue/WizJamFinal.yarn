@@ -82,7 +82,7 @@ Lily:
     Lily: I'm doing wonderful, actually.
     Lily: I've been able to reach out to everyone and get some support.
     Louise: Way to make a girl feel special.
-    Lily: I didn't mean it that way
+    Lily: I didn't mean it that way.
     -> (Everything sucks and I miss you and I don’t want to leave this town and I need you to come back but I know you can’t)
     <<AddFact lilydoingtruth>>
     <<AddTogetherEndingCounter>>
@@ -306,7 +306,7 @@ tags:
     Louise: Lung by lung. Heart by heart. Wail by wail. 
     Louise: They have everything ahead of them, and---
     Lily: Weez. It's okay. I understand, now. 
-    <<wait  2.5>>
+    <<wait  2>>
     Lily: Maybe you'll reincarnate. Come back as one of the crying babies.
     Louise: Hah. So you want me to get stuck back in the cycle of Samsara, huh?
     Lily: Beats dying. 
@@ -322,25 +322,24 @@ tags:
 title: StandFeeling
 tags:
 ---
+    <<AddFact standfeeling>>
     Lily: Like...what's it like? What do you feel?
     Louise: Haven't you asked me this question before?
     Lily: No. I didn't want to pry. Not if it was going to make you go through it again.
     Louise: C'mon now, I'm made of sterner stuff than that, Lily. 
     Louise: But, hmmm...
     Louise: All I can really feel is what I was feeling in the last 10 minutes, or so. 
-    Louise: Excitement. Getting hyped to screw up this billboard. 
+    Louise: Excitement. Getting hyped to finish the climb up here and screw up this billboard. 
     Louise: Anxiety, about getting you caught. Though there's always that. One thing they don't tell you about being dead is you can still have anxiety attacks.
-    Louise: Pride--which goeths before the fall, and shit--when I finally got up here, and started showing you how safe it was.
+    Louise: Pride--which goeths before the fall, and shit--when I finally got up here, and started showing you how safe it was. Reaching up to try and spray paint.
     Louise: And then endorphins. 
     Lily: There's no pain?
     Louise: You really want me to tell you about that?
-    Lily: No, but--
+    Lily: No, but...
     Louise: Then we're square. 
      <<if TryFact ("stuckalone")>> and <<if TryFact ("standnoise")>>
-        <<wait 2.5>>
         <<jump Vignette2End>>
     <<else>>
-        <<wait2.5>>
         <<jump HowStandChoices>>
     <<endif>>
 ===
@@ -483,9 +482,33 @@ Lily:
     //load new scene
     <<EndSection>>
     <<jump Vignette3>>
--> Lily: No 
+-> Lily: No. I don't. 
     <<AddFact friendsnodeathno>>
     <<AddTogetherEndingCounter>>
+    <<wait 3>>
+    Louise: What makes you say that?
+    Lily:
+    -> I'm a coward.
+        Louise: I know this place, Lily. 
+        Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally, of course. 
+        Louise: After I died, though? I didn't even get a shrine or anything. Everyone's too scared to come back up here. Even the government. 
+        Louise: But you make the journey, still. Doesn't seem very cowardly to me.
+    -> I wouldn't have been cool enough for you
+        Louise: Are you kidding, Lils? 
+        Louise: Take a look around you.
+        Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally, of course. 
+        Louise: After I died, though? I didn't even get a shrine or anything. Everyone's too scared to come back up here. Even the government. 
+        Louise: But you make the journey, still. Seems pretty cool to me.
+    -> I'm not strong enough
+        Louise: Are you kidding, Lils? 
+        Louise: Take a look around you.
+        Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally, of course. 
+        Louise: After I died, though? I didn't even get a shrine or anything. Everyone's too scared to come back up here. Even the government. 
+        Louise: But you make the journey, still. 
+        Louise: It means a lot more than you'd think.
+        Louise: And I see those biceps.
+        Lily: Ha, ha. 
+        Louise: Seriously, have you been working out?
     //ending vignette stuff here
     //load new scene
     <<EndSection>>
@@ -493,6 +516,12 @@ Lily:
 -> Lily: Do not respond
     <<AddFact friendsnodeathsilence>>
     <<AddAloneEndingCounter>>
+    <<wait 3>>
+    Louise: Lily?
+    <<wait  3>>
+    Louise: Would you?
+    <<wait  2>>
+    Louise: Lily?
     //ending vignette stuff here
     //load new scene
     <<EndSection>>
@@ -505,10 +534,14 @@ tags:
 position: 254,-138
 ---
 Louise: You know, what surprises me the most about this is that this stupid fucking billboard still has juice, after all this time.
+Louise: How long's it been, again?
+Lily: 10 years. 
+Louise: 
 //(more dialogue here)
+//Someone has a baby. Whether it is D'Artagnan or all the people around Lily. This is a sticking point/important 
 Louise: You asked me a…a while ago what it felt like to get electrocuted. 
 Louise: And I think if you’re going to move on, at all, you should know. 
-//Louise talks about how its the worst pain shes ever felt, but she got to see the stars again, and she'd go over it all over again if it meant Lily could move on
+//Louise talks about how its the worst pain shes ever felt, but she got to see the stars again, and she'd go through it all over again if it meant Lily could move on
 Lily: (all I saw was you convulsing)
 Louise: (reassuring Lily that it isn’t her fault. Louise was the one who decided to bring them out there in the first place)
 Louise: Do you ever plan on getting out of here, Lily?
