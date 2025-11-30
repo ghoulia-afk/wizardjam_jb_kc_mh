@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ModelSwapMaster : MonoBehaviour
 {
-    public List<GameObject> models;
+    public List<GameObject> bodies;
+    public List<GameObject> heads;
     public List<string> tags;
 
-    private GameObject current;
+    private GameObject currentBody;
 
     private static List<ModelSwapMaster> swappers;
 
@@ -22,37 +23,31 @@ public class ModelSwapMaster : MonoBehaviour
         foreach (ModelSwapMaster swapper in swappers)
         {
             if (swapper == null) swappers.Remove(swapper);
-
+            else swapper.SwapModels(tag);
         }
-        /*
-        if (models.Count == 0 | tags.Count == 0)
+    }
+
+    public void SwapModels(string tag)
+    {
+        if (bodies.Count == 0 | tags.Count == 0)
         {
             Debug.LogError($"No models found, or no tags found, or both!");
             return;
         }
 
-        if (!tags.Contains(tag))
-        {
-            Debug.LogError($"Tried swapping to model with tag of {tag} but failed: tag not found.");
-            return;
-        }
+        if (!tags.Contains(tag)) return; // Request was prolly meant for a different swapper
 
         int requestIndex = tags.IndexOf(tag);
 
-        if (models.Count <= requestIndex)
+        if (bodies.Count <= requestIndex)
         {
-            Debug.LogError($"Model at index {requestIndex} doesn't exist.");
+            Debug.LogError($"Index {requestIndex} doesn't exist in models!");
             return;
         }
 
-        if (current != null) current.SetActive(false);
+        if (currentBody != null) currentBody.transform.localPosition = Vector3.down * 100;
 
-        current = models[requestIndex];
-        current.SetActive(true);*/
-    }
-
-    public void SwapModels(string tag)
-    {
-
+        currentBody = bodies[requestIndex];
+        currentBody.SetActive(true);
     }
 }
