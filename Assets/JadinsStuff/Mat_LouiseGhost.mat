@@ -48,6 +48,7 @@ Material:
     - _Bias: 0.08
     - _Max: 0.7
     - _Min: 0.2
+    - _Opacity: 0.8
     - _Power: 1.59
     - _Scale: 1.33
     - _Speed: 0.2
