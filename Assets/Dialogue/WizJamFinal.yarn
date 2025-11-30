@@ -8,6 +8,7 @@ GAME TITLE
 //<<PlayAudioClip "babywhaa">>
 //<<sir_swapsalot Scenes/Map_2>>
 //<<sir_tolaspaws Scenes/Map_1>>
+//<<jump TheSmasheningChoice>>
 <<jump Vignette1>>
 ===
 
@@ -16,7 +17,7 @@ title: Vignette1
 tags:
 ---
 
-
+//<<camMoveWhee "maesSuperAwesomeTestAngle">>
 Lily: So, that’s most of what you missed in the scene this past summer, while you’ve been away.
 Louise: Jeez. Stabbing Caesar Salad really broke up? 
 Lily: Sorta. Everyone knows they’re probably gonna get back together–
@@ -1024,9 +1025,15 @@ tags:
 
 Lily:
 -> smash the billboard
-    //play smashing sound
+    <<PlayAudioClip "glassbreak">>
+    <<wait  2>>
+    <<PlayAudioClip "baby_crying">>
     //play credits
 -> don't smash the billboard
+    <<PlayAudioClip "footsteps_sound">>
+    //fade here
+
+    <<PlayAudioClip "baby_crying">>
     //play crying
     //play credits
     //swap scenes
