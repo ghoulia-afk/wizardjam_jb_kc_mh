@@ -4,7 +4,7 @@ position: -371,-363
 color: red
 ---
 
-GAME TITLE
+LILY AND LOUISE
 //<<PlayAudioClip "babywhaa">>
 //<<sir_swapsalot Scenes/Map_2>>
 //<<sir_tolaspaws Scenes/Map_1>>
@@ -836,14 +836,7 @@ Lily: I love you, Louise.
 Louise: I love you more, Lils. 
 Louise: Don't be a stranger.
 
-Lily:
-//smash the billboard
-    
-    //play smashing sound
-    //play credits
-//don't smash the billboard
-    //play crying
-    //play credits
+<<jump TheSmasheningChoice>>
 
 
 
@@ -1023,15 +1016,10 @@ Lily:
     <<wait  2>>
     <<PlayAudioClip "baby_crying">>
     <<lady_guineroll "CreditsParent">>
-    //play credits
 -> don't smash the billboard
     <<PlayAudioClip "footsteps_sound">>
-    //fade here
     <<PlayAudioClip "baby_crying">>
     <<lady_guineroll "CreditsParent">>
-    //play crying
-    //play credits
-    //swap scenes
 ===
 
 //Old/Obsolete 

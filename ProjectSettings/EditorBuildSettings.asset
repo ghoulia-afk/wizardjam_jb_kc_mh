@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main.unity
     guid: d27b1e38dd644d74ebc953f696f70e3a
-  - enabled: 1
+  - enabled: 0
     path: Assets/TestSceneDeux.unity
     guid: 21eb3c1a9fc3e8b48aef20af11fe931f
-  - enabled: 1
+  - enabled: 0
     path: Assets/MyAwesomeFruits.unity
     guid: 5f25541ee29838844a02363bc613db42
-  - enabled: 1
+  - enabled: 0
     path: Assets/MyAwesomeDrinks.unity
     guid: 12e476416a6371c4ebe790f2ddf928d0
-  - enabled: 1
+  - enabled: 0
     path: Assets/MyAwesomeEggs.unity
     guid: b75f50ed35e7f8947adae2540e2dc9dc
   - enabled: 1
@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map_3.unity
     guid: 742338a004967c841b775d70ea682cc4
+  - enabled: 1
+    path: Assets/Scenes/Map_4.unity
+    guid: fc0bc35c77bdd4d4f89f103447685402
+  - enabled: 1
+    path: Assets/Scenes/Map_5.unity
+    guid: 2d89f19ea9a6f6344b971e301aa895cf
   m_configObjects: {}
