@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 92555d7cddf24134e826166d4efadadc
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Tex_Mesh_Lily: {fileID: 2800000, guid: 1e15214009914194985254e62acf8669, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

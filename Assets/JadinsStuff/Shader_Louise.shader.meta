@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 11c7412a4a46a8347b9086ff9343364a
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Tex_Mesh_Louis: {fileID: 2800000, guid: 0200b41cef7c2e34b907f5769d19ea5c, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
