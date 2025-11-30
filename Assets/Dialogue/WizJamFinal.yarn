@@ -6,7 +6,7 @@ color: red
 
 GAME TITLE
 //<<PlayAudioClip "babywhaa">>
-<<sir_swapsalot Scenes/Map_1>>
+//<<sir_swapsalot Scenes/Map_1>>
 //<<sir_tolaspaws Scenes/Map_1>>
 <<jump Vignette2>>
 ===
@@ -460,6 +460,7 @@ Lily:
 <<wait  2>>
 Louise: But regardless, I'm still getting eaten up by something. And the worst part is it's one of the big things. Not death by a thousand cuts.
 Lily: Then let's feed it so it goes away. 
+Lily: And so you can rest a little.
 Louise: Lily...
 <<wait  1>>
 Louise: Fuck.
@@ -478,6 +479,7 @@ Lily:
     Lily: ...well, yes, but the more important lesson is to be smart about it.
     Lily: Medium is the message, and all that.
     Lily: Plus, I...I think you're really cool. 
+    Louise: Aw, Lils. 
     //ending vignette stuff here
     //load new scene
     <<EndSection>>
@@ -536,9 +538,43 @@ position: 254,-138
 Louise: You know, what surprises me the most about this is that this stupid fucking billboard still has juice, after all this time.
 Louise: How long's it been, again?
 Lily: 10 years. 
-Louise: 
-//(more dialogue here)
-//Someone has a baby. Whether it is D'Artagnan or all the people around Lily. This is a sticking point/important 
+Louise: Damn.
+Lily: Pesky time flying, right?
+<<wait  3>>
+<<if TryFact ("didPunkShow")>>
+    Lily: Arty's had a baby, now, you know.
+    Louise: You're fucking me.
+    Lily: I think that's metaphysically impossible these days.
+    Louise: Fuck. I forgot a word.
+    Louise: You're fucking shitting me.
+    Lily: It's true. 
+    Louise: Phoebe Louise Gauthier-O'Connor.
+    Lily: Born just a few days ago.
+    Louise: Wait, who'd they get hitched to?
+    Lily: Anthony O'Connor. 
+    Lily: He was a seahorse dad. 
+    Louise: Andy from down the street?
+    Lily: Yeah. He was in Stabbing Caesar Salad, remember?
+    Louise: Jeez. He was just a beanpole last time I saw him.
+    Louise: ...
+    Louise: .......
+    Louise: Phoebe Louise.
+    Lily: I know. It's such a pretty name.
+<<elseif TryFact ("noPunkShow")>>
+    Lily: Everyone around me's had babies, now. It's weird.
+    //more dialogue about this
+    Louise: Arty wanted to have kids, when they were old enough. 
+    Louise: Liked the name Phoebe. 
+    Lily: Andy O'Connor had a baby recently, actually. Named her Louise D'Artagnan.
+    Louise: Andy from down the street?
+    Lily: Yeah. He was a seahorse dad. And he was in Stabbing Caesar Salad, remember?
+    Louise: Jeez. He was just a beanpole last time I saw him.
+    Louise: ...
+    Louise: ......
+    Louise: Louise D'Artagnan. 
+<<endif>>
+<<wait  2>>
+Louise: uo
 Louise: You asked me a…a while ago what it felt like to get electrocuted. 
 Louise: And I think if you’re going to move on, at all, you should know. 
 //Louise talks about how its the worst pain shes ever felt, but she got to see the stars again, and she'd go through it all over again if it meant Lily could move on
@@ -547,15 +583,15 @@ Louise: (reassuring Lily that it isn’t her fault. Louise was the one who decid
 Louise: Do you ever plan on getting out of here, Lily?
 Lily:
     -> Yes
-        <<AddFact lilyleaving>>
+        <<AddFact lilyleaving>> //Louise tests her on this/make the player work for it
         <<AddTogetherEndingCounter>>
         <<jump EpilogueChecker>>
     -> No
-        <<AddFact lilystaying>>
+        <<AddFact lilystaying>> //Louise believes her and takes her at her word
         <<AddAloneEndingCounter>>
         <<jump EpilogueChecker>>
     -> I don’t know
-        <<AddFact lilylocationindecision>>
+        <<AddFact lilylocationindecision>> //depends on what happened at the Punk show
         <<if TryFact("didPunkShow")>>
             <<AddTogetherEndingCounter>>
         <<elseif TryFact ("noPunkShow")>>
