@@ -9,14 +9,22 @@ public class ModelSwapMaster : MonoBehaviour
 
     private GameObject current;
 
+    private static List<ModelSwapMaster> swappers;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        swappers.Add(this);
     }
 
-    public void SwapModels(string tag)
+    public static void StaticSwapModels(string tag)
     {
+        foreach (ModelSwapMaster swapper in swappers)
+        {
+            if (swapper == null) swappers.Remove(swapper);
+
+        }
+        /*
         if (models.Count == 0 | tags.Count == 0)
         {
             Debug.LogError($"No models found, or no tags found, or both!");
@@ -40,6 +48,11 @@ public class ModelSwapMaster : MonoBehaviour
         if (current != null) current.SetActive(false);
 
         current = models[requestIndex];
-        current.SetActive(true);
+        current.SetActive(true);*/
+    }
+
+    public void SwapModels(string tag)
+    {
+
     }
 }

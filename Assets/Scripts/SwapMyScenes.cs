@@ -81,8 +81,4 @@ public void Start(){
             newMesh.transform.position += Vector3.up * 100;
         }
     }
-
-    
-
-
 }
