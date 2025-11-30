@@ -24,6 +24,11 @@ public class LevelTransitionFade : MonoBehaviour
 
     }
 
+    public void FadeToHalf()
+    {
+        canvasGroup.DOFade(0.5f, 4f).SetUpdate(true);
+    }
+
 
 
 }
