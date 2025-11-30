@@ -24,17 +24,17 @@ Louise: That’s what everyone’s said about ‘em since forever, Lily.
 Lily: Well, damn, Weezy, sorry for being a total dweeb. 
 Louise: Aw, dude, I didn’t mean that to come out that way. Just…
 Louise: Guess when you’re submerged in it, it’s hard to see the water for the reef.
-Louise: And I'm happy this city's weirdos still have places to congregate, instead of gettin' pushed out by gentrifiers.
+Louise: And I'm happy this city's weirdos still have places to congregate, instead of gettin' pushed out by landlord leeches.
 Lily: Yeah. The Acid Wash still stands.
 Louise: Probably gonna survive the heat death of the universe. Kinda like this fuckass billboard.
-Lily: But, that out of the way, is there anything else you wanna know about? 
+Lily: Yeah... Um, is there anything else you wanna know about? 
 Louise: Lemme take a look at the list you made me. Hmmm…
 //(Lily takes a look at the list herself.)
 Louise: Might as well just rattle ‘em off, goin’ down it. 
 Louise: And be honest. Would rather you hurt my feelings than try to sugarcoat it.
 Louise: How ‘bout…
 Louise: My family?
-    -> Lily: Fuckin’ terrible. They’re distraught without you.
+    -> Lily: Fucking terrible. They’re distraught without you.
        Louise: Oh...fuck. Shit.
        Lily: You wanted me to be honest!
        Louise: I still do! Of course I do!
@@ -57,17 +57,17 @@ Louise: My family?
             -> Lily: ...
                 <<AddFact familyLie>>
                 <<AddAloneEndingCounter>>
-    Lily: At the very least, they've managed to get a lot of support and advocacy from the community, actually.
+    Lily: At the very least, they've gotten a lot of support from the community.
     Louise: Good. 
 Louise: The world?
     ->  Lily: (neutral) Same as it ever was. 
-        Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
+        Lily: You really haven’t missed much that way. Still spinning like normal, shithead politics and all.
         Louise: Huh. Typical.
-        Lily: Hey, they haven't gutted the public transit. Not yet, anyway.
+        Lily: Hey, they haven't gutted public transit. Not yet, anyway.
         Louise: You’re voting, right?
         Lily: Of course I am. Gonna volunteer for the next local election come fall. 
     -> Lily: (neutral) Burning down the house.
-        Lily: Everything’s gone down the tubes.
+        Lily: Everything’s gone down the tubes. We're building doomsday cars and spray-painting our faces silver.
         Louise: Bullshit. Your phone still works and you don’t smell like BO.
         Lily: What, you think I wouldn't figure out how to take showers in the apocalypse?
         Louise: ...Y'know what? Fair point.
@@ -93,8 +93,8 @@ Lily:
         Lily: You'll be here a while.
         Louise: What, you think I got anything better to do? Not like I can just go back. 
 <<wait  3>>
-Louise: When you were showing me that video of SCS’s last show earlier, I saw you had a little noti pop up for something. A benefit show at the Acid Wash.
-Lily: Yeah. Benefiting the Gauthier Family. D'artagnan agreed to go, last I heard.
+Louise: When you were showing me that video of SCS’s last show earlier, I saw a little noti pop up for something. A benefit show at the Acid Wash.
+Lily: Yeah. Benefiting the Gauthier Family. Last I heard, D'artagnan agreed to go.
 Louise: Really? My Arty?
 Lily: Sure did. Took some convincing from me, your Mama, and your Mémère, but they'll be there. Julie and Guillaume both agreed to help them do their makeup, give 'em a little punk makeover.
 Lily: It seems like it's really going to get them out of their shell, especially after...you know.
@@ -115,7 +115,7 @@ Lily:
     -> Yes
         <<AddFact didPunkShow>>
         <<AddTogetherEndingCounter>>
-        Lily: Even though all those emotions in one place seems a little...scary, and people mostly knew me through you, and I'm still a big dweeby astrophysics major, and it's already gonna be a bit of a tearjerker, I...
+        Lily: Even though all those emotions in one place seems a little...scary, and people mostly knew me through you, and I'm still a big dweeby astrophysics major, and it's already gonna be a tearjerker, I...
         Lily: It's just as much my scene as it is yours. 
         Louise: Was. 
         Lily: Right.
@@ -128,9 +128,9 @@ Lily:
         <<AddAloneEndingCounter>>
         Louise: Wait, what? Why?
         Lily: It's...it's not quite my scene, still.
-        Lily: I wasn't much but a big dweeby astrophysics major when I started out going to shows, and stuff. 
-        Lily: And people mostly knew me through you, and it's already gonna be a bit of a tearjerker.
-        Lily: All those emotions in one place seems a little...scary.
+        Lily: I'm just a big dweeby astrophysics major. And the people there mostly knew me through you, anyway. 
+        Lily: Plus, it's already gonna be a bit of a tearjerker.
+        Lily: All those emotions in one place seems...scary.
         Louise: ...Fair enough. 
         Louise: You always have been sensitive to stuff like that. 
         Lily: Yeah. On my empath grindset since day one.
@@ -140,12 +140,12 @@ Lily: They wanna knock this billboard down, you know.
 Louise: You mean the fuckass billboard?
 Lily: Yes, I mean the fuckass billboard.
 Louise: I bet they do.
-Louise: Now it's just an eyesore. Or earsore. Or both. Is earsore a real word?
+Louise: It's an eyesore. Or earsore. Or both. Is earsore a real word?
 Lily: It is now, since you're saying it with your mouth organ. 
 Louise: Hardee har. 
 Louise: But you know what? Good. I never liked this thing very much. 
 Louise: Especially not now.
-Louise: Can't be a shining monument to the folly of capitalism, since it's tied to me. Can't make a statement besides a scream, since that's what it was programmed to do. 
+Louise: Can't be a shining monument to the folly of capitalism, since it's tied to me. Can't make a statement besides a scream, because it was never programmed to do anything else.
 Lily: Kind of like a baby.
 Louise: Except this thing will never be able to grow up.
 Lily: I can't help but feel bad for it, any time I see it. For the same reasons you hate it, actually.
@@ -159,7 +159,7 @@ Louise: But the billboard can't do that. Not without thumbs.
 Louise: It doesn't have those kinds of opportunities like we do.
 Louise: So do you think we should smash it? Put it out of its misery?
 Lily: What? How the hell did we get *here*?
-Louise: It'd technically be a victimless crime, if you can call it that.
+Louise: Technically it'd be a victimless crime, if you can call it that.
 Louise: And we'd definitely be leaving something behind. 
 Louise: So how 'bout it? A smashening for the ages?
 Lily: 
@@ -169,7 +169,7 @@ Lily:
     -> Nah
         <<AddFact initialSmashNo>>
         Louise: Oh, Lils, I was just fucking with you. Wouldn't want you to get in trouble for real.
-Lily: Man, it really doesn't feel like it's been three months. Feels like it was yesterday you went away.
+Lily: Man, it really doesn't feel like it's been three months. Feels like it was yesterday you...went away.
 Louise: Time flies when you're blah-de-blah, as they say.
 Lily: Oh my gosh, you're such a shithead, Weez. 
 Louise: You love me and you know it, Lils. 
@@ -193,7 +193,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     //swing to Louise
-    Louise: So I'll forgive you this time, but don't lie to me like this again. Hurts worse than the electricity did tearing me apart.
+    Louise: So I'll forgive you this time, but don't lie to me like this again. Hurts worse than the electricity did.
     //at this point Louise feels Lily is just lying about this
     //may need to jump to another node for this cutscene
     <<jump Vignette2>>
@@ -205,7 +205,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     //swing to Louise
-    Louise: So you'll have to forgive me for knowing you'd say that. Even though, strictly speaking, my last thoughts were how that electricity hurt like a motherfucker as it was tearing me apart.
+    Louise: So you'll have to forgive me for knowing you'd say that. Even though, strictly speaking, my last thought was how that electricity hurt like a motherfucker.
     <<jump Vignette2>>
 -> Lily: (Do not respond)
     <<AddFact lilyfaultsilence>>
@@ -217,7 +217,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: And I know how hard it's been for you.
     //swing to Louise
     Louise: So don't worry. If you can't find the words right now, I won't hold it against you. 
-    Louise: I just wish I could still hold your hand. 
+    Louise: I just...wish I could still hold your hand. 
     //Louise also understands that Lily might not have processed this enough
     //may need to jump to another node for this cutscene 
     //swap scenes for map 2, unload map 1
@@ -309,9 +309,9 @@ tags:
     Lily: Weez. It's okay. I understand, now. 
     <<wait  2>>
     Lily: Maybe you'll reincarnate. Come back as one of the crying babies.
-    Louise: Hah. So you want me to get stuck back in the cycle of Samsara, huh?
+    Louise: Hah. So you want me to get stuck back in the cycle of Samsara, is that it?
     Lily: Beats dying. 
-    Louise: Now you're getting it. I've taught you well, young padawan. 
+    Louise: Heh. Now you're getting it. I've taught you well, young padawan. 
     Lily: Fucker. 
      <<if TryFact ("stuckalone")>> and <<if TryFact ("standfeeling")>>
         <<jump Vignette2End>>
@@ -347,7 +347,7 @@ tags:
 title: Vignette2End
 tags:
 ---
-Louise: I can tell you exactly who I miss, now I'm thinking.
+Louise: I can tell you exactly who I miss, now that I'm thinking about it.
 Lily: Who is that?
 Louise: D'artagnan. My Arty. How are they?
 <<if TryFact ("noPunkShow")>>
@@ -360,17 +360,17 @@ Louise: D'artagnan. My Arty. How are they?
             Lily: That is the truth. 
             Louise: The fuck it is, Lily. You didn't go to that show that night, did you?
             <<wait  3>>
-            Louise: So they're dead? 
+            Louise: They aren't...*dead*, right? 
             <<wait 1>>
             Louise: Lily.
             <<wait  1>>
-            Louise: Lily!
+            Louise: Lily!?
             Lily: Yes! They're dead, alright? I just thought--
             Louise: No. You didn't think.
             <<wait  3>>
             Louise: What happened to D'Artagnan, Lily? 
             Lily: They left, once they saw I wasn't there. Julie and Guillaume tried to get them to stay, but they just wanted to go home, be by themselves.
-            Lily: Luckily, though, your Mama and Mémère were home, so they were going to meet Arty at the station by your family's apartment.
+            Lily: Your Mama and Mémère were home, so they were going to meet Arty at the station by your family's apartment.
             Lily: And Arty decided to jaywalk. Not a car in sight.
             <<wait  1>>
             Lily: Until there was a car. 
@@ -389,7 +389,7 @@ Louise: D'artagnan. My Arty. How are they?
             <<wait  1>>
             Louise: What happened to D'Artagnan, Lily? 
             Lily: They left, once they saw I wasn't there. Julie and Guillaume tried to get them to stay, but they just wanted to go home, be by themselves.
-            Lily: Luckily, though, your Mama and Mémère were home, so they were going to meet Arty at the station by your family's apartment.
+            Lily: Your Mama and Mémère were home, so they were going to meet Arty at the station by your family's apartment.
             Lily: And Arty decided to jaywalk. Not a car in sight.
             <<wait  1>>
             Lily: Until there was a car. 
@@ -414,7 +414,7 @@ Louise: D'artagnan. My Arty. How are they?
         -> (Lie) They...they didn't make it, Louise.
             <<AddFact liedAboutArtDeath>>
             <<AddAloneEndingCounter>>
-            Louise: You don't smile like that when you're telling me the truth, Lils.
+            Louise: You don't look like that when you're telling me the truth, Lils.
             Louise: Tell me the truth. 
             Lily: That is the truth. 
             Louise: The fuck it is, Lily. You think this is funny?
@@ -441,11 +441,11 @@ Louise: I know it's always been hard to get you outta the house, but--lemme star
 Louise: Being dead gives you a whole lot of time to think. 
 Louise: The flipside is that you think a whole lot about your own death. Or, I do, at least. 
 Louise: And, I miss more than just Arty, and you, and my family, and the Acid Wash.
-Louise: I don't live somewhere interesting. Not an old mansion, or a newspaper office, or a game studio, or a dive bar. Don't have ghost buddies, unless you count the dead rabbits and squirrels hanging out around here.
+Louise: I don't live somewhere interesting. Not an old mansion, or a newspaper office, or a game studio, or a dive bar. Don't have ghost buddies, unless you count the dead bugs hanging out around here.
 Louise: I'm in the middle of the woods. Nature bathing for eternity in the electric shadow of this fuckass billboard.
 Louise: No more mosh pits. No more sloppy makeouts in graffitied bathrooms. No more going to the beach or hiking or board games. 
 Louise: All because I wanted to make art out of this...thing. Leave a mark behind.
-Louise: Hell. You been rubbing off on me, because these days, I see things your way. Like you've filtered this billboard through stained glass. Not like it asked to be screaming forever. 
+Louise: Hell. You've been rubbing off on me, because these days, I see things your way. Like you've made this billboard into stained glass. Not like it asked to be screaming forever. 
 Louise: Like a kid without a bottle.
 Lily: Or Frankenstein's monster. 
 Louise: Perfect example of how unfeeling capitalists make for bad parents.
@@ -478,7 +478,7 @@ Lily:
     Louise: Right. Only vandalise walls that aren't electrified.
     Lily: No!
     Lily: ...well, yes, but the more important lesson is to be smart about it.
-    Lily: Medium is the message, and all that.
+    Lily: Medium is the message, and all that. No pun intended.
     Lily: Plus, I...I think you're really cool. 
     Louise: Aw, Lils. 
     //ending vignette stuff here
@@ -493,21 +493,21 @@ Lily:
     Lily:
     -> I'm a coward.
         Louise: I know this place, Lily. 
-        Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally, of course. 
-        Louise: After I died, though? I didn't even get a shrine or anything. Everyone's too scared to come back up here. Even the government. 
-        Louise: But you make the journey, still. Doesn't seem very cowardly to me.
+        Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally...mostly.
+        Louise: After I died, though? Everyone's too scared to come back up here, even the government. I didn't even get a shrine or anything. 
+        Louise: But you still make the journey. Doesn't seem very cowardly to me.
     -> I wouldn't have been cool enough for you.
         Louise: Are you kidding, Lils? 
         Louise: Take a look around you.
         Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally, of course. 
-        Louise: After I died, though? I didn't even get a shrine or anything. Everyone's too scared to come back up here. Even the government. 
-        Louise: But you make the journey, still. Seems pretty cool to me.
+        Louise: After I died, though? Everyone's too scared to come back up here, even the government. I didn't even get a shrine or anything. 
+        Louise: But you still make the journey. Seems pretty cool to me.
     -> I'm not strong enough.
         Louise: Are you kidding, Lils? 
         Louise: Take a look around you.
         Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally, of course. 
-        Louise: After I died, though? I didn't even get a shrine or anything. Everyone's too scared to come back up here. Even the government. 
-        Louise: But you make the journey, still. 
+        Louise: After I died, though? Everyone's too scared to come back up here, even the government. I didn't even get a shrine or anything. 
+        Louise: But you still make the journey. 
         Louise: It means a lot more than you'd think.
         Louise: And I see those biceps.
         Lily: Ha, ha. 
@@ -524,7 +524,7 @@ Lily:
     <<wait  3>>
     Louise: Would you?
     <<wait  2>>
-    Louise: Lily?
+    Louise: ...Lily?
     //ending vignette stuff here
     //load new scene
     <<EndSection>>
@@ -536,7 +536,7 @@ title: Vignette3
 tags:
 position: 254,-138
 ---
-Louise: You know, what surprises me the most about this is that this stupid fucking billboard still has juice, after all this time.
+Louise: You know, what surprises me the most is that this stupid fucking billboard still has juice, after all this time.
 Louise: How long's it been, again?
 Lily: 10 years. 
 Louise: Damn.
@@ -549,7 +549,7 @@ Lily: Pesky time flying, right?
     Louise: Fuck. I forgot a word.
     Louise: You're fucking shitting me.
     Lily: It's true. 
-    Louise: Phoebe Louise Gauthier-O'Connor.
+    Lily: Phoebe Louise Gauthier-O'Connor.
     Lily: Born just a few days ago.
     Louise: Wait, who'd they get hitched to?
     Lily: Anthony O'Connor. 
@@ -595,9 +595,9 @@ Louise: Let me have this.
 <<wait  3>>
 Louise: It was the worst thing I've ever felt. Never really goes away, actually. 
 Louise: Since it was the *last* thing I ever felt, it...hangs over everything. 
-Louise: Like I was trapped in a 
+Louise: Like a great big hunting trap that just won't let go. 
 Louise: But when that current was coursing through me? When I was connected to this billboard?
-Louise: I was looking up. My muscles locked up, so I couldn't move, but it meant even though I was frozen, I could see the universe.
+Louise: I was looking up. My muscles locked up, so I couldn't move, but even though I was frozen, I could see the universe.
 <<wait  2>>
 Louise: Y'know how scientists talk about finding God in small equations?
 Lily: I do. I'm one of them, Weez.
@@ -631,7 +631,7 @@ Lily:
             Louise: And that's more than enough.
             Louise: But you have to promise me you're gonna follow through.
             Louise: Because if you're not going to move on, I'm going to find a way to. 
-            Louise: And I have a very, very long memory, too. 
+            Louise: And I have a very, very long memory. 
             Lily: I promise. Scout's honor.
         -> Another city
             Lily: The next town over's not enough. I need a different city.
@@ -642,7 +642,7 @@ Lily:
             Louise: And that's more than enough.
             Louise: But you have to promise me you're gonna follow through.
             Louise: Because if you're not going to move on, I'm going to find a way to. 
-            Louise: And I have a very, very long memory, too. 
+            Louise: And I have a very, very long memory. 
             Lily: I promise. Scout's honor.
         -> I don't know
             Lily: I don't know, but, you're right. I need...
@@ -655,7 +655,7 @@ Lily:
             Louise: And that's more than enough.
             Louise: But you have to promise me you're gonna follow through.
             Louise: Because if you're not going to move on, I'm going to find a way to. 
-            Louise: And I have a very, very long memory, too. 
+            Louise: And I have a very, very long memory. 
             Lily: I promise. Scout's honor.
         <<AddTogetherEndingCounter>>
         <<jump EpilogueChecker>>
@@ -665,7 +665,7 @@ Lily:
         Louise: ...well, alright.
         Louise: I can't force your hand.
         Louise: But just know, if you're not going to move on, I'm going to find a way to. 
-        Louise: And I have a very, very long memory, too.
+        Louise: And I have a very, very long memory.
         <<jump EpilogueChecker>>
     -> I don’t know
         <<AddFact lilylocationindecision>> //depends on what happened at the Punk show
@@ -682,7 +682,7 @@ Lily:
         Louise: You were enough.
         Louise: You were my friend. And I love you.
         Louise: But just know, if you're not going to move on, I'm going to find a way to. 
-        Louise: And I have a very, very long memory, too.
+        Louise: And I have a very, very long memory.
 Lily: This fuckass billboard.
 Louise: This fuckass billboard.
 Louise: Your hands look like they want a bat.
@@ -706,7 +706,7 @@ title: TogetherEnding
 tags:
 position: -244,347
 ---
-Louise: Seems like this is it, Lils.
+Louise: This is it, Lils.
 <<if TryFact ("initialSmashYes")>>
     Louise: Still remember how you told me you wanted to smash this thing. 
 <<elseif TryFact ("initialSmashNo")>>
@@ -730,10 +730,10 @@ Lily: Don't worry. So do I.
 //If Lily tells the truth or lies about her own wellbeing
 <<if TryFact ("lilydoingtruth")>>
     Louise: You said you were feeling like shit after I died.
-    Lily: I'm doing a whole heckuva lot better now. Don't worry. 
+    Lily: I'm doing a whole hell of a lot better now. Don't worry. 
 <<elseif TryFact ("lilydoinglie")>>
     Louise: And are you doing as well as you told me you were, way back when, right after I bit it?
-    Lily: Yes, of course. I'm doing a whole heckuva lot better now. Don't worry.  
+    Lily: Yes, of course. I'm doing a whole hell of a lot better now. Don't worry.  
 <<endif>>
 Louise: Man. Little ripples.
 
@@ -770,13 +770,13 @@ Lily: I'm okay now. Really.
 //If Lily lied about Art's death or life
 
 <<if TryFact("liedAboutArtAlive")>> //lily lied about arty being alive
-    Louise: And I think maybe I'm coming around to forgiving you about lying about Arty dying.
+    Louise: And I think, *maybe*, I'm coming around to forgiving you for lying about Arty.
     Louise: Maybe. 
     Louise: Don't bank on it.
     Lily: You don't have to. It was stupid.
     Louise: Figured I'd mention it, anyway. 
 <<elseif TryFact("liedAboutArtDeath")>> //lily joked about arty's death
-    Louise: And I think maybe I'm coming around to forgiving you about making that dumbass joke about Arty.
+    Louise: And I think, *maybe*, I'm coming around to forgiving you about making that dumbass joke about Arty.
     Louise: Maybe. 
     Louise: Don't bank on it.
     Lily: You don't have to. It was stupid.
@@ -826,10 +826,10 @@ Louise: Can you blame me?
 Louise: Ever since you put that idea about reincarnation into my head, it hasn't left.
 Louise: I could come back as a baby, sure, but what if I come back as something else?
 Louise: In an entirely different part of the world?
-Louise: And, I hate thinking about this part, but
-Louise: what if I forget you?
-Louise: The point is you've infected me quite badly with your ideas. Cough, cough.
-Lily: Did you just say cough, cough out loud?
+Louise: And, I hate thinking about this part, but...
+Louise: ...what if I forget you?
+Louise: The point is you've infected me pretty bad with your ideas. Cough, cough.
+Lily: Did you just say 'cough, cough' out loud?
 Louise: Gallows humor. 
 Lily: I have just one big question for you,  then.
 Lily: What do *you* want me to do?
@@ -874,7 +874,8 @@ tags:
 position: -24,375
 ---
 //Lily is alone at the billboard.
-//Potentially, show Louise on the billboard speaking to Lily.
+//(MAE NOTE: I feel it might be more impactful if Louise is just gone and we get the dialogue as a monologue from Lily.)
+//(MAE NOTE: Like soliliquy-style. So-lily-quy. Louise moved on. The player has to face their choices without her to hold their hand.)
 //Facts that need to be checked/that lead to Alone (let the player know why Louise left):
 //noPunkShow
 //lilystaying
@@ -989,7 +990,7 @@ Louise: You'll have to learn to live with that.
 
 //If Lily said they'd still be friends if Louise hadn't died
 <<if TryFact("friendsnodeathyes")>> //would be friends
-    Louise: If things had been different, though, at least I know we would've been friends 
+    Louise: If things had been different, though, at least I know we would've been friends.
     Louise: Got a pretty big medium for your message, here. 
     Lily: You remembered *that*? 
     Louise: I told you my memory's long. 
