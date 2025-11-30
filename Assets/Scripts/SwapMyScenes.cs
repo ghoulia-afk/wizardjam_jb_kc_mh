@@ -13,6 +13,8 @@ public class SwapMyScenes : MonoBehaviour
 
     public LevelTransitionFade fade;
 
+    public RollMyCredits creditsRoller;
+
     // [YarnCommand("sir_swapsalot")]
 
 public void Start(){
@@ -33,6 +35,12 @@ public void Start(){
             "sir_swapsalot",     // the name of the command
             Scenecalibur // the method to run
         );
+
+        dialogueRunner.AddCommandHandler<string>(
+            "lady_guineroll",
+            ShowCredits
+            );
+
     }
     public void Scenecalibur (string sceneName)
     {
@@ -47,6 +55,13 @@ public void Start(){
         SceneManager.LoadScene (sceneName);
         Debug.Log("Loaded scene" + (sceneName));
         fade.FadeInScene();
+
+    }
+
+    public void ShowCredits(string _)
+    {
+        fade.FadeToHalf();
+        creditsRoller.rollCreds = true;
 
     }
 

@@ -68,7 +68,7 @@ Louise: The world?
         Louise: You’re voting, right?
         Lily: Of course I am. Gonna volunteer for the next local election come fall. 
     -> Lily: (neutral) Burning down the house.
-        Lily: Everything’s gone down the tubes.
+        Lily: Everything’s gone down the tubes. We're building doomsday cars and spray-painting our faces silver.
         Louise: Bullshit. Your phone still works and you don’t smell like BO.
         Lily: What, you think I wouldn't figure out how to take showers in the apocalypse?
         Louise: ...Y'know what? Fair point.
@@ -1028,12 +1028,13 @@ Lily:
     <<PlayAudioClip "glassbreak">>
     <<wait  2>>
     <<PlayAudioClip "baby_crying">>
+    <<lady_guineroll "CreditsParent">>
     //play credits
 -> don't smash the billboard
     <<PlayAudioClip "footsteps_sound">>
     //fade here
-
     <<PlayAudioClip "baby_crying">>
+    <<lady_guineroll "CreditsParent">>
     //play crying
     //play credits
     //swap scenes
