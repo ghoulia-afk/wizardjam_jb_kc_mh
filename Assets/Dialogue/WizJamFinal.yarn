@@ -295,6 +295,8 @@ Louise: You know it wasn’t your fault, right?
 -> Lily: No.
     <<AddFact lilyatfault>>
     <<AddTogetherEndingCounter>>
+    Louise: ...
+    <<camMoveWhee cameraStarsUpward>>
     Louise: Lily Laflamme. 
     Louise: I know you.
     Louise: I love you.
@@ -305,15 +307,18 @@ Louise: You know it wasn’t your fault, right?
 -> Lily: (Do not respond)
     <<AddFact lilyfaultsilence>>
     <<AddTogetherEndingCounter>>
+    Louise: ...
+    <<camMoveWhee cameraStarsUpward>>
     Louise: Lily Laflamme. 
     Louise: I know you.
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     Louise: And I know how hard it's been for you without me.
-    //swing to Louise
+    <<camMoveWhee cameraThroughFoliageView>>
     Louise: So don't worry. If you can't find the words right now, I won't hold it against you. 
     Louise: I just wish...I could still hold your hand. 
     Louise: Instead of just going right through it, every time.
+    <<camMoveWhee cameraStraightOnClose>>
     Louise: Stupid ghost rules. 
     //Louise also understands that Lily might not have processed this enough
     //may need to jump to another node for this cutscene 
@@ -330,6 +335,7 @@ title: Vignette2
 tags:
 position: 140,-322
 ---
+<<camMoveWhee cameraLilyShoulder>>
 Louise: Alright, something smells delicious. What do you have?
 Lily: Oh, just one of your old favorites.
 //-> Lily: Spinach puffs. //(either add fact or don’t)
@@ -339,10 +345,13 @@ Louise: Spinach puffs? Dude, you hate those! What’s gotten into you?
 Lily: I figured, it’s been five years since…you know.
 Louise: It’s ok, Lily. You’re allowed to say the d-word. And the e-word, for that matter. 
 Lily: I wanted to do something nice for you, is the point. 
+<<camMoveWhee cameraLookingOut>>
 Louise: Appreciate it. Considering I can’t exactly dip out of here whenever I want.
 Lily: Of course, Weezy. 
 <<wait  1>>
+<<camMoveWhee cameraLouiseShoulder>>
 Lily: How do you stand it?
+<<camMoveWhee cameraLilyShoulder>>
 Louise: Stand what?
 <<jump HowStandChoices>>
 ===
@@ -363,14 +372,22 @@ title: StuckAlone
 tags: 
 ---
     <<AddFact stuckalone>>
+    //angle for Louise to be talking
     Louise: But I'm not alone, Lily. You have your visits with me. That's more than enough.
+    //angle looking out over city
+    <<camMoveWhee >>
     Lily: Everything around here's breaking down, though. 
     Lily: Surely you must miss some normalcy.
+    //angle looking at Louise
+    <<camMoveWhee cameraLilyShoulder>>
     Louise: Oh, do they tell ghost stories about me, now?
     Louise: Is that why they're not fucking with the trees?
     Louise: Lettin' nature take its course on the powerlines?
     <<wait  .5>>
+    //angle looking out at the city
+    <<camMoveWhee cameraLouiseShoulder>>
     Lily: ...maybe.
+    //angle looking at Louise
     Louise: Oh, Lils, that's kickass.
     Louise: I've always wanted to be ooky-spooky.
     Lily: You really don't miss anything?
@@ -392,21 +409,24 @@ title: StandNoise
 tags:
 ---
     <<AddFact standnoise>>
+    //upper angle
     Lily: The screaming, I mean.
     Louise: I mean, it's not like it's stopped wailing. 
     Louise: Or like I feel any less terrible.
     Louise: After a while, I guess I've just...tuned it out.
     Louise: Otherwise I think I'd get kinda bitter about it. 
     Lily: Bitter?
-    Louise: Yeah. You mentioned that it's like a baby. All it can do to talk to the world is cry. Wail. Bawl. Whatever. Insert loud, obnoxious, gutwrenching verb here. 
+    Louise: Yeah. You mentioned once that it's like a baby. All it can do to talk to the world is cry. Wail. Bawl. Whatever. Insert loud, obnoxious, gutwrenching verb here. 
     Louise: If I focus too long on it, I get a little jealous.
     Lily: *Jealous*?
+    //look at louise
     Louise: Yes, Lily. Jealous.
     Louise: Of all the babies getting delivered around the world, second by second.
     Louise: Lung by lung. Heart by heart. Wail by wail. 
     Louise: They have everything ahead of them, and---
     Lily: Weez. It's okay. I understand, now. 
     <<wait  2>>
+    //look at Lily
     Lily: Maybe you'll reincarnate. Come back as one of the crying babies.
     Louise: Hah. So you want me to get stuck back in the cycle of Samsara, huh?
     Lily: Beats dying. 
@@ -424,18 +444,27 @@ tags:
 ---
     <<AddFact standfeeling>>
     Lily: Like...what's it like? What do you feel?
+    //sharpangleright
     Louise: Haven't you asked me this question before?
+    //sharpangleleft
     Lily: No. I didn't want to pry. Not if it was going to make you go through it again.
     Louise: C'mon now, I'm made of sterner stuff than that, Lily. 
-    Louise: But, hmmm...
+    Louise: But...
+    //straightonfar
     Louise: All I can really feel is what I was feeling in the last 10 minutes, or so. 
+    //through foliage
     Louise: Excitement. Getting hyped to finish the climb up here and screw up this billboard. 
+    //upper view
     Louise: Anxiety, about getting you caught. Though there's always that. One thing they don't tell you about being dead is you can still have anxiety attacks.
+    //lower view
     Louise: Pride--which goeths before the fall, and shit--when I finally got up here, and started showing you how safe it was. Reaching up to try and spray paint.
+    //cityoverlook
     Louise: And then endorphins. 
+    //look at lily
     Lily: There's no pain?
     Louise: You really want me to tell you about that?
     Lily: No, but...
+    //look at louise
     Louise: Then we're square. 
      <<if TryFact ("stuckalone")>> and <<if TryFact ("standnoise")>>
         <<jump Vignette2End>>
@@ -449,11 +478,13 @@ tags:
 Louise: I can tell you exactly who I miss, now I'm thinking.
 Lily: Who is that?
 Louise: D'artagnan. My Arty. How are they?
+//side angle view
 <<if TryFact ("noPunkShow")>>
     Lily:
         -> (Lie) They're doing really well. Never better, actually.
             <<AddAloneEndingCounter>>
             <<AddFact liedAboutArtAlive>>
+            //look at each other by line 
             Louise: You don't smile like that when you're telling me the truth, Lils.
             Louise: Tell me the truth. 
             Lily: That is the truth. 
@@ -468,6 +499,8 @@ Louise: D'artagnan. My Arty. How are they?
             Louise: No. You didn't think.
             <<wait  3>>
             Louise: What happened to D'Artagnan, Lily? 
+            Lily:...
+            <<camMoveWhee cameraStarsUpward>>
             Lily: They left, once they saw I wasn't there. Julie and Guillaume tried to get them to stay, but they just wanted to go home, be by themselves.
             Lily: Luckily, though, your Mama and Mémère were home, so they were going to meet Arty at the station by your family's apartment.
             Lily: And Arty decided to jaywalk. Not a car in sight.
@@ -478,7 +511,9 @@ Louise: D'artagnan. My Arty. How are they?
             <<wait  3>>
             Louise: Jesus Christ.
             <<wait  1>>
-            Louise: Well. Thank you for being honest with me, at least.
+            <<camMoveWhee cameraStraightOnClose>>
+            Louise: Well. Thank you for being honest with me, eventually, at least.
+
         -> They...they didn't make it, Louise.
             <<AddTogetherEndingCounter>>
             <<AddFact truthAboutArtDeath>>
@@ -486,6 +521,7 @@ Louise: D'artagnan. My Arty. How are they?
             Louise: You didn't go to the show that night, did you?
             Lily: I didn't.
             <<wait  1>>
+            <<camMoveWhee cameraStarsUpward>>
             Louise: What happened to D'Artagnan, Lily? 
             Lily: They left, once they saw I wasn't there. Julie and Guillaume tried to get them to stay, but they just wanted to go home, be by themselves.
             Lily: Luckily, though, your Mama and Mémère were home, so they were going to meet Arty at the station by your family's apartment.
@@ -502,17 +538,20 @@ Louise: D'artagnan. My Arty. How are they?
         -> They're doing really well. Never better, actually.
             <<AddFact truthAboutArtAlive>>
             <<AddTogetherEndingCounter>>
+            //line by line
             Louise: So you went to the show after all?
             Lily: I did, and we had a great time. They're in their third year at college now, a junior. Wanna make art for video games.
             Louise: Hideo Kojima type shit?
             Lily: Yeah. Hideo Kojima type shit. And some Final Fantasy in there, too. Maybe some Bayonetta. 
             Louise: Man.
+            <<camMoveWhee cameraLookingOut>>
             <<wait  2>>
             Louise: Thank you, Lily.
             Louise: I can't imagine how I'd feel if they--if they died, too. 
         -> (Lie) They...they didn't make it, Louise.
             <<AddFact liedAboutArtDeath>>
             <<AddAloneEndingCounter>>
+            //line by line
             Louise: You don't smile like that when you're telling me the truth, Lils.
             Louise: Tell me the truth. 
             Lily: That is the truth. 
@@ -526,6 +565,7 @@ Louise: D'artagnan. My Arty. How are they?
             Lily: Yeah. Hideo Kojima type shit. And some Final Fantasy in there, too. Maybe some Bayonetta. 
             Louise: Man.
             <<wait  2>>
+            <<camMoveWhee cameraLookingOut>>
             Louise: Well, thanks, Lily. Even though I had to yank it out of you, since you wanted to be a total prick.
 <<endif>>
 <<wait  3>>
@@ -536,10 +576,12 @@ Louise: D'artagnan. My Arty. How are they?
 <<endif>>
 Lily: More than the whole being dead thing?
 Louise: Yeah, actually. 
+<<camMoveWhee cameraThroughFoliageView>>
 Louise: I know it's always been hard to get you outta the house, but--lemme start over.
 Louise: Being dead gives you a whole lot of time to think. 
 Louise: The flipside is that you think a whole lot about your own death. Or, I do, at least. 
 Louise: And, I miss more than just Arty, and you, and my family, and the Acid Wash.
+<<camMoveWhee cameraSkyboxView>>
 Louise: I don't live somewhere interesting. Not an old mansion, or a newspaper office, or a game studio, or a dive bar. Don't have ghost buddies, unless you count the dead rabbits and squirrels hanging out around here.
 Louise: I'm in the middle of the woods. Nature bathing for eternity in the electric shadow of this fuckass billboard.
 Louise: No more mosh pits. No more sloppy makeouts in graffitied bathrooms. No more going to the beach or hiking or board games. 
@@ -594,18 +636,24 @@ Lily:
     -> I wouldn't have been cool enough for you.
         Louise: Are you kidding, Lils? 
         Louise: Take a look around you.
+        <<camMoveWhee cameraThroughFoliage>>
         Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally, of course. 
         Louise: After I died, though? I didn't even get a shrine or anything. Everyone's too scared to come back up here. Even the government. 
+        //look at louise
         Louise: But you make the journey, still. Seems pretty cool to me.
     -> I'm not strong enough.
         Louise: Are you kidding, Lils? 
         Louise: Take a look around you.
+       <<camMoveWhee cameraThroughFoliage>>
         Louise: It's not easy getting up here, anymore. Used to be everyone would come around here and drink. Legally, of course. 
         Louise: After I died, though? I didn't even get a shrine or anything. Everyone's too scared to come back up here. Even the government. 
+        //look at louise
         Louise: But you make the journey, still. 
         Louise: It means a lot more than you'd think.
         Louise: And I see those biceps.
+        //look at lily
         Lily: Ha, ha. 
+        //look at Louise
         Louise: Seriously, have you been working out?
 -> Lily: Do not respond
     <<AddFact friendsnodeathsilence>>
@@ -676,7 +724,7 @@ Lily: You had to share my sleeping bag--
 Louise: And you moved us outside under the stars to try and prove snipes weren't real.
 Lily: And we got rained on in the morning, but the night before--
 Louise: Perfectly clear. Not a cloud in the sky. 
-//Louise got scared and had to share Lily's sleeping bag
+//camera silence
 Louise: You asked me a…a while ago what it felt like to get electrocuted. 
 Louise: And I think if you’re going to move on, at all, you should know. 
 Lily: You don't have to talk about this. 
