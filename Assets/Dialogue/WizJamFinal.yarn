@@ -96,18 +96,18 @@ Louise: And be honest. Would rather you hurt my feelings than try to sugarcoat i
 Louise: How ‘bout…
 Louise: My family?
     -> Lily: Fuckin’ terrible. They’re distraught without you.
-            <<camMoveWhee cameraLouiseShoulder>>
-            Louise: Oh...fuck. Shit.
             <<camMoveWhee cameraLilyShoulder>>
-            Lily: You wanted me to be honest!
+            Louise: Oh...fuck. Shit.
             <<camMoveWhee cameraLouiseShoulder>>
+            Lily: You wanted me to be honest!
+            <<camMoveWhee cameraLilyShoulder>>
             Louise: I still do! Of course I do!
             Louise: It's just not--easy to hear that, you know. I don't think it would be easy for anyone. 
             Louise: But I'm happy you told me the truth.
             <<AddFact familyTruth>>
             <<AddTogetherEndingCounter>>
     -> Lily: (Lie) Just fine. They miss you, obviously, but they’re not really letting it keep them down.
-            <<camMoveWhee cameraLouiseShoulder>>
+            <<camMoveWhee cameraLilyShoulder>>
             Louise: Oh, don't bullshit me like that. I *just* told you to be honest with me. 
             Lily: But I don't want to hurt you. 
             Louise: I'm beyond you hurting me now, Lily. 
@@ -118,7 +118,7 @@ Louise: My family?
             -> Lily: I'm sorry. 
                 <<AddFact apologisedForLie>>
                 <<AddTogetherEndingCounter>>
-                <<camMoveWhee cameraLouiseShoulder>>
+                <<camMoveWhee cameraLilyShoulder>>
                 Louise: It's alright. Shouldn't have opened with that one.
             -> Lily: ...
                 <<AddFact familyLie>>
@@ -132,14 +132,17 @@ Louise: The world?
         Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
         Louise: Huh. Typical.
         Lily: Hey, they haven't gutted the public transit. Not yet, anyway.
-        <<camMoveWhee cameraLouiseShoulder>>
-        Louise: You’re voting, right?
         <<camMoveWhee cameraLilyShoulder>>
+        Louise: You’re voting, right?
+        <<camMoveWhee cameraLouiseShoulder>>
         Lily: Of course I am. Gonna volunteer for the next local election come fall. 
     -> Lily: (neutral) Burning down the house.
         Lily: Everything’s gone down the tubes. We're building doomsday cars and spray-painting our faces silver.
+        <<camMoveWhee cameraLilyShoulder>>
         Louise: Bullshit. Your phone still works and you don’t smell like BO.
+        <<camMoveWhee cameraLouiseShoulder>>
         Lily: What, you think I wouldn't figure out how to take showers in the apocalypse?
+        <<camMoveWhee cameraLowerView>>
         Louise: ...Y'know what? Fair point.
 Louise: You?
 <<camMoveWhee cameraSharpAngleRight>>
@@ -147,6 +150,7 @@ Lily:
     -> Lily: (Lie) Doing great. I've gotten some good support from everyone. 
         <<AddFact lilydoinglie>>
         <<AddAloneEndingCounter>>
+        <<camMoveWhee cameraThroughFoliageView>>
         Lily: I'm doing wonderful, actually.
         Lily: I've been able to reach out to everyone and get some support.
         Louise: Way to make a girl feel special.
@@ -186,10 +190,11 @@ Louise: Shut up.
 Louise: Anyway.
 Louise: Saw the Chichis on there.
 Lily: Ha, yeah. All alive and kicking.
+<<camMoveWhee cameraCityOverlook>>
 Louise: Christ. Wonder if Ines still got that terrible pair of crust pants. 
 Lily: I don’t know about that, but I do know they got a whole song dedicated to you. La Crusty Cumbia del Weezy.
 Louise: You’re going, right?
-<<cam>>
+<<camMoveWhee>>
 Lily:
     -> Yes
         <<AddFact didPunkShow>>
@@ -214,7 +219,7 @@ Lily:
         Louise: You always have been sensitive to stuff like that. 
         Lily: Yeah. On my empath grindset since day one.
         Louise: Don't undercut yourself like that, Lils. You're too important.
-//shot forward
+<<camMoveWhee cameraLowerView>>
 Lily: They wanna knock this billboard down, you know.
 Louise: You mean the fuckass billboard?
 Lily: Yes, I mean the fuckass billboard.
@@ -222,6 +227,7 @@ Louise: I bet they do.
 Louise: Now it's just an eyesore. Or earsore. Or both. Is earsore a real word?
 Lily: It is now, since you're saying it with your mouth organ. 
 Louise: Hardee har. 
+<<camMoveWhee cameraStraightOn>>
 Louise: But you know what? Good. I never liked this thing very much. 
 Louise: Especially not now.
 Louise: Can't be a shining monument to the folly of capitalism, since it's tied to me. Can't make a statement besides a scream, since that's what it was programmed to do. 
@@ -230,14 +236,18 @@ Louise: Except this thing will never be able to grow up.
 Lily: I can't help but feel bad for it, any time I see it. For the same reasons you hate it, actually.
 Lily: It's not like it asked to exist. 
 Louise: Does anybody, though?
+<<camMoveWhee cameraLouiseShoulder>>
 Lily: No. We're not that magical. 
 Lily: But maybe that's just the thing. 
 Lily: What we choose to do with our existence.
 Lily: Like...like when we came out here, that night, and tried to paint. Tried to leave something behind.
 Louise: But the billboard can't do that. Not without thumbs.
+<<camMoveWhee cameraLilyShoulder>>
 Louise: It doesn't have those kinds of opportunities like we do.
 Louise: So do you think we should smash it? Put it out of its misery?
+<<camMoveWhee cameraLouiseShoulder>>
 Lily: What? How the hell did we get *here*?
+<<camMoveWhee cameraLilyShoulder>>
 Louise: It'd technically be a victimless crime, if you can call it that.
 Louise: Might be doing it a favor, actually. 
 Louise: Though, I don't know what'd happen to me, considering. 
@@ -250,11 +260,14 @@ Lily:
     -> Nah
         <<AddFact initialSmashNo>>
         Louise: Oh, Lils, I was just fucking with you. Wouldn't want you to get in trouble for real.
+<<camMoveWhee cameraSharpAngleRight>>
 Lily: Man, it really doesn't feel like it's been three months. Feels like it was yesterday you went away.
 Louise: Time flies when you're blah-de-blah, as they say.
 Lily: Oh my gosh, you're such a shithead, Weez. 
-Louise: You love me and you know it, Lils. 
-<<wait  5>>
+Louise: You love me and you know it, Lils.
+<<wait  1>>
+<<camMoveWhee cameraStraightOnClose>>
+Louise: ...
 Louise: I have another question for you, Lily. 
 Lily: We did the whole list, though, didn’t we?
 Louise: That was stuff you thought I’d wanna know about. And I know how thoughtful you are, but, I want to know, no lists, just from me to you.
@@ -263,18 +276,20 @@ Louise: That was stuff you thought I’d wanna know about. And I know how though
 title: GhostReveal
 tags:
 ---
+<<camMoveWhee cameraLilyShoulder>>
 Louise: You know it wasn’t your fault, right?
 -> Lily: (Lie) Yes.
     <<AddFact lilynotfault>>
-    <<AddTogetherEndingCounter>> 
-    //camera move to look at Lily
-    //add Fresnel shader/model swap?
+    <<AddTogetherEndingCounter>>
+    Louise: ...
+    <<camMoveWhee cameraStarsUpward>>
     Louise: Lily Laflamme. 
     Louise: I know you.
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
-    //swing to Louise
-    Louise: So I'll forgive you this time, but don't lie to me like this again. Hurts worse than the electric shock did.
+    Louise: So I'll forgive you this time, but don't lie to me like this again. 
+    <<camMoveWhee>>
+    Louise: Hurts worse than the electrocution did.
     //at this point Louise feels Lily is just lying about this
     //<<jump Vignette2>>
 -> Lily: No.
