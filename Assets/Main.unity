@@ -247,6 +247,9 @@ MonoBehaviour:
   dialogueRunner: {fileID: 588572661387402176}
   audioClips:
   - {fileID: 8300000, guid: 7add992a39391cc4fa281ceaca7bfd3e, type: 3}
+  - {fileID: 8300000, guid: 035b2d8b6720d924885da394c23aa07a, type: 3}
+  - {fileID: 8300000, guid: a1c982bd8e137cc44b5dde187161f4a2, type: 3}
+  - {fileID: 8300000, guid: 2ebb2fd8d9a63d74c8afce5b691fd4dd, type: 3}
 --- !u!82 &8615883
 AudioSource:
   m_ObjectHideFlags: 0
