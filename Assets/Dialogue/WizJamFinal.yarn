@@ -3,13 +3,64 @@ tags:
 position: -371,-363
 color: red
 ---
-
+<<camMoveWhee cameraSideAngleView>>
 LILY AND LOUISE
 //<<PlayAudioClip "babywhaa">>
 //<<sir_swapsalot Scenes/Map_2>>
 //<<sir_tolaspaws Scenes/Map_1>>
 //<<jump TheSmasheningChoice>>
-<<jump Vignette1>>
+<<jump CameraTesterPassage>>
+//<<wait  1>>
+//<<jump Vignette1>>
+===
+
+
+title: CameraTesterPassage
+tags: 
+---
+Lily:
+-> cameraStraightOnClose
+    <<camMoveWhee cameraStraightOnClose>>
+    <<jump CameraTesterPassage>>
+-> cameraSideAngleView
+    <<camMoveWhee cameraSideAngleView>>
+    <<jump CameraTesterPassage>>
+-> cameraThroughFoliageView
+    <<camMoveWhee cameraThroughFoliageView>>
+    <<jump CameraTesterPassage>>
+-> cameraUpperView
+    <<camMoveWhee cameraUpperView>>
+    <<jump CameraTesterPassage>>
+-> cameraLowerView
+    <<camMoveWhee cameraLowerView>>
+    <<jump CameraTesterPassage>>
+-> cameraSkyboxView
+    <<camMoveWhee cameraSkyboxView>>
+    <<jump CameraTesterPassage>>
+-> cameraStraightOnFar
+    <<camMoveWhee cameraStraightOnFar>>
+    <<jump CameraTesterPassage>>
+-> cameraSharpAngleRight
+    <<camMoveWhee cameraSharpAngleRight>>
+    <<jump CameraTesterPassage>>
+-> cameraSharpAngleLeft
+    <<camMoveWhee cameraSharpAngleLeft>>
+    <<jump CameraTesterPassage>>
+-> cameraLilyShoulder
+    <<camMoveWhee cameraLilyShoulder>>
+    <<jump CameraTesterPassage>>
+-> cameraLouiseShoulder
+    <<camMoveWhee cameraLouiseShoulder>>
+    <<jump CameraTesterPassage>>
+-> cameraLookingOut
+    <<camMoveWhee cameraLookingOut>>
+    <<jump CameraTesterPassage>>
+-> cameraStarsUpward
+    <<camMoveWhee cameraStarsUpward>>
+    <<jump CameraTesterPassage>>
+-> cameraCityOverlook
+    <<camMoveWhee cameraCityOverlook>>
+    <<jump CameraTesterPassage>>
 ===
 
 //Louise and Lily are sitting on the edge of the billboard’s catwalk, watching the sun set. 
@@ -18,61 +69,80 @@ tags:
 ---
 
 //<<camMoveWhee "maesSuperAwesomeTestAngle">>
+<<camMoveWhee cameraStraightOnFar>>
 Lily: So, that’s most of what you missed in the scene this past summer, while you’ve been away.
+<<camMoveWhee cameraLilyShoulder>>
 Louise: Jeez. Stabbing Caesar Salad really broke up? 
+<<camMoveWhee cameraLouiseShoulder>>
 Lily: Sorta. Everyone knows they’re probably gonna get back together–
-Louise: That’s what everyone’s said about ‘em since forever, Lily. 
+Louise: That’s what everyone’s said about ‘em since forever, Lily.
+<<camMoveWhee cameraStraightOnClose>>
 Lily: Well, damn, Weezy, sorry for being a total dweeb. 
 Louise: Aw, dude, I didn’t mean that to come out that way. Just…
+<<camMoveWhee cameraCityOverlook>>
 Louise: Guess when you’re submerged in it, it’s hard to see the water for the reef.
 Louise: And I'm happy this city's weirdos still have places to congregate, instead of gettin' pushed out by gentrifiers.
 Lily: Yeah. The Acid Wash still stands.
-Louise: Probably gonna survive the heat death of the universe. Kinda like this fuckass billboard.
+Louise: Probably gonna survive the heat death of the universe. 
+<<camMoveWhee cameraStraightOnFar>>
+Louise: Kinda like this fuckass 30 foot high billboard.
 Lily: But, that out of the way, is there anything else you wanna know about? 
+<<camMoveWhee cameraLouiseShoulder>>
 Louise: Lemme take a look at the list you made me. Hmmm…
 //(Lily takes a look at the list herself.)
-Louise: Might as well just rattle ‘em off, goin’ down it. 
+Louise: Might as well just rattle ‘em off, goin’ down it.
+<<camMoveWhee cameraLilyShoulder>> 
 Louise: And be honest. Would rather you hurt my feelings than try to sugarcoat it.
 Louise: How ‘bout…
 Louise: My family?
     -> Lily: Fuckin’ terrible. They’re distraught without you.
-       Louise: Oh...fuck. Shit.
-       Lily: You wanted me to be honest!
-       Louise: I still do! Of course I do!
-       Louise: It's just not--easy to hear that, you know. I don't think it would be easy for anyone. 
-       Louise: But I'm happy you told me the truth.
-        <<AddFact familyTruth>>
-        <<AddTogetherEndingCounter>>
-        //response
+            <<camMoveWhee cameraLouiseShoulder>>
+            Louise: Oh...fuck. Shit.
+            <<camMoveWhee cameraLilyShoulder>>
+            Lily: You wanted me to be honest!
+            <<camMoveWhee cameraLouiseShoulder>>
+            Louise: I still do! Of course I do!
+            Louise: It's just not--easy to hear that, you know. I don't think it would be easy for anyone. 
+            Louise: But I'm happy you told me the truth.
+            <<AddFact familyTruth>>
+            <<AddTogetherEndingCounter>>
     -> Lily: (Lie) Just fine. They miss you, obviously, but they’re not really letting it keep them down.
-        Louise: Oh, don't bullshit me like that. I *just* told you to be honest with me. 
-        Lily: But I don't want to hurt you. 
-        Louise: I'm beyond you hurting me now, Lily. 
-        Lily: Okay, okay! Okay...okay.
-        <<wait  2>>
-        Lily: 
+            <<camMoveWhee cameraLouiseShoulder>>
+            Louise: Oh, don't bullshit me like that. I *just* told you to be honest with me. 
+            Lily: But I don't want to hurt you. 
+            Louise: I'm beyond you hurting me now, Lily. 
+            Lily: Okay, okay! Okay...okay.
+            <<camMoveWhee cameraLookingOut>>
+            Lily:...
+            Lily: 
             -> Lily: I'm sorry. 
                 <<AddFact apologisedForLie>>
                 <<AddTogetherEndingCounter>>
+                <<camMoveWhee cameraLouiseShoulder>>
                 Louise: It's alright. Shouldn't have opened with that one.
             -> Lily: ...
                 <<AddFact familyLie>>
                 <<AddAloneEndingCounter>>
+    <<camMoveWhee cameraSharpAngleLeft>>
     Lily: At the very least, they've managed to get a lot of support and advocacy from the community, actually.
     Louise: Good. 
+<<camMoveWhee cameraCityOverlook>>
 Louise: The world?
     ->  Lily: (neutral) Same as it ever was. 
         Lily: You really haven’t missed much that way. Still spinning like normal, shithead politicians and all. Or at least the ones you’re always talking about.
         Louise: Huh. Typical.
         Lily: Hey, they haven't gutted the public transit. Not yet, anyway.
+        <<camMoveWhee cameraLouiseShoulder>>
         Louise: You’re voting, right?
+        <<camMoveWhee cameraLilyShoulder>>
         Lily: Of course I am. Gonna volunteer for the next local election come fall. 
     -> Lily: (neutral) Burning down the house.
         Lily: Everything’s gone down the tubes. We're building doomsday cars and spray-painting our faces silver.
         Louise: Bullshit. Your phone still works and you don’t smell like BO.
         Lily: What, you think I wouldn't figure out how to take showers in the apocalypse?
         Louise: ...Y'know what? Fair point.
-Louise: You? 
+Louise: You?
+<<camMoveWhee cameraSharpAngleRight>>
 Lily:
     -> Lily: (Lie) Doing great. I've gotten some good support from everyone. 
         <<AddFact lilydoinglie>>
@@ -80,10 +150,14 @@ Lily:
         Lily: I'm doing wonderful, actually.
         Lily: I've been able to reach out to everyone and get some support.
         Louise: Way to make a girl feel special.
-        Lily: I didn't mean it that way.
+        Lily: I didn't mean it that way, Weez.
+        Louise: Who's been supporting you, then?
+        Lily: ...
+        Louise: That's what I thought. Lily, please. You can't keep doing this to yourself. 
     -> Lily: (Everything sucks and I miss you and I don’t want to leave this town and I need you to come back but I know you can’t)
         <<AddFact lilydoingtruth>>
         <<AddTogetherEndingCounter>>
+        <<camMoveWhee cameraStarsUpward>>
         Lily:...
         Lily: Everything is terrible. 
         Lily: I haven't been sleeping, I haven't been eating right, I...
@@ -94,6 +168,7 @@ Lily:
         Lily: You'll be here a while.
         Louise: What, you think I got anything better to do? Not like I can just go back. 
 <<wait  3>>
+<<camMoveWhee cameraUpperView>>
 Louise: When you were showing me that video of SCS’s last show earlier, I saw you had a little noti pop up for something. A benefit show at the Acid Wash.
 Lily: Yeah. Benefiting the Gauthier Family. D'artagnan agreed to go, last I heard.
 Louise: Really? My Arty?
@@ -102,8 +177,10 @@ Lily: It seems like it's really going to get them out of their shell, especially
 Louise: After their best friend killed themselves, and I left?
 Lily:...Yeah. That.
 Louise: Huh. That kiddo's...
+<<camMoveWhee cameraLouiseShoulder>>
 Lily: ...
 Lily: Are you going to cry, Weezy-Lou?
+<<camMoveWhee cameraLilyShoulder>>
 Louise: No. Just got some dust in my eyes.
 Louise: Shut up. 
 Louise: Anyway.
@@ -112,6 +189,7 @@ Lily: Ha, yeah. All alive and kicking.
 Louise: Christ. Wonder if Ines still got that terrible pair of crust pants. 
 Lily: I don’t know about that, but I do know they got a whole song dedicated to you. La Crusty Cumbia del Weezy.
 Louise: You’re going, right?
+<<cam>>
 Lily:
     -> Yes
         <<AddFact didPunkShow>>
@@ -161,6 +239,8 @@ Louise: It doesn't have those kinds of opportunities like we do.
 Louise: So do you think we should smash it? Put it out of its misery?
 Lily: What? How the hell did we get *here*?
 Louise: It'd technically be a victimless crime, if you can call it that.
+Louise: Might be doing it a favor, actually. 
+Louise: Though, I don't know what'd happen to me, considering. 
 Louise: And we'd definitely be leaving something behind. 
 Louise: So how 'bout it? A smashening for the ages?
 Lily: 
@@ -194,7 +274,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     //swing to Louise
-    Louise: So I'll forgive you this time, but don't lie to me like this again. Hurts worse than the electricity did tearing me apart.
+    Louise: So I'll forgive you this time, but don't lie to me like this again. Hurts worse than the electric shock did.
     //at this point Louise feels Lily is just lying about this
     //<<jump Vignette2>>
 -> Lily: No.
@@ -205,7 +285,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     //swing to Louise
-    Louise: So you'll have to forgive me for knowing you'd say that. Even though, strictly speaking, my last thoughts were how that electricity hurt like a motherfucker as it was tearing me apart.
+    Louise: So you'll have to forgive me for knowing you'd say that. Even though, strictly speaking, my last thoughts were how electrocution hurts like a motherfucker.
     //<<jump Vignette2>>
 -> Lily: (Do not respond)
     <<AddFact lilyfaultsilence>>
@@ -214,10 +294,12 @@ Louise: You know it wasn’t your fault, right?
     Louise: I know you.
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
-    Louise: And I know how hard it's been for you.
+    Louise: And I know how hard it's been for you without me.
     //swing to Louise
     Louise: So don't worry. If you can't find the words right now, I won't hold it against you. 
-    Louise: I just wish I could still hold your hand. 
+    Louise: I just wish...I could still hold your hand. 
+    Louise: Instead of just going right through it, every time.
+    Louise: Stupid ghost rules. 
     //Louise also understands that Lily might not have processed this enough
     //may need to jump to another node for this cutscene 
     //swap scenes for map 2, unload map 1
