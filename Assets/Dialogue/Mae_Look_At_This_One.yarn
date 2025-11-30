@@ -108,14 +108,14 @@ Louise: Shut up.
 Louise: Anyway.
 Louise: Saw the Chichis on there.
 Lily: Ha, yeah. All alive and kicking.
-Louise: Christ. Wonder if Ines still got that terrible pair of crust pants. 
+Louise: Christ. Wonder if Ines still has that terrible pair of crust pants. 
 Lily: I don’t know about that, but I do know they got a whole song dedicated to you. La Crusty Cumbia del Weezy.
 Louise: You’re going, right?
 Lily:
     -> Yes
         <<AddFact didPunkShow>>
         <<AddTogetherEndingCounter>>
-        Lily: Even though all those emotions in one place seems a little...scary, and people mostly knew me through you, and I'm still a big dweeby astrophysics major, and it's already gonna be a tearjerker, I...
+        Lily: Even though all those emotions in one place is...scary, and people mostly knew me through you, and I'm still a big dweeby astrophysics major, and it's already gonna be a tearjerker, and I...
         Lily: It's just as much my scene as it is yours. 
         Louise: Was. 
         Lily: Right.
@@ -145,7 +145,7 @@ Lily: It is now, since you're saying it with your mouth organ.
 Louise: Hardee har. 
 Louise: But you know what? Good. I never liked this thing very much. 
 Louise: Especially not now.
-Louise: Can't be a shining monument to the folly of capitalism, since it's tied to me. Can't make a statement besides a scream, because it was never programmed to do anything else.
+Louise: Can't be a shining monument to the folly of capitalism, since it's tethered to me now. Can't make a statement besides a scream, because it was never programmed to do anything else.
 Lily: Kind of like a baby.
 Louise: Except this thing will never be able to grow up.
 Lily: I can't help but feel bad for it, any time I see it. For the same reasons you hate it, actually.
@@ -155,8 +155,8 @@ Lily: No. We're not that magical.
 Lily: But maybe that's just the thing. 
 Lily: What we choose to do with our existence.
 Lily: Like...like when we came out here, that night, and tried to paint. Tried to leave something behind.
-Louise: But the billboard can't do that. Not without thumbs.
-Louise: It doesn't have those kinds of opportunities like we do.
+Louise: The billboard can't do that, Lils. Not without thumbs.
+Louise: It doesn't have those kinds of opportunities.
 Louise: So do you think we should smash it? Put it out of its misery?
 Lily: What? How the hell did we get *here*?
 Louise: Technically it'd be a victimless crime, if you can call it that.
@@ -193,7 +193,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     //swing to Louise
-    Louise: So I'll forgive you this time, but don't lie to me like this again. Hurts worse than the electricity did.
+    Louise: So I'll forgive you this time, but don't lie to me like this again. Hurts worse than the electric shock did.
     //at this point Louise feels Lily is just lying about this
     //may need to jump to another node for this cutscene
     <<jump Vignette2>>
@@ -205,7 +205,7 @@ Louise: You know it wasn’t your fault, right?
     Louise: I love you.
     Louise: You're stubborn, honest to a fault when you want to be, and intelligent.
     //swing to Louise
-    Louise: So you'll have to forgive me for knowing you'd say that. Even though, strictly speaking, my last thought was how that electricity hurt like a motherfucker.
+    Louise: So you'll have to forgive me for thinking you'd say that. Even though, strictly speaking, my last thought was that electricity hurts like a motherfucker.
     <<jump Vignette2>>
 -> Lily: (Do not respond)
     <<AddFact lilyfaultsilence>>
@@ -630,7 +630,7 @@ Lily:
             Louise: My friend. 
             Louise: And that's more than enough.
             Louise: But you have to promise me you're gonna follow through.
-            Louise: Because if you're not going to move on, I'm going to find a way to. 
+            Louise: Because if you're not going to move on, I'm going to find my own way out. I'll haunt the whole electrical grid if I have to.
             Louise: And I have a very, very long memory. 
             Lily: I promise. Scout's honor.
         -> Another city
@@ -641,7 +641,7 @@ Lily:
             Louise: My friend. 
             Louise: And that's more than enough.
             Louise: But you have to promise me you're gonna follow through.
-            Louise: Because if you're not going to move on, I'm going to find a way to. 
+            Louise: Because if you're not going to move on, I'm going to find my own way out. I'll haunt the whole electrical grid if I have to.
             Louise: And I have a very, very long memory. 
             Lily: I promise. Scout's honor.
         -> I don't know
@@ -654,7 +654,7 @@ Lily:
             Louise: My friend. 
             Louise: And that's more than enough.
             Louise: But you have to promise me you're gonna follow through.
-            Louise: Because if you're not going to move on, I'm going to find a way to. 
+            Louise: Because if you're not going to move on, I'm going to find my own way out. I'll haunt the whole electrical grid if I have to.
             Louise: And I have a very, very long memory. 
             Lily: I promise. Scout's honor.
         <<AddTogetherEndingCounter>>
@@ -664,7 +664,7 @@ Lily:
         <<AddAloneEndingCounter>>
         Louise: ...well, alright.
         Louise: I can't force your hand.
-        Louise: But just know, if you're not going to move on, I'm going to find a way to. 
+        Louise: But just know, if you're not going to move on, I'm going to find my own way out. I'll haunt the whole electrical grid if I have to.
         Louise: And I have a very, very long memory.
         <<jump EpilogueChecker>>
     -> I don’t know
@@ -681,7 +681,7 @@ Lily:
         Louise: Well, whatever decision you make, I...
         Louise: You were enough.
         Louise: You were my friend. And I love you.
-        Louise: But just know, if you're not going to move on, I'm going to find a way to. 
+        Louise: But just know, if you're not going to move on, I'm going to find my own way out. I'll haunt the whole electrical grid if I have to.
         Louise: And I have a very, very long memory.
 Lily: This fuckass billboard.
 Louise: This fuckass billboard.
@@ -741,7 +741,7 @@ Louise: Man. Little ripples.
 
 <<if TryFact("didPunkShow")>>
     Louise: I think a lot about you going to that punk show, too, you know. Took guts, considering how you used to be. Had ripples, I think. Especially with D'Artagnan. 
-    Lily: I'm a little better now, I think, yeah. I even picked up the bass.
+    Lily: I'm a little better now, I think. I even picked up the bass.
     Louise: Oh, fuck yeah. Rocker chick shit. 
     Lily: And Arty's playing, too. Drums.
     Louise: They always were one for percussive maintenance. 
@@ -845,10 +845,13 @@ Lily:
 //smash the billboard
     
     //play smashing sound
-    //play credits
-//don't smash the billboard
     //play crying
     //play credits
+//don't smash the billboard
+    //play retreating footsteps
+    //play distant crying
+    //play credits
+
 
 
 
@@ -875,147 +878,147 @@ position: -24,375
 ---
 //Lily is alone at the billboard.
 //(MAE NOTE: I feel it might be more impactful if Louise is just gone and we get the dialogue as a monologue from Lily.)
-//(MAE NOTE: Like soliliquy-style. So-lily-quy. Louise moved on. The player has to face their choices without her to hold their hand.)
+//(MAE NOTE: Like soliliquy-style. So-lily-quy. Louise moved on, billboard might be haunted. The player has to face their choices without her to hold their hand.)
 //Facts that need to be checked/that lead to Alone (let the player know why Louise left):
 //noPunkShow
 //lilystaying
 //lilynotfault
 //familyLie
 Lily: Louise? Louise, where are you?
-Louise: I'm right up here.
+Billboard: (Screaming.)
 <<if TryFact ("initialSmashYes")>>
-    Louise: Still remember how you told me you wanted to smash this thing. 
+    Lily: I told you I wanted to smash this thing. 
 <<elseif TryFact ("initialSmashNo")>>
-    Louise: Still remember how you told me you didn't want to smash this thing. 
+    Lily: I remember telling you I didn't want to smash this thing. 
 <<endif>>
-Lily: So do I, Louise, but
-Lily: why are you in there? 
-Louise: Communion. 
-Louise: I figured out I could...channel myself in here. Electric current. The last thing I touched. 
-Louise: It hurt like hell, but, I can leave, now. 
-Louise: Go wherever I want, as long as there's a current. 
-Louise: Even through those old power lines. 
+Lily: Louise.
+Lily: Are you in there? 
+Billboard: (Screaming.)
+Lily: Electric current. The last thing you touched. Can you hear me? Are you leaving?
+Lily: Where are you gonna go?
+Billboard: (Still screaming.) 
+Lily: I don't know if those old power lines are gonna carry you as far as you want. 
 Lily: Why?
 Lily: Why do you want to leave, so bad? 
 
 <<if TryFact ("initialSmashYes")>>
-    Louise: Wouldn't it make you feel better to smash this thing? You *did* say you wanted to, when I asked you all those years ago.  
+    Lily: Would it make you rest easier if I broke this thing? You *did* say you wanted to, all those years ago.  
 <<elseif TryFact ("initialSmashNo")>>
-    Louise: Still remember how you told me you didn't want to smash this thing. You might be able to help me feel better if you do. 
+    Lily: I said I didn't want to break this thing. ...Would it make you rest easier if I did? 
 <<endif>>
 
 //If Lily told the truth about Louise's family
 <<if TryFact ("familytruth")>>
-    Louise: And if it helps, it'll probably help my family let go if you destroy it.
+    Lily: What would your family think? Shit, they'd probably join in if they could.
 <<elseif TryFact ("familylie")>> 
-    Louise: If it helps, it'll probably help my family let go if you destroy it. Though I guess the lie you told me all those years ago might be true, these days.
-    Louise: About them being "just fine".
+    Lily: What would your family think? I told you they were fine, but...
+    Lily: I don't think they'd pass up a chance to tear this thing to the ground.
     //If Louise apologised for lying (if she lied)
     <<if TryFact ("apologisedForLie")>>
-        Louise: And I forgive you for it. Really.
-        Lily: Y'mean it?
-        Louise: Yeah. Not every day you get apologies that really mean something.
+        Lily: I'm still sorry.
+        Lily: You forgave me, but...still.
+        Billboard: (Still, still screaming.)
     <<else>>
-    Louise: Not like the truth mattered much to you, anyway. 
-    Lily: No, Weez-
-    Louise: My name is Louise. 
-    Lily:...Louise, I thought if I let you down gently, it would
-    Louise: *Gently*?
-    Louise: By lying to me?
-    Louise: Come on, Lily. You're smarter than this. 
+    Lily: I'm still sorry. 
+    Lily: You...don't have to say anything back.
+    Billboard: (Screams.) 
+    Lily:...Louise, I thought if I let you down gently, it would-
+    Billboard: (A punch of static briefly distorts the screaming.)
+    Lily: -Weezy?!
+    Lily: Why won't you just talk to me?! Tell me I'm smarter than this, tell me I'm an idiot, tell me *anything*! 
     <<endif>>
 <<endif>>
 
 //If Lily tells the truth or lies about her own wellbeing
 <<if TryFact ("lilydoingtruth")>>
-    Louise: Though, I do hope you're doing better than how you told me you were feeling. 
+    Lily: I didn't lie when I said my whole world stopped when you died!
 <<elseif TryFact ("lilydoinglie")>>
-    Louise: And are you doing as well as you told me you were, way back when, right after I bit it?
+    Lily: You knew I was lying when I told you I was fine! Well, I'm *not* fine! I feel like shit, actually! There, are you happy now?!
 <<endif>>
-Lily: I was, but this is changing things. 
-Lily: A lot.
+Billboard: (The screaming continues. No static.) 
+Lily: Are you even here at all...?
 
 //If Lily goes to the punk show or not
 
 <<if TryFact("didPunkShow")>>
-    Louise: At least you got out of the house once upon a time for Acid Wash.
-    Louise: Really. I was happy to hear you went. 
-    Louise: Who knows what kind of ripples you had? 
+    Lily: I went to see Acid Wash because of you, that night. Dragged myself out of the house, put on a brave face, because it was what you would have done.
+    Lily: ...And you were always so much braver than me. 
+    Lily: You always talked about positive ripples. I...hope I made some.
 <<elseif TryFact ("noPunkShow")>>
-    Louise: I think a lot about that night. When you didn't go to Acid Wash. Had ripples. 
-    Louise: Though, don't get me wrong. I don't blame you for Arty.
-    Louise: I just...wish things had gone differently.
-    Lily: Me too, Louise. Me too. 
+    Lily: I think a lot about that night. When I didn't go to Acid Wash. The ripples that choice made. 
+    Lily: I wouldn't be mad if you blamed me for Arty.
+    Lily: I just...wish things had gone differently.
+    Billboard: (Maybe the screaming falters, if only for a microsecond. It's impossible to tell for sure.) 
 <<endif>>
-Louise: But the only ripples that matter now are the ones you make for the future, Lils. You made your bed already with me. 
+Lily: But I've already made this bed, haven't I. If you weren't giving me the silent treatment, you'd tell me the only ripples that matter now are the ones I make for the future, huh?
 
 //If Lily said she knew it wasn't her fault (or not) (or didn't respond)
 
 <<if TryFact ("lilyatfault")>>
-    Louise: Even if I am mad at you, I hope you don't still feel like it was your fault. Me dying, I mean.
+    Lily: I was so sure it was my fault. Your death, I mean. You said it wasn't, but...I can't help but feel like deep down, you had the same thoughts as me.
 <<elseif TryFact ("lilynotfault")>>
-    Louise: Even if I am mad at you, I hope you haven't backslid into thinking it was your fault. Me dying, I mean.
+    Lily: It was an accident. Your death, I mean. It was an accident, and I'm sorry, and I wish you would come back. Please come back.
 <<elseif TryFact ("lilyfaultsilence")>>
-    Louise: And I hope you've made peace with your part in all this, whatever you think it was. My death, I mean.
+    Lily: (Deep sigh.)
 <<endif>>
 Lily: I've tried to stay positive, Weezy...Louise.
 Lily: But everything seems so incredibly fucked all the time. Especially without you. 
-Louise: It was like that before me, and it'll be like that after me. 
-Louise: You'll have to learn to live with that.
+Billboard: (Incessantly, screaming.) 
+Lily: Please don't say I'll have to learn to live with that.
 
 //If Lily lied about Art's death or life
 
 <<if TryFact("liedAboutArtAlive")>> //lily lied about arty being alive
-    Louise: Like your little white lie about Arty. I hope you don't expect forgiveness.
-    Lily: You don't have to. It was stupid.
-    Louise: Figured I'd mention it, anyway. 
+    Lily: I shouldn't have lied about Arty. You don't have to forgive me; it was stupid. I thought I was helping, and...and *I* was stupid.
+    Billboard: (This round of screaming is almost angry, if you squint.)
+    Lily: I still wish you were here to yell at me about it in person. 
 <<elseif TryFact("liedAboutArtDeath")>> //lily joked about arty's death
-    Louise: Like your little joke about Arty. I hope you don't expect forgiveness.
-    Lily: You don't have to. It was stupid.
-    Louise: Figured I'd mention it, anyway.
+    Lily: I shouldn't have joked about Arty. You don't have to forgive me; it was stupid. I don't know what I was thinking.
+    Billboard: (This round of screaming is almost judgemental, if you squint.)
+    Lily: I still wish you were here to be annoyed in person. 
 <<elseif TryFact("truthAboutArtAlive")>> //art is alive and well
-    Louise: Knowing Arty's been in good hands has been...an anchor for me, you know. 
-    Louise: Even outside of the punk show. 
-    Lily: Yeah. They've grown up so wonderfully.
+    Lily: Arty asked about you the other day, you know. About the old times.
+    Lily: I didn't know what to tell them. 
+    Lily: They've grown up so wonderfully.
     Lily: I just wish you were around to see them.
-    Louise: Well, now maybe I can.  
+    Billboard: (If the screaming quiets by a fraction of a decible, the world will never know.)  
 <<elseif TryFact("truthAboutArtDeath")>> //art is dead
-    Louise: I appreciate you being blunt about D'Artagnan's death, you know. 
-    Louise: Some people would have beaten around the bush. 
-    Lily: I thought it would be the right thing to do, in the moment. 
-    Lily: Even though I hated hurting you.
-    Louise: But that's the thing about wounds, you know?
-    Louise: They like to heal.
+    Lily: Is Arty with you, wherever you went?
+    Billboard: (Screams. Screams. Screams.) 
+    Lily: I thought telling you would be the right thing to do, in the moment. Even though I hated hurting you.
+    Lily: But I always wondered if you ever tried to look for them afterwards.
+    Billboard: (If the screaming quiets by a fraction of a decible, the world will never know.)
+    Lily: After this, I don't know if I'll ever believe anyone is really gone for good.
 <<endif>>
 
 //If Lily said they'd still be friends if Louise hadn't died
 <<if TryFact("friendsnodeathyes")>> //would be friends
-    Louise: If things had been different, though, at least I know we would've been friends.
-    Louise: Got a pretty big medium for your message, here. 
-    Lily: You remembered *that*? 
-    Louise: I told you my memory's long. 
+    Lily: If things had been different, though, at least we would've been friends.
+    Lily: Got a pretty big medium for our message, here. 
+    Billboard: (The screaming, for just a moment, seems to splutter.) 
+    Lily: Hey, I've got a long memory too. 
 <<elseif TryFact("friendsnodeathno")>> //would not be friends
-    Louise: Hope now you believe how cool, brave, and smart you are. Even without me. I really meant it, that time. 
+    Lily: Did you really mean it, that time? When you said I was cool, and brave, and smart? Even without you? 
 <<elseif TryFact("friendsnodeathsilence")>> //indecision
-    Louise: It seems like it doesn't matter now if we woulda been friends if I was still alive, huh?
-    Louise: You were playing the long game. 
-    Lily: We would have been. In a heartbeat. I can say that now.
-    Louise: It's okay, Lily. You don't have to make shit up on my account. 
+    Lily: Maybe it doesn't matter now if we would have stayed friends. Things didn't go differently. You didn't live. And you aren't here.
+    Billboard: (The screaming continues. Absolutely and completely unchanging.) 
+    Lily: I can't take back that silence. But if I had another chance...Louise, I'd go through all of this again. In a heartbeat. I can say that now.
+    Billboard: (Screaming. Still unchanging.) 
 <<endif>>
 
 
 
 //How Lily plans to move on (Leaving, Staying, Indecisive)
 <<if TryFact("lilyleaving")>> //plans to leave
-    Louise: But no matter what, I know whatever you end up doing, wherever you go, you'll do good. 
+    Lily: But no matter what, whatever I end up doing, wherever I go, I'll try to do good by you. 
 <<elseif TryFact("lilystaying")>> //plans to stay
-    Louise: But even though you're staying here, I know whatever you end up doing, you'll do good. You *did* spend about a decade longer here than you probably needed to. 
+    Lily: But even if I never see you again, whatever I end up doing here, I'll try to do good by you. Sunk cost fallacy never hurt anyone, right? 
 <<elseif TryFact("lilylocationindecision")>> //doesn't know
-    Louise: But I know whatever you end up doing, wherever you go, you'll do good. 
+    Lily: I still don't know what I want, and that's scary. But whatever I end up doing, wherever I go, I'll try to do good by you. 
 <<endif>>
-Louise: You still have good in you. I believe that much. 
-Lily: Thank you, Weez.
-Louise: Louise. 
+Lily: I'm grateful for you, Louise. Wherever you are, I hope you know that.
+Billboard: (For just a moment, silence. Probably a glitch.)
+Lily: Bye, Weezy. 
 
 ===
 
@@ -1026,9 +1029,11 @@ tags:
 Lily:
 -> smash the billboard
     //play smashing sound
+    //play crying
     //play credits
 -> don't smash the billboard
-    //play crying
+    //play retreating footsteps
+    //play distant crying
     //play credits
     //swap scenes
 ===
