@@ -15,11 +15,6 @@ public class SwapMyScenes : MonoBehaviour
 
     public RollMyCredits creditsRoller;
 
-    public GameObject oldMesh;
-
-    public GameObject newMesh;
-
-
     // [YarnCommand("sir_swapsalot")]
 
 public void Start(){
@@ -46,7 +41,7 @@ public void Start(){
             ShowCredits
             );
 
-        dialogueRunner.AddCommandHandler<string, GameObject, GameObject>(
+        dialogueRunner.AddCommandHandler<string, string, string>(
             "king_mesher",
             ModelSwapper
             );
@@ -75,10 +70,16 @@ public void Start(){
 
     }
 
-    public void ModelSwapper (string objectName, GameObject gameObjectOld, GameObject gameObjectNew)
+    public void ModelSwapper (string objectName, string oldMeshTag, string newMeshTag)
     {
-        gameObjectOld.SetActive(false);
-        gameObjectNew.SetActive(true);
+        GameObject oldMesh = GameObject.FindWithTag(oldMeshTag);
+        GameObject newMesh = GameObject.FindWithTag(newMeshTag);
+
+        if (oldMesh != null && newMesh != null)
+        {
+            oldMesh.transform.position += Vector3.down * 100;
+            newMesh.transform.position += Vector3.up * 100;
+        }
     }
 
     
