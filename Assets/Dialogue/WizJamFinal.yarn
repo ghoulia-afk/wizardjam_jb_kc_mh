@@ -8,8 +8,8 @@ GAME TITLE
 //<<PlayAudioClip "babywhaa">>
 //<<sir_swapsalot Scenes/Map_2>>
 //<<sir_tolaspaws Scenes/Map_1>>
-<<jump TheSmasheningChoice>>
-//<<jump Vignette1>>
+//<<jump TheSmasheningChoice>>
+<<jump Vignette1>>
 ===
 
 //Louise and Lily are sitting on the edge of the billboard’s catwalk, watching the sun set. 
@@ -69,7 +69,6 @@ Louise: The world?
         Lily: Of course I am. Gonna volunteer for the next local election come fall. 
     -> Lily: (neutral) Burning down the house.
         Lily: Everything’s gone down the tubes. We're building doomsday cars and spray-painting our faces silver.
-        Lily: Everything’s gone down the tubes.
         Louise: Bullshit. Your phone still works and you don’t smell like BO.
         Lily: What, you think I wouldn't figure out how to take showers in the apocalypse?
         Louise: ...Y'know what? Fair point.
