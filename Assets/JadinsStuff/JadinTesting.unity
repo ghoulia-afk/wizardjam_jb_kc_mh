@@ -170,6 +170,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6da7c72350246c94485aabe6c7710984, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: efcc6ed3ce8db674b91c7d36c394d869, type: 2}
+    - target: {fileID: -4369760204306259604, guid: 6da7c72350246c94485aabe6c7710984, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: efcc6ed3ce8db674b91c7d36c394d869, type: 2}
     - target: {fileID: 919132149155446097, guid: 6da7c72350246c94485aabe6c7710984, type: 3}
       propertyPath: m_Name
       value: Mesh_Louise_Body_Standing
@@ -476,7 +484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b8027fb214927498e8f816a19f9ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
+  bodies: []
+  heads: []
   tags: []
 --- !u!1001 &5116275641688521816
 PrefabInstance:
