@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
+//Made in collaboration with Alexis Morin and Nick Kornek
 public class SwapMyScenes : MonoBehaviour
 { //A scene swapper that runs whenever sir_swapsalot is called 
     

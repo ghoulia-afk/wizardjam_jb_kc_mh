@@ -9,9 +9,9 @@ LILY AND LOUISE
 //<<sir_swapsalot Scenes/Map_2>>
 //<<sir_tolaspaws Scenes/Map_1>>
 //<<jump TheSmasheningChoice>>
-<<jump CameraTesterPassage>>
-//<<wait  1>>
-//<<jump Vignette1>>
+//<<jump CameraTesterPassage>>
+<<wait  1>>
+<<jump Vignette1>>
 ===
 
 

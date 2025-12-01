@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FindMyCameras : MonoBehaviour
+
+    //Made in collaboration with Alexis Morin
 {
 
 #if UNITY_EDITOR //only compiles if in editor - KGC

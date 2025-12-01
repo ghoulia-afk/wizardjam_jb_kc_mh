@@ -1332,19 +1332,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Credits:\nGame Design:\nLead Game Designer: K. Galvin Clark @bigglassesbluestockings\nLead
+  m_text: "Game Design:\nLead Game Designer: K. Galvin Clark @bigglassesbluestockings\nLead
     Narrative Designer: K. Galvin Clark @bigglassesbluestockings\nLead Writer: K.
     Galvin Clark @bigglassesbluestockings\nAdditional Narrative: Mae Haslam\nAdditional
-    Writing: Mae Haslam\nYarnspinner and Unity Tools Creator: Jadin Brown\n\nArt:
+    Writing: Mae Haslam\nYarn Spinner and Unity Tools Creator: Jadin Brown\n\nArt:
     \nTrees, Foliage, and Natural Environment Artist: Mae Haslam\nConcept Painting:
     Mae Haslam\nSkybox Artist: Mae Haslam\nCharacter Models: Jadin Brown\nCharacter
     Texturing: Jadin Brown\nHard Surface Modeling: Jadin Brown\nCamera Placers: Mae
     Haslam, K. Galvin Clark\n\nSpecial Thanks:\nAlexis Morin\nNick Kornek\nSchuyler
-    Palmer\n\nAudio Credits: \nCrying Baby: \nGlass Breaking:\nFootsteps:\n\nYarnspinner
-    Credits Here"
+    Palmer\n\nAudio Credits: \nCrying Baby: sjmac1962  https://pixabay.com/sound-effects/baby-crying-64996/\nGlass
+    Breaking: LordSonny https://pixabay.com/sound-effects/glass-cinematic-hit-161212/
+    \nFootsteps: DRAGON-STUDIO https://pixabay.com/sound-effects/footsteps-on-the-nature-trail-419017/\n\nDialogue
+    Powered by Yarn Spinner \u2014 https://yarnspinner.dev\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e6832dbbe5b020746b687ad0a9cf1ade, type: 2}
+  m_sharedMaterial: {fileID: -287417874701857690, guid: e6832dbbe5b020746b687ad0a9cf1ade, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1375,7 +1377,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1404,7 +1406,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -3150.7231}
+  m_margin: {x: -532.66895, y: 0, z: -704.98413, w: -3150.7231}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1540,7 +1542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 88.99993}
+  m_AnchoredPosition: {x: 75, y: 88.99993}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412067383
@@ -1563,10 +1565,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Super Awesome Game Title
+  m_text: Lily & Louise
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e6832dbbe5b020746b687ad0a9cf1ade, type: 2}
+  m_sharedMaterial: {fileID: -287417874701857690, guid: e6832dbbe5b020746b687ad0a9cf1ade, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1590,14 +1592,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1626,7 +1628,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -83.341095}
+  m_margin: {x: -37.270447, y: 0, z: -36.130005, w: -83.341095}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2028,7 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657ef8de8b85b2340b853f29c373edd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 10
+  scrollSpeed: 15
   rollCreds: 0
 --- !u!225 &1834750325
 CanvasGroup:

@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RollMyCredits : MonoBehaviour
-
-    //credits to skGameDev for this one
+//Made in collaboration with Nick Kornek + partially based off of a tutorial by skGameDev
+//https://www.youtube.com/watch?v=Eeee4TU69x4
 {
     public float scrollSpeed = 5f; //how fast the credits move
     public bool rollCreds = false;

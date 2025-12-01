@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Made in collaboration with Nick Kornek
+
 public class LevelTransitionFade : MonoBehaviour
 {
 
