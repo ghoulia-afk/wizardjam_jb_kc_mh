@@ -4,6 +4,7 @@ using UnityEngine;
 using Yarn.Unity;
 
 //Made in collaboration with Alexis Morin
+
 public class CameraMover : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
