@@ -22,7 +22,7 @@ public class ModelSwapMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject body in bodies) body.SetActive(false);
+        for (int i = 0; i < bodies.Count; i++) bodies[i].gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -34,10 +34,10 @@ public class ModelSwapMaster : MonoBehaviour
     /// types will pick it up.</param>
     public static void StaticSwapModels(string tag)
     {
-        foreach (ModelSwapMaster swapper in swappers)
+        for (int i = 0; i < swappers.Count; i++)
         {
-            if (swapper == null) swappers.Remove(swapper);
-            else { swapper.SwapBodies(tag); swapper.SwapHeads(tag); }
+            if (swappers[i] == null) swappers.RemoveAt(i);
+            else { swappers[i].SwapBodies(tag); swappers[i].SwapHeads(tag); }
         }
     }
 
@@ -59,9 +59,9 @@ public class ModelSwapMaster : MonoBehaviour
             return;
         }
 
-        if (currentBody != null) currentBody.SetActive(false);
+        if (currentBody != null) currentBody.gameObject.SetActive(false);
         currentBody = bodies[requestIndex];
-        currentBody.SetActive(true);
+        currentBody.gameObject.SetActive(true);
     }
 
     public void SwapHeads(string tag)
