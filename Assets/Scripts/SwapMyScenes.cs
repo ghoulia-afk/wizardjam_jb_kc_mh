@@ -42,9 +42,9 @@ public void Start(){
             ShowCredits
             );
 
-        dialogueRunner.AddCommandHandler<string, string, string>(
+        dialogueRunner.AddCommandHandler<string>(
             "king_mesher",
-            ModelSwapper
+            ModelSwapMaster.StaticSwapModels
             );
 
     }
@@ -69,17 +69,5 @@ public void Start(){
         fade.FadeToHalf();
         creditsRoller.rollCreds = true;
 
-    }
-
-    public void ModelSwapper (string objectName, string oldMeshTag, string newMeshTag)
-    {
-        GameObject oldMesh = GameObject.FindWithTag(oldMeshTag);
-        GameObject newMesh = GameObject.FindWithTag(newMeshTag);
-
-        if (oldMesh != null && newMesh != null)
-        {
-            oldMesh.transform.position += Vector3.down * 100;
-            newMesh.transform.position += Vector3.up * 100;
-        }
     }
 }
