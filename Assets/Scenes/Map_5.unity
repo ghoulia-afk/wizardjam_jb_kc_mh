@@ -10809,9 +10809,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 514434934280745671, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 835886680375310860, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
       propertyPath: m_Name
       value: ModelSwapper_Lily
+      objectReference: {fileID: 0}
+    - target: {fileID: 902717094932875808, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.894049
+      objectReference: {fileID: 0}
+    - target: {fileID: 902717094932875808, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4479693
+      objectReference: {fileID: 0}
+    - target: {fileID: 902717094932875808, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000024366145
+      objectReference: {fileID: 0}
+    - target: {fileID: 902717094932875808, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000017780703
+      objectReference: {fileID: 0}
+    - target: {fileID: 902717094932875808, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 53.227
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979509236261224312, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6751404940074363417, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10852,6 +10880,10 @@ PrefabInstance:
     - target: {fileID: 6751404940074363417, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.653
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859066095664429268, guid: 349b0dfcfdf47824eac7b805242857fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
