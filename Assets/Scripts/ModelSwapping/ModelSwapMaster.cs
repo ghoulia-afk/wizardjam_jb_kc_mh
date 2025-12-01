@@ -14,11 +14,14 @@ public class ModelSwapMaster : MonoBehaviour
 
     private static List<ModelSwapMaster> swappers;
 
+    private void Awake()
+    {
+        swappers.Add(this);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        swappers.Add(this);
-
         foreach (GameObject body in bodies) body.SetActive(false);
     }
 
