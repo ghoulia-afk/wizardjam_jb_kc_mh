@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lily & Louise
+  m_text: LILY, LOUISE, AND THE 30 FOOT HIGH SCREAMING BILLBOARD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6832dbbe5b020746b687ad0a9cf1ade, type: 2}
   m_sharedMaterial: {fileID: -287417874701857690, guid: e6832dbbe5b020746b687ad0a9cf1ade, type: 2}

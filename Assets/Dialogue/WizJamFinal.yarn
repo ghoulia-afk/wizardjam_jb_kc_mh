@@ -3,8 +3,9 @@ tags:
 position: -371,-363
 color: red
 ---
+
 <<camMoveWhee cameraSideAngleView>>
-LILY AND LOUISE
+LILY, LOUISE, AND THE 30 FOOT HIGH SCREAMING BILLBOARD
 //<<PlayAudioClip "babywhaa">>
 //<<sir_swapsalot Scenes/Map_2>>
 //<<sir_tolaspaws Scenes/Map_1>>
@@ -12,6 +13,10 @@ LILY AND LOUISE
 //<<jump CameraTesterPassage>>
 <<wait  1>>
 <<jump Vignette1>>
+//louise_body_standing
+//lily_body_bat
+//louise_head_right
+//lily_head_
 ===
 
 
@@ -67,7 +72,8 @@ Lily:
 title: Vignette1
 tags:
 ---
-
+//king_mesher lily_body_sitting>>
+//king_mesher louise_body_sitting>>
 //<<camMoveWhee "maesSuperAwesomeTestAngle">>
 <<camMoveWhee cameraStraightOnFar>>
 Lily: So, that’s most of what you missed in the scene this past summer, while you’ve been away.
