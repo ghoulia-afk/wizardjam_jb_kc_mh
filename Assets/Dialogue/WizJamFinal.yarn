@@ -13,10 +13,24 @@ LILY, LOUISE, AND THE 30 FOOT HIGH SCREAMING BILLBOARD
 //<<jump CameraTesterPassage>>
 <<wait  1>>
 <<jump Vignette1>>
+
+//All Louise Poses:
 //louise_body_standing
-//lily_body_bat
+//louise_body_cigarette
+//louise_body_sitting
+//louise_head_forward
+//louise_head_left
 //louise_head_right
-//lily_head_
+//louise_head_up
+
+//All Lily Poses:
+//lily_body_standing
+//lily_body_bat
+//lily_body_sitting
+//lily_head_forward
+//lily_head_left
+//lily_head_right
+//lily_head_up
 ===
 
 
@@ -72,8 +86,8 @@ Lily:
 title: Vignette1
 tags:
 ---
-//king_mesher lily_body_sitting>>
-//king_mesher louise_body_sitting>>
+//Ex. <<king_mesher lily_body_bat>>
+//Ex. <<king_mesher louise_head_left>>
 //<<camMoveWhee "maesSuperAwesomeTestAngle">>
 <<camMoveWhee cameraStraightOnFar>>
 Lily: So, that’s most of what you missed in the scene this past summer, while you’ve been away.
@@ -81,9 +95,12 @@ Lily: So, that’s most of what you missed in the scene this past summer, while 
 Louise: Jeez. Stabbing Caesar Salad really broke up? 
 <<camMoveWhee cameraLouiseShoulder>>
 Lily: Sorta. Everyone knows they’re probably gonna get back together–
+<<king_mesher louise_head_left>>
 Louise: That’s what everyone’s said about ‘em since forever, Lily.
 <<camMoveWhee cameraStraightOnClose>>
+<<king_mesher lily_head_right>>
 Lily: Well, damn, Weezy, sorry for being a total dweeb. 
+<<king_mesher louise_head_right>>
 Louise: Aw, dude, I didn’t mean that to come out that way. Just…
 <<camMoveWhee cameraCityOverlook>>
 Louise: Guess when you’re submerged in it, it’s hard to see the water for the reef.
@@ -91,9 +108,13 @@ Louise: And I'm happy this city's weirdos still have places to congregate, inste
 Lily: Yeah. The Acid Wash still stands.
 Louise: Probably gonna survive the heat death of the universe. 
 <<camMoveWhee cameraStraightOnFar>>
+<<king_mesher louise_head_forward>>
+<<king_mesher lily_head_forward>>
 Louise: Kinda like this fuckass 30 foot high billboard.
+<<king_mesher lily_head_right>>
 Lily: But, that out of the way, is there anything else you wanna know about? 
 <<camMoveWhee cameraLouiseShoulder>>
+<<king_mesher louise_head_left>>
 Louise: Lemme take a look at the list you made me. Hmmm…
 //(Lily takes a look at the list herself.)
 Louise: Might as well just rattle ‘em off, goin’ down it.
